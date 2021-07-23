@@ -1,4 +1,4 @@
-# My Persoanl Website
+# My Personal Website
 
 ## Purpose
 1. Who am I? 💁🏻
