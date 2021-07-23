@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.playground {
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+	font-family: 'SourceSansPro-ExtraLight';
+	src: url('./assets//fonts/SourceSansPro-ExtraLight.ttf') format('truetype');
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: 'SourceSansPro-Regular';
+	src: url('./assets/fonts/SourceSansPro-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'SourceSansPro-SemiBold';
+	src: url('./assets/fonts/SourceSansPro-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+}
+
+@layer base {
+	html,
+	body {
+		padding: 0;
+		margin: 0;
+		scroll-behavior: smooth;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+}
+
+@layer utilities {
+	.sidebar_text_container {
+		@apply flex flex-col justify-evenly;
+	}
+
+	.sidebar_header {
+		font-family: 'SourceSansPro-SemiBold';
+		@apply text-center uppercase flex m-auto text-2xl cursor-pointer;
+	}
+
+	.inactive_sidebar_text {
+		transform: rotate(-90deg);
+		font-family: 'SourceSansPro-Regular';
+		@apply uppercase text-gray-400 cursor-pointer duration-300;
+	}
+
+	.active_sidebar_text {
+		transform: rotate(-90deg);
+		font-family: 'SourceSansPro-Semibold';
+		@apply uppercase text-black cursor-pointer duration-300;
+	}
+
+	.inactive_sidebar_text:hover {
+		transform: translateX(-5px) rotate(-90deg);
+		@apply text-black;
+	}
+	.active_sidebar_text:hover {
+		transform: translateX(-5px) rotate(-90deg);
+	}
 }
