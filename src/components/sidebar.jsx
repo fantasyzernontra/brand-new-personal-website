@@ -1,16 +1,18 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation, useHistory } from 'react-router-dom'
 import SideBarText from '../data/sidebar'
 
-const SideBar = ({ children }) => {
+const SideBar = ({ children, setIsOpenCurtain }) => {
 	const location = useLocation()
+	const history = useHistory()
 
 	return (
 		<div className='flex flex-row'>
-			<nav className='h-screen w-28 flex flex-col justify-between'>
-				<h1 className='sidebar_header'>
-					<Link to='/'>NON</Link>
-				</h1>
-				<div className='sidebar_text_container' style={{ height: '90%' }}>
+			<nav className='sidebar_container'>
+				<div className='sidebar_header_container'>
+					<h1 className='sidebar_header'>NON</h1>
+					<h1 className='sidebar_header text-hard_pink'>.</h1>
+				</div>
+				<div className='sidebar_text_container'>
 					{SideBarText.map((text, index) => (
 						<span
 							key={index}
@@ -20,10 +22,22 @@ const SideBar = ({ children }) => {
 									? 'active_sidebar_text'
 									: 'inactive_sidebar_text'
 							}
+							onClick={() => {
+								setIsOpenCurtain(false)
+								setTimeout(
+									() => history.push(text === 'about' ? '' : text),
+									1500
+								)
+							}}
 						>
-							<Link to={text === 'about' ? '' : text}>{text}</Link>
+							{text}
 						</span>
 					))}
+				</div>
+				<div className='sidebar_lang_container'>
+					<span className='active_sidebar_lang_text'>EN</span>
+					<hr className='h-1 bg-primary_pink w-full' />
+					<span className='inactive_sidebar_lang_text'>TH</span>
 				</div>
 			</nav>
 			{children}
