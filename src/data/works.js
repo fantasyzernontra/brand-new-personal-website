@@ -4,7 +4,7 @@
 
 const works = [
 	{
-		work_type: 'dev',
+		work_type: [1, 2],
 		work_name: 'Wungsun Clinic - OPD Online System',
 		url: 'https://wungsun-clinic.online',
 		description:
@@ -16,7 +16,7 @@ const works = [
 		pictures: [],
 	},
 	{
-		work_type: 'dev',
+		work_type: [1],
 		work_name: 'KiiD Event Attendance Web Application',
 		url: 'https://kiidincubeprogram.com',
 		description:
