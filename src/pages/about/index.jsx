@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import LandingCurtain from '../../components/animation/landing-curtain'
+import FullCurtain from '../../components/animation/full-curtain'
 import SideBar from '../../components/sidebar'
 import ContactButton from '../../components/about/contact-button'
 
@@ -12,7 +12,7 @@ const About = () => {
 
 	return (
 		<SideBar setIsOpenCurtain={setIsOpenCurtain}>
-			<LandingCurtain isOpen={isOpenCurtain} />
+			<FullCurtain isOpen={isOpenCurtain} />
 			<div className='about_container'>
 				<section className='about_header'>
 					<h2 className='text-2xl'>Non Nontra</h2>
@@ -41,6 +41,9 @@ const About = () => {
 							</p>
 							<p className='ml-48 text-2xl'>
 								in Full Stack Web Development and Mobile Development.
+							</p>
+							<p className='ml-48 text-2xl'>
+								And I'm a working with myself consistently as a Weight Lifter.
 							</p>
 						</article>
 					</div>

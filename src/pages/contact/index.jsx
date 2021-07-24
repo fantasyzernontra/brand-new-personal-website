@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import LandingCurtain from '../../components/animation/landing-curtain'
+import FullCurtain from '../../components/animation/full-curtain'
 import SideBar from '../../components/sidebar'
 
 const Contact = () => {
@@ -8,7 +8,7 @@ const Contact = () => {
 
 	return (
 		<SideBar setIsOpenCurtain={setIsOpenCurtain}>
-			<LandingCurtain isOpen={isOpenCurtain} />
+			<FullCurtain isOpen={isOpenCurtain} />
 			<div className='bg-gray-100 w-full'>Contact</div>
 		</SideBar>
 	)

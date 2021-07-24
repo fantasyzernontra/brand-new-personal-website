@@ -1,3 +1,3 @@
-const sidebar = ['contact', 'experiences', 'skills', 'about']
+const sidebar = ['contact', 'experiences', 'works', 'about']
 
 export default sidebar

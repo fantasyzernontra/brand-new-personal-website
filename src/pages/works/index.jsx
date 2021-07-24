@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 
 import SideBar from '../../components/sidebar'
-import LandingCurtain from '../../components/animation/landing-curtain'
+import HalfCurtain from '../../components/animation/half-curtain'
 
-const Skills = () => {
+const Works = () => {
 	const [isOpenCurtain, setIsOpenCurtain] = useState(true)
 
 	return (
 		<SideBar setIsOpenCurtain={setIsOpenCurtain}>
-			<LandingCurtain isOpen={isOpenCurtain} />
-			<div className='bg-gray-100 w-full'>Skills</div>
+			<HalfCurtain isOpen={isOpenCurtain} />
+			<div className='works-container'></div>
 		</SideBar>
 	)
 }
 
-export default Skills
+export default Works
