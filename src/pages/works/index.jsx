@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import SideBar from '../../components/sidebar'
 import HalfCurtain from '../../components/animation/half-curtain'
@@ -14,6 +15,9 @@ const Works = () => {
 		url: WorkInfo[0].banner.url,
 		alt: WorkInfo[0].banner.alt,
 	})
+	const history = useHistory()
+	const [isViewInDetails, setIsViewInDetails] = useState(false)
+	const [isLoaded, setIsLoaded] = useState(false)
 
 	function setHoverWork(workId) {
 		hoverWork.current = workId
@@ -32,11 +36,27 @@ const Works = () => {
 		}, 1500)
 	}
 
+	function onViewWorkDetails() {
+		const work = WorkInfo.find((item) => item.id === hoverWork.current)
+		setTimeout(() => history.push(`/works/${work.path_name}`), 1200)
+	}
+
+	useEffect(() => {
+		setTimeout(() => setIsLoaded(true), 2700)
+	}, [])
+
+	useEffect(() => {
+		if (isViewInDetails) onViewWorkDetails()
+	})
+
 	return (
 		<SideBar setIsOpenCurtain={onOpenCurtain}>
-			<HalfCurtain isOpen={isOpenCurtain} />
+			{!isViewInDetails && <HalfCurtain isOpen={isOpenCurtain} />}
 			<div className='works-container'>
-				<div className='left-container'>
+				<div
+					className='left-container'
+					id={isViewInDetails ? 'view-in-details' : null}
+				>
 					<article className='work-list-container'>
 						{WorkInfo.map((item, index) => (
 							<WorkName
@@ -45,7 +65,7 @@ const Works = () => {
 								short_desc={item.short_desc}
 								workId={item.id}
 								setHoverWork={() => {
-									if (!isChangeWork.current) {
+									if (!isChangeWork.current && item.id !== hoverWork.current) {
 										setHoverWork(item.id)
 										onChangeWork()
 									}
@@ -55,17 +75,21 @@ const Works = () => {
 						))}
 					</article>
 				</div>
-				<div className='right-container'>
+				<div
+					className={`right-container ${isLoaded ? '' : 'pointer-events-none'}`}
+					id={isViewInDetails ? 'view-in-details' : null}
+				>
 					<section
 						className='work-banner-container'
 						style={{
 							backgroundImage: `url(${banner.url})`,
 							backgroundSize: 'cover',
 						}}
+						onClick={() => setIsViewInDetails(true)}
 					>
 						<div className='hover-banner'>
 							<div className='hover-border'>
-								<div className='hover-banner-button'>In Details</div>
+								<div className='hover-banner-button'>View In Details</div>
 							</div>
 						</div>
 					</section>

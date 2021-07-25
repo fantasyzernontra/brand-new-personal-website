@@ -1,7 +1,7 @@
 @import './styles/component.css';
 @import './styles/about.css';
 @import './styles/works.css';
-
+@import './styles/work-in-details.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

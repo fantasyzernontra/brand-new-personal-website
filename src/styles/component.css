@@ -19,9 +19,21 @@
 	@apply h-screen w-1/2  bg-white absolute duration-500 z-10;
 }
 
+.closed-full-curtain {
+	@apply w-0 bg-white h-screen absolute duration-500 z-50;
+}
+
+.closed-full-curtain#closed {
+	animation: closedFullCurtainAnimated 1.5s ease forwards;
+}
+
 .sidebar_container {
 	animation: curtainAppear 0.8s ease forwards 1.5s;
 	@apply opacity-0 h-screen w-24 z-20 flex flex-col justify-between duration-500;
+}
+
+.sidebar_container#without-animation {
+	@apply opacity-100 h-screen w-24 z-20 flex flex-col justify-between duration-500;
 }
 
 .sidebar_text_container {
@@ -122,5 +134,15 @@
 
 	100% {
 		@apply opacity-100 border-r-2 border-gray-100;
+	}
+}
+
+@keyframes closedFullCurtainAnimated {
+	0% {
+		@apply w-0;
+	}
+
+	100% {
+		@apply w-full;
 	}
 }

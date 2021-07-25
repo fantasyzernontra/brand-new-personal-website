@@ -33,9 +33,10 @@
 }
 
 .about_description {
+	font-family: 'SourceSansPro-ExtraLight';
 	animation: aboutDescriptionFadingIn 0.8s ease forwards 3.1s;
 	transform: translateY(45px);
-	@apply opacity-0;
+	@apply opacity-0 tracking-wider;
 }
 
 .about_footer {

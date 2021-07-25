@@ -1,13 +1,16 @@
 import { useLocation, useHistory } from 'react-router-dom'
 import SideBarText from '../data/sidebar'
 
-const SideBar = ({ children, setIsOpenCurtain }) => {
+const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 	const location = useLocation()
 	const history = useHistory()
 
 	return (
 		<div className='flex flex-row'>
-			<nav className='sidebar_container'>
+			<nav
+				className='sidebar_container'
+				id={withOutAnimation ? 'without-animation' : ''}
+			>
 				<div className='sidebar_header_container'>
 					<h1 className='sidebar_header'>NON</h1>
 					<h1 className='sidebar_header text-hard_pink'>.</h1>
@@ -25,7 +28,7 @@ const SideBar = ({ children, setIsOpenCurtain }) => {
 							onClick={() => {
 								setIsOpenCurtain(false)
 								setTimeout(
-									() => history.push(text === 'about' ? '' : text),
+									() => history.push(text === 'about' ? '' : '/' + text),
 									1500
 								)
 							}}
