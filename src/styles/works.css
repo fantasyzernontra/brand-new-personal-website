@@ -1,0 +1,79 @@
+.works-container {
+	font-family: 'SourceSansPro-Regular';
+	@apply h-screen overflow-auto w-full bg-gray-200 flex flex-row;
+}
+
+.left-container {
+	@apply z-10 w-1/2 flex flex-col justify-center h-full bg-white;
+}
+
+.right-container {
+	@apply w-1/2;
+}
+
+.work-list-container {
+	@apply w-3/5 mx-auto gap-y-10 flex flex-col;
+}
+
+.work-name-container {
+	@apply flex flex-row gap-x-5 cursor-pointer duration-1000 items-center;
+}
+
+.work-name {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-xl cursor-pointer text-gray-600 duration-1000;
+}
+
+.work-short-desc {
+	@apply text-gray-400 cursor-pointer tracking-wide duration-1000;
+}
+
+.work-line {
+	@apply border-hard_pink w-0 duration-1000;
+}
+
+.work-banner-container {
+	@apply w-full h-full relative;
+}
+
+.hover-banner {
+	z-index: -1;
+	@apply w-full h-full duration-500  flex items-center justify-center p-10 cursor-pointer;
+}
+
+.hover-banner-button {
+	z-index: -1;
+	@apply border-white border text-white p-5 mx-auto opacity-0 w-max duration-500;
+}
+
+.hover-border {
+	@apply border border-white w-full h-full duration-500 opacity-0 flex items-center justify-center;
+}
+
+.work-banner-container:hover > .hover-banner {
+	background-color: rgba(0, 0, 0, 0.7);
+	@apply z-30;
+}
+
+.work-banner-container:hover > .hover-banner > .hover-border {
+	@apply z-40 opacity-100;
+}
+
+.work-banner-container:hover
+	> .hover-banner
+	> .hover-border
+	.hover-banner-button {
+	@apply z-40 opacity-100;
+}
+
+.work-name-container#hovered {
+	transform: translateX(20px);
+}
+
+.work-name-container#hovered > .work-name {
+	@apply text-hard_blue;
+}
+
+.work-line#expanding {
+	@apply w-6;
+}
