@@ -1,0 +1,118 @@
+/* About Page */
+.about_container {
+	padding: 3.2rem;
+	font-family: 'SourceSansPro-Regular';
+	@apply w-full text-white_text bg-hard_blue flex flex-col justify-between;
+}
+
+.about_header {
+	animation: animatedToOriginal 0.8s ease forwards 3.25s;
+	transform: translateY(-60px);
+	@apply flex flex-row justify-between
+        items-center opacity-0;
+}
+
+.about_content {
+	@apply flex flex-col h-3/5 justify-center;
+}
+
+.welcome_container {
+	@apply w-11/12 mx-auto flex flex-col gap-y-5;
+}
+
+.welcome {
+	font-family: 'SourceSansPro-Semibold';
+	animation: welcomeFadingIn 0.8s ease forwards 2s;
+	@apply text-9xl text-white_text tracking-wider duration-300 opacity-0;
+}
+
+.welcome-line {
+	animation: welcomeLineExpanding 0.8s ease forwards 2.4s;
+	@apply ml-48 w-0
+        border-hard_pink;
+}
+
+.about_description {
+	animation: aboutDescriptionFadingIn 0.8s ease forwards 3.1s;
+	transform: translateY(45px);
+	@apply opacity-0;
+}
+
+.about_footer {
+	animation: animatedToOriginal 0.8s ease forwards 3.25s;
+	transform: translateY(60px);
+	@apply flex flex-row items-end justify-end w-full gap-x-5 opacity-0;
+}
+
+.about_contact_element {
+	@apply flex flex-col text-xl;
+}
+
+.about_contact_header {
+	font-family: 'SourceSansPro-Semibold';
+	@apply tracking-wider;
+}
+
+.about_contact_sub_header {
+	font-family: 'SourceSansPro-Regular';
+	@apply tracking-wider cursor-pointer text-gray-400 duration-200;
+}
+
+.about_contact_sub_header:hover {
+	@apply text-white_text;
+}
+
+.about-header-contact-button-container {
+	@apply flex flex-row gap-x-5 justify-center items-center;
+}
+
+.contact-button {
+	@apply duration-200 cursor-pointer border border-white rounded-lg;
+}
+
+.contact-button:hover {
+	transform: rotate(-10deg);
+	@apply bg-gray-400;
+}
+
+@keyframes animatedToOriginal {
+	0% {
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes welcomeFadingIn {
+	0% {
+		@apply opacity-0;
+	}
+
+	100% {
+		@apply opacity-100;
+	}
+}
+
+@keyframes welcomeLineExpanding {
+	0% {
+		@apply w-0;
+	}
+
+	100% {
+		@apply w-4/12;
+	}
+}
+
+@keyframes aboutDescriptionFadingIn {
+	0% {
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}

@@ -1,0 +1,126 @@
+/* Components */
+.curtain {
+	animation: curtainSliding 1.5s ease forwards;
+	@apply h-screen w-full bg-white absolute duration-500 z-10;
+}
+
+.closed-curtain {
+	animation: curtainClosing 1.5s ease forwards;
+	@apply h-screen w-0  bg-white absolute duration-500 z-10;
+}
+
+.half-curtain {
+	animation: halfCurtainSliding 1.5s ease forwards;
+	@apply h-screen w-full bg-white absolute duration-500 z-10;
+}
+
+.closed-half-curtain {
+	animation: halfCurtainClosing 1.5s ease forwards;
+	@apply h-screen w-1/2  bg-white absolute duration-500 z-10;
+}
+
+.sidebar_container {
+	animation: curtainAppear 0.8s ease forwards 1.5s;
+	@apply opacity-0 h-screen w-24 z-20 flex flex-col justify-between duration-500;
+}
+
+.sidebar_text_container {
+	@apply flex flex-col justify-evenly h-5/6 text-right;
+}
+
+.sidebar_header_container {
+	@apply flex m-auto justify-center items-center h-1/6;
+}
+
+.sidebar_header {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-center uppercase  text-2xl cursor-pointer;
+}
+
+.inactive_sidebar_text {
+	transform: rotate(-90deg);
+	font-family: 'SourceSansPro-Regular';
+	@apply uppercase text-gray-400 cursor-pointer duration-300 tracking-wider;
+}
+
+.active_sidebar_text {
+	transform: rotate(-90deg);
+	font-family: 'SourceSansPro-Semibold';
+	@apply uppercase text-hard_blue cursor-pointer duration-300 tracking-wider;
+}
+
+.inactive_sidebar_text:hover {
+	transform: translateX(-5px) rotate(-90deg);
+	@apply text-hard_blue;
+}
+.active_sidebar_text:hover {
+	transform: translateX(-5px) rotate(-90deg);
+}
+
+.sidebar_lang_container {
+	@apply flex flex-col m-auto justify-center items-center gap-y-2 w-2/6 h-1/6;
+}
+
+.active_sidebar_lang_text {
+	font-family: 'SourceSansPro-Semibold';
+	@apply text-hard_blue cursor-pointer;
+}
+
+.inactive_sidebar_lang_text {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-gray-400 cursor-pointer duration-300;
+}
+
+.inactive_sidebar_lang_text:hover {
+	@apply text-hard_blue;
+}
+
+@keyframes curtainSliding {
+	0% {
+		@apply w-full;
+	}
+
+	100% {
+		@apply w-0;
+	}
+}
+
+@keyframes curtainClosing {
+	0% {
+		@apply w-0;
+	}
+
+	100% {
+		@apply w-full;
+	}
+}
+
+@keyframes halfCurtainSliding {
+	0% {
+		@apply w-full;
+	}
+
+	100% {
+		@apply w-1/2;
+	}
+}
+
+@keyframes halfCurtainClosing {
+	0% {
+		@apply w-1/2;
+	}
+
+	100% {
+		@apply w-full;
+	}
+}
+
+@keyframes curtainAppear {
+	0% {
+		@apply opacity-0;
+	}
+
+	100% {
+		@apply opacity-100 border-r-2 border-gray-100;
+	}
+}
