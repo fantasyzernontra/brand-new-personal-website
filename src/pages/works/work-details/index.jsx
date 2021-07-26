@@ -32,7 +32,7 @@ const WorkInDetails = ({ match }) => {
 	return (
 		<SideBar withOutAnimation={true} setIsOpenCurtain={onCloseCurtain}>
 			<ClosedCurtain isClosed={isCloseCurtain} />
-			<div className='work-details-container'>
+			<section className='work-details-container'>
 				<WorkBanner work={work} />
 				<WorkDescription work={work} ref={workDescWrapper} />
 				<WorkPictures url={work.pictures[0].url} alt={work.pictures[0].alt} />
@@ -43,7 +43,7 @@ const WorkInDetails = ({ match }) => {
 				{work.partners_testimonial && (
 					<PartnerTestimonial work={work} ref={partnetTestimonialWrapper} />
 				)}
-			</div>
+			</section>
 		</SideBar>
 	)
 }

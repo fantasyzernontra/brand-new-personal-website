@@ -52,7 +52,7 @@ const Works = () => {
 	return (
 		<SideBar setIsOpenCurtain={onOpenCurtain}>
 			{!isViewInDetails && <HalfCurtain isOpen={isOpenCurtain} />}
-			<div className='works-container'>
+			<section className='works-container'>
 				<div
 					className='left-container'
 					id={isViewInDetails ? 'view-in-details' : null}
@@ -79,7 +79,7 @@ const Works = () => {
 					className={`right-container ${isLoaded ? '' : 'pointer-events-none'}`}
 					id={isViewInDetails ? 'view-in-details' : null}
 				>
-					<section
+					<article
 						className='work-banner-container'
 						style={{
 							backgroundImage: `url(${banner.url})`,
@@ -92,9 +92,9 @@ const Works = () => {
 								<div className='hover-banner-button'>View In Details</div>
 							</div>
 						</div>
-					</section>
+					</article>
 				</div>
-			</div>
+			</section>
 		</SideBar>
 	)
 }

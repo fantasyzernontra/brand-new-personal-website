@@ -13,8 +13,8 @@ const About = () => {
 	return (
 		<SideBar setIsOpenCurtain={setIsOpenCurtain}>
 			<FullCurtain isOpen={isOpenCurtain} />
-			<div className='about_container'>
-				<section className='about_header'>
+			<section className='about_container'>
+				<article className='about_header'>
 					<h2 className='text-2xl'>Non Nontra</h2>
 					<div className='about-header-contact-button-container'>
 						<hr className='w-10 border-hard_pink' />
@@ -27,17 +27,17 @@ const About = () => {
 							/>
 						))}
 					</div>
-				</section>
-				<section className='about_content'>
+				</article>
+				<article className='about_content'>
 					<div className='welcome_container'>
 						<h1 className='welcome'>Hi! I'm Non</h1>
 						<hr className='welcome-line' />
-						<article className='about_description'>
+						<div className='about_description'>
 							<p className='ml-48 text-2xl'>
 								Currently, I'm a junior computer science student.
 							</p>
 							<p className='ml-48 text-2xl'>
-								Also, I'm an entrepreneur who is specialise
+								Also, I'm a full stack developer who is familiar
 							</p>
 							<p className='ml-48 text-2xl'>
 								in Full Stack Web Development and Mobile Development.
@@ -45,10 +45,10 @@ const About = () => {
 							<p className='ml-48 text-2xl'>
 								And I'm a working with myself consistently as a Weight Lifter.
 							</p>
-						</article>
+						</div>
 					</div>
-				</section>
-				<section className='about_footer'>
+				</article>
+				<article className='about_footer'>
 					<div className='about_contact_element'>
 						<span className='about_contact_header'>E-mail:</span>
 						<span className='about_contact_sub_header'>
@@ -68,8 +68,8 @@ const About = () => {
 							</Link>
 						</span>
 					</div>
-				</section>
-			</div>
+				</article>
+			</section>
 		</SideBar>
 	)
 }

@@ -45,12 +45,6 @@
 	@apply border-white_text w-16;
 }
 
-.scroll-to-discover {
-	animation: discoverLoop 5s infinite;
-	font-family: 'SourceSansPro-ExtraLight';
-	@apply bottom-10 absolute uppercase text-xl tracking-wider text-white_text;
-}
-
 .work-details-introduction {
 	width: 95vw;
 	@apply h-screen bg-white flex flex-row justify-evenly items-center p-10 text-hard_blue;
@@ -86,7 +80,7 @@
 }
 
 .introduction-details-production:hover {
-	@apply text-hard_pink;
+	@apply text-soft_pink;
 }
 
 .work-picture {
@@ -176,28 +170,6 @@
 .partner-testimonial-container.partner-testimonial-appear
 	> .partner-testimonial-article {
 	animation: partnetTestimonialAppear 2s ease forwards;
-}
-
-@keyframes discoverLoop {
-	0% {
-		@apply opacity-100;
-	}
-
-	25% {
-		@apply opacity-0;
-	}
-
-	50% {
-		@apply opacity-100;
-	}
-
-	75% {
-		@apply opacity-0;
-	}
-
-	100% {
-		@apply opacity-100;
-	}
 }
 
 @keyframes bannerAppearing {

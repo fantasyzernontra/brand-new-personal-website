@@ -26,11 +26,16 @@ const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 									: 'inactive_sidebar_text'
 							}
 							onClick={() => {
-								setIsOpenCurtain(false)
-								setTimeout(
-									() => history.push(text === 'about' ? '' : '/' + text),
-									1500
-								)
+								if (
+									!location.pathname.replace('/', '').includes(text) &&
+									!(location.pathname === '/' && text === 'about')
+								) {
+									setIsOpenCurtain(false)
+									setTimeout(
+										() => history.push(text === 'about' ? '' : '/' + text),
+										1500
+									)
+								}
 							}}
 						>
 							{text}

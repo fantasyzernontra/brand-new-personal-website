@@ -1,5 +1,5 @@
 import VisitingLabel from '../visiting-label'
-import ScrollToDiscover from '../scroll-to-discover'
+import ScrollToDiscover from '../../scroll-to-discover'
 
 const WorkBanner = ({ work }) => {
 	return (

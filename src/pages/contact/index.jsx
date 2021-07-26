@@ -9,7 +9,7 @@ const Contact = () => {
 	return (
 		<SideBar setIsOpenCurtain={setIsOpenCurtain}>
 			<FullCurtain isOpen={isOpenCurtain} />
-			<div className='bg-gray-100 w-full'>Contact</div>
+			<section className='bg-gray-100 w-full'>Contact</section>
 		</SideBar>
 	)
 }

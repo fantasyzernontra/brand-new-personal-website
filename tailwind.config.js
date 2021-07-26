@@ -7,7 +7,7 @@ module.exports = {
 				hard_blue: '#132743',
 				hard_pink: '#FF6187',
 				soft_blue: '#FF6187',
-				soft_pink: '#FF6187',
+				soft_pink: '#FF9BAA',
 				white_text: '#E3ECFF',
 			},
 		},

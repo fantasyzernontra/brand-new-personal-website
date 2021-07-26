@@ -89,6 +89,34 @@
 	@apply text-hard_blue;
 }
 
+.scroll-to-discover {
+	animation: discoverLoop 5s infinite;
+	font-family: 'SourceSansPro-ExtraLight';
+	@apply bottom-16 absolute uppercase text-2xl tracking-wider text-white_text mx-auto w-full text-center;
+}
+
+@keyframes discoverLoop {
+	0% {
+		@apply opacity-100;
+	}
+
+	25% {
+		@apply opacity-0;
+	}
+
+	50% {
+		@apply opacity-100;
+	}
+
+	75% {
+		@apply opacity-0;
+	}
+
+	100% {
+		@apply opacity-100;
+	}
+}
+
 @keyframes curtainSliding {
 	0% {
 		@apply w-full;
