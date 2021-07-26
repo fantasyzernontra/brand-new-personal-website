@@ -29,11 +29,13 @@
 
 .sidebar_container {
 	animation: curtainAppear 0.8s ease forwards 1.5s;
-	@apply opacity-0 h-screen w-24 z-20 flex flex-col justify-between duration-500;
+	width: 5vw;
+	@apply opacity-0 h-screen z-20 flex flex-col justify-between duration-500;
 }
 
 .sidebar_container#without-animation {
-	@apply opacity-100 h-screen w-24 z-20 flex flex-col justify-between duration-500;
+	width: 5vw;
+	@apply opacity-100 h-screen z-20 flex flex-col justify-between duration-500;
 }
 
 .sidebar_text_container {

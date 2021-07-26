@@ -1,9 +1,14 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
+import { useObserverWithUnObserve } from '../../../utils/useObserverWithUnObserver'
 
 import ClosedCurtain from '../../../components/animation/ closed-full-curtain'
-import VisitingLabel from '../../../components/work-details/visiting-label'
 import SideBar from '../../../components/sidebar'
-import ScrollToDiscover from '../../../components/work-details/scroll-to-discover'
+
+import WorkBanner from '../../../components/work-details/ui/work-banner'
+import WorkDescription from '../../../components/work-details/ui/work-description'
+import WorkPictures from '../../../components/work-details/ui/work-picture'
+import PainPointRelieving from '../../../components/work-details/ui/painpoint-relieving'
+import PartnerTestimonial from '../../../components/work-details/ui/partner-testimonial'
 
 import WorkInfo from '../../../data/works'
 
@@ -11,31 +16,33 @@ const WorkInDetails = ({ match }) => {
 	const workName = match.params.workName
 	const work = WorkInfo.find((item) => item.path_name === workName)
 	const [isCloseCurtain, onCloseCurtain] = useState(true)
+	const observer = useObserverWithUnObserve
+	const workDescWrapper = useRef(null)
+	const painPointWrapper = useRef(null)
+	const partnetTestimonialWrapper = useRef(null)
+
+	useEffect(() => {
+		observer(workDescWrapper.current, 'work-desc-appear')
+		if (work.painpoint_relieving)
+			observer(painPointWrapper.current, 'painpoint-appear')
+		if (work.partners_testimonial)
+			observer(partnetTestimonialWrapper.current, 'partner-testimonial-appear')
+	}, [observer, work.painpoint_relieving, work.partners_testimonial])
 
 	return (
 		<SideBar withOutAnimation={true} setIsOpenCurtain={onCloseCurtain}>
 			<ClosedCurtain isClosed={isCloseCurtain} />
 			<div className='work-details-container'>
-				<section
-					className='work-details-banner'
-					id='banner'
-					style={{
-						backgroundImage: `linear-gradient(
-							to bottom,
-							rgba(0, 0, 0, 0.4),
-							rgba(0, 0, 0, 0.75)
-						), url(${work.banner.url})`,
-					}}
-				>
-					<h1 className='work-detail-title'>{work.work_name}</h1>
-					<p className='work-detail-short-desc'>{work.short_desc}</p>
-					{work.label && <VisitingLabel label={work.label} url={work.url} />}
-					<ScrollToDiscover />
-				</section>
-				<section
-					className='work-details-introduction'
-					id='work-introduction'
-				></section>
+				<WorkBanner work={work} />
+				<WorkDescription work={work} ref={workDescWrapper} />
+				<WorkPictures url={work.pictures[0].url} alt={work.pictures[0].alt} />
+				{work.painpoint_relieving && (
+					<PainPointRelieving work={work} ref={painPointWrapper} />
+				)}
+				<WorkPictures url={work.pictures[1].url} alt={work.pictures[1].alt} />
+				{work.partners_testimonial && (
+					<PartnerTestimonial work={work} ref={partnetTestimonialWrapper} />
+				)}
 			</div>
 		</SideBar>
 	)

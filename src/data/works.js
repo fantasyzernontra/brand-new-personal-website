@@ -18,22 +18,24 @@ const works = [
 		url: 'https://wungsun-clinic.online',
 		description:
 			"Wungsun Clinic's OPD (Out Patient Department) Online System. This system has been based on web-application or generally, they're called 'Website'. This application is allowed any patients who are suffering in dermatology submitting their disease and get the treatment. Also, the doctor and clinic's worker would be able to performing the treatment through the application.",
+		painpoint_relieving:
+			"Wungsun Clinic's patient are allowed to submitting their treatment requisition with thier fingertips. Doctors are more convenient to diagnose anywhere, anytime as they want.",
 		partners: 'Wungsun Clinic - คลินิคหมอวังสันต์',
+		partners_testimonial:
+			"We are convinient and treat our patient gentlely. We followed Non Nontra's guidelines which finally improved and applying with Digital Transformation perfectly.",
+		partners_testimonial_name: 'Wungsun Attaset',
+		partners_org: 'Owner of Wungsun Clinic, Thailand',
 		responsible:
 			'Business Analysis, Researching, Project Management, Development, System Engineering and Vulnerability Prevention',
 		tech_stack: ['Next.JS', 'Node.JS', 'PostgreSQL', 'Docker', 'NGINX'],
 		pictures: [
 			{
-				url: 'https://storage.googleapis.com/personal-website-non-nontra/wungsun-clinic/wsclinic-1.png',
-				alt: '',
-			},
-			{
-				url: 'https://storage.googleapis.com/personal-website-non-nontra/wungsun-clinic/wsclinic-1.png',
-				alt: '',
+				url: 'https://storage.googleapis.com/personal-website-non-nontra/wungsun-clinic/wsclinic-2.png',
+				alt: 'Wungsun Clinic',
 			},
 			{
 				url: 'https://storage.googleapis.com/personal-website-non-nontra/wungsun-clinic/wsclinic-3.png',
-				alt: '',
+				alt: 'Wungsun Clinic',
 			},
 		],
 	},
@@ -52,16 +54,27 @@ const works = [
 		url: 'https://kiidincubeprogram.com',
 		description:
 			'KiiD Event Attendance is a web-application which is capable of establishing the event, attendee management, staff assigning and QR code checking in.',
+		painpoint_relieving: false,
 		partners:
 			'KiiD - Kluay Nam Thai Innovative Industries District, NIA - National Innovation Agency Thailand',
+		partners_testimonial: false,
 		responsible: [
 			'Business Analysis (Back-end System), Data Relationship Declaration (ER Diagram), System Engineering and Vulnerability Prevention',
 		],
 		tech_stack: ['Vue.JS', 'Node.JS', 'PostgreSQL', 'Docker', 'NGINX'],
 		pictures: [
-			'https://storage.googleapis.com/personal-website-non-nontra/kiid/kiid-1.png',
-			'https://storage.googleapis.com/personal-website-non-nontra/kiid/kiid-2.png',
-			'https://storage.googleapis.com/personal-website-non-nontra/kiid/kiid-3.png',
+			{
+				url: 'https://storage.googleapis.com/personal-website-non-nontra/kiid/kiid-1.png',
+				alt: '',
+			},
+			{
+				url: 'https://storage.googleapis.com/personal-website-non-nontra/kiid/kiid-2.png',
+				alt: '',
+			},
+			{
+				url: 'https://storage.googleapis.com/personal-website-non-nontra/kiid/kiid-3.png',
+				alt: '',
+			},
 		],
 	},
 ]

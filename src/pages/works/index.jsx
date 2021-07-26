@@ -38,7 +38,7 @@ const Works = () => {
 
 	function onViewWorkDetails() {
 		const work = WorkInfo.find((item) => item.id === hoverWork.current)
-		setTimeout(() => history.push(`/works/${work.path_name}`), 1200)
+		setTimeout(() => history.push(`/works/${work.path_name}`), 2000)
 	}
 
 	useEffect(() => {

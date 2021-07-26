@@ -4,21 +4,28 @@
 
 .work-details-banner {
 	font-family: 'SourceSansPro-Regular';
-	@apply w-screen h-screen bg-cover flex flex-col items-center justify-center text-white_text gap-y-16;
+	width: 95vw;
+	@apply h-screen bg-cover flex flex-col items-center justify-center text-white_text gap-y-16;
 }
 
 .work-detail-title {
 	font-family: 'SourceSansPro-SemiBold';
-	@apply text-6xl;
+	animation: bannerAppearing 1.2s ease forwards;
+	transform: translateY(70px);
+	@apply text-6xl opacity-0 duration-1000;
 }
 
 .work-detail-short-desc {
 	font-family: 'SourceSansPro-ExtraLight';
-	@apply text-2xl;
+	animation: bannerAppearing 1.2s ease forwards 0.7s;
+	transform: translateY(70px);
+	@apply text-2xl opacity-0 duration-1000;
 }
 
 .visiting-container {
-	@apply flex flex-row items-center justify-center gap-x-14 duration-700 cursor-pointer;
+	animation: bannerAppearing 1.2s ease forwards 1s;
+	transform: translateY(70px);
+	@apply flex flex-row items-center justify-center gap-x-14 duration-1000 cursor-pointer opacity-0;
 }
 
 .visiting-label {
@@ -41,12 +48,134 @@
 .scroll-to-discover {
 	animation: discoverLoop 5s infinite;
 	font-family: 'SourceSansPro-ExtraLight';
-	@apply bottom-10 absolute uppercase text-xl tracking-wider;
+	@apply bottom-10 absolute uppercase text-xl tracking-wider text-white_text;
 }
 
 .work-details-introduction {
-	height: 75vh;
-	@apply w-screen bg-green-200;
+	width: 95vw;
+	@apply h-screen bg-white flex flex-row justify-evenly items-center p-10 text-hard_blue;
+}
+
+.introduction-title {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-4xl tracking-wider;
+}
+
+.introduction-desc {
+	font-family: 'SourceSansPro-ExtraLight';
+	@apply text-xl tracking-wide leading-10;
+}
+
+.introduction-details-header {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-gray-400 text-base uppercase;
+}
+
+.introduction-details-content {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-xl text-hard_blue capitalize;
+}
+
+.introduction-details-sub-container {
+	@apply flex flex-col gap-y-2 my-8;
+}
+
+.introduction-details-production {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-xl text-hard_blue cursor-pointer duration-500;
+}
+
+.introduction-details-production:hover {
+	@apply text-hard_pink;
+}
+
+.work-picture {
+	width: 95vw;
+	@apply h-screen flex border-b border-gray-200 my-28;
+}
+
+.painpoint-relieving-container {
+	width: 95vw;
+	height: 60vh;
+	font-family: 'SourceSansPro-Regular';
+	@apply flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
+}
+
+.painpoint-relieving-title {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-3xl capitalize;
+}
+
+.painpoint-relieving-desc {
+	font-family: 'SourceSansPro-ExtraLight';
+	@apply text-2xl leading-10 tracking-wide;
+}
+
+.painpoint-relieving-article {
+	transform: translateY(50px);
+	@apply flex flex-col gap-y-8 w-5/12 items-center text-center opacity-0;
+}
+
+.partner-testimonial-container {
+	width: 95vw;
+	height: 60vh;
+	font-family: 'SourceSansPro-Regular';
+	@apply flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
+}
+
+.partner-testimonial-article {
+	transform: translateY(50px);
+	@apply flex flex-col gap-y-12 w-7/12 items-center opacity-0;
+}
+
+.partner-testimonial-title {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-xl capitalize text-hard_pink tracking-widest;
+}
+
+.partner-testimonial-speech {
+	font-family: 'SourceSansPro-ExtraLight';
+	@apply text-2xl leading-10 tracking-wider;
+}
+
+.partner-testimonial-name {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-2xl tracking-wide text-gray-400;
+}
+
+.partner-testimonial-org {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-hard_blue text-2xl tracking-wide;
+}
+
+.work-introduction-container {
+	transform: translateY(50px);
+	@apply flex flex-col w-5/12 gap-y-8 opacity-0;
+}
+
+.work-explanation {
+	transform: translateX(-50px);
+	@apply flex flex-col w-4/12 opacity-0;
+}
+
+/* Work Desc. Intro. Animation */
+.work-details-introduction.work-desc-appear > .work-introduction-container {
+	animation: workDescAppear1 2s ease forwards;
+}
+
+.work-details-introduction.work-desc-appear > .work-explanation {
+	animation: workDescAppear2 2s ease forwards;
+}
+
+/* Pain Point Animation */
+.painpoint-relieving-container.painpoint-appear > .painpoint-relieving-article {
+	animation: painPointAppear 2s ease forwards;
+}
+
+/* Partner Testimonial Animation */
+.partner-testimonial-container.partner-testimonial-appear
+	> .partner-testimonial-article {
+	animation: partnetTestimonialAppear 2s ease forwards;
 }
 
 @keyframes discoverLoop {
@@ -67,6 +196,65 @@
 	}
 
 	100% {
+		@apply opacity-100;
+	}
+}
+
+@keyframes bannerAppearing {
+	0% {
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes workDescAppear1 {
+	0% {
+		transform: translateY(50px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes workDescAppear2 {
+	0% {
+		transform: translateX(-50px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateX(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes painPointAppear {
+	0% {
+		transform: translateY(50px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes partnetTestimonialAppear {
+	0% {
+		transform: translateY(50px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
 		@apply opacity-100;
 	}
 }
