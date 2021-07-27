@@ -7,7 +7,7 @@ import SideBar from '../../components/sidebar'
 import ContactButton from '../../components/contact/contact-button'
 
 import DarkContactButtonData from '../../data/dark-contact-button'
-import SelfPhoto from '../../assets/image/self5.jpg'
+import SelfPhoto from '../../assets/image/self3.jpg'
 
 const Contact = () => {
 	const [isOpenCurtain, setIsOpenCurtain] = useState(true)

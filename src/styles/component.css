@@ -40,7 +40,7 @@
 .sidebar_container {
 	animation: curtainAppear 0.8s ease forwards 1.6s;
 	width: 5vw;
-	@apply opacity-0 h-screen z-20 flex flex-col justify-between duration-500;
+	@apply hidden opacity-0 h-screen z-20 md:flex flex-col justify-between duration-500;
 }
 
 .sidebar_container#without-animation {
@@ -103,6 +103,71 @@
 	animation: discoverLoop 5s infinite;
 	font-family: 'SourceSansPro-ExtraLight';
 	@apply bottom-16 absolute uppercase text-2xl tracking-wider text-white_text mx-auto w-full text-center;
+}
+
+/* Hamburger */
+.hamburger {
+	@apply cursor-pointer w-12 h-12 transition-all;
+}
+
+.hamburger-topbun,
+.hamburger-bottombun {
+	content: '';
+	background-color: #fff;
+	height: 2px;
+	@apply absolute w-6 rotate-0 transition-all;
+}
+
+.hamburger-topbun {
+	transform: translateY(-5px);
+}
+
+.hamburger-bottombun {
+	transform: translateY(3px);
+}
+
+.open {
+	transform: translateY(-1px);
+	@apply rotate-90;
+}
+
+.open .hamburger-topbun {
+	transform: rotate(45deg) translateY(0px);
+}
+
+.open .hamburger-bottombun {
+	transform: rotate(-45deg) translateY(0px);
+}
+
+.mobile-nav-menu {
+	@apply w-0 absolute h-screen overflow-hidden bg-white z-50 p-7 opacity-0 duration-1000 flex flex-col justify-between;
+}
+
+.mobile-nav-menu.active {
+	animation: hamburgerAppearing 1.2s ease forwards;
+}
+
+.mobile-nav-menu .nav-menu-content {
+	@apply flex flex-col gap-y-4;
+}
+
+.nav-menu-lang {
+	@apply flex flex-row gap-x-2 text-xl;
+}
+
+.navLink {
+	font-family: 'SourceSansPro-ExtraLight';
+	@apply text-hard_blue text-xl capitalize duration-300;
+}
+
+.navlink-line {
+	animation: navLinkLineExpanding 1.2s ease forwards 1.2s;
+	@apply w-0;
+}
+
+.navLink.active > .navlink-line {
+	animation: navLinkLineExpanding 1.2s ease forwards 1.2s;
+	@apply border-hard_blue;
 }
 
 @keyframes discoverLoop {
@@ -204,5 +269,29 @@
 
 	100% {
 		@apply w-1/2;
+	}
+}
+
+@keyframes hamburgerAppearing {
+	0% {
+		@apply w-0;
+	}
+
+	1% {
+		@apply opacity-100;
+	}
+
+	100% {
+		@apply w-screen opacity-100;
+	}
+}
+
+@keyframes navLinkLineExpanding {
+	0% {
+		@apply w-0;
+	}
+
+	100% {
+		@apply w-full;
 	}
 }

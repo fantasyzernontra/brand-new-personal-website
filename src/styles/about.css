@@ -1,8 +1,7 @@
 /* About Page */
 .about_container {
-	padding: 3.2rem;
 	font-family: 'SourceSansPro-Regular';
-	@apply w-full text-white_text bg-hard_blue flex flex-col justify-between;
+	@apply w-full h-screen text-white_text bg-hard_blue flex flex-col justify-between p-5 md:p-12;
 }
 
 .about_header {
@@ -17,18 +16,18 @@
 }
 
 .welcome_container {
-	@apply w-11/12 mx-auto flex flex-col gap-y-5;
+	@apply w-full md:w-11/12 mx-auto flex flex-col gap-y-5;
 }
 
 .welcome {
 	font-family: 'SourceSansPro-Semibold';
 	animation: welcomeFadingIn 0.8s ease forwards 2s;
-	@apply text-9xl overflow-hidden  text-white_text tracking-wider duration-300 opacity-0;
+	@apply text-5xl lg:text-9xl overflow-hidden  text-white_text tracking-wider duration-300 opacity-0;
 }
 
 .welcome-line {
 	animation: welcomeLineExpanding 0.8s ease forwards 2.4s;
-	@apply ml-48 w-0
+	@apply ml-0 md:ml-48 w-0
         border-hard_pink;
 }
 
@@ -42,11 +41,11 @@
 .about_footer {
 	animation: animatedToOriginal 0.8s ease forwards 3.25s;
 	transform: translateY(60px);
-	@apply flex flex-row items-end justify-end w-full gap-x-5 opacity-0;
+	@apply flex flex-row items-end justify-between md:justify-end w-full gap-x-5 opacity-0;
 }
 
 .about_contact_element {
-	@apply flex flex-col text-xl;
+	@apply flex flex-col text-base md:text-xl;
 }
 
 .about_contact_header {
@@ -64,7 +63,7 @@
 }
 
 .about-header-contact-button-container {
-	@apply flex flex-row gap-x-5 justify-center items-center;
+	@apply hidden md:flex flex-row gap-x-5 justify-center items-center;
 }
 
 .contact-button {
@@ -74,6 +73,10 @@
 .contact-button:hover {
 	transform: rotate(-10deg);
 	@apply bg-gray-400;
+}
+
+.about-desc-element {
+	@apply ml-0 md:ml-48 text-base md:text-2xl inline md:block;
 }
 
 @keyframes animatedToOriginal {
