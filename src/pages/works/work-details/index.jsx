@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useObserverWithUnObserve } from '../../../utils/useObserverWithUnObserver'
 
-import ClosedCurtain from '../../../components/animation/ closed-full-curtain'
+import ClosedCurtain from '../../../components/animation/closed-full-curtain'
 import SideBar from '../../../components/sidebar'
 
 import WorkBanner from '../../../components/work-details/ui/work-banner'

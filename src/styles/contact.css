@@ -4,9 +4,8 @@
 }
 
 .contact-main-container .left {
-	background-image: url('../assets/image/self3.jpg');
 	@apply w-1/2 h-screen
-		bg-cover  bg-bottom;
+		bg-cover  bg-bottom bg-gray-300;
 }
 
 .contact-main-container .right {
@@ -14,7 +13,17 @@
 }
 
 .contact-main-container .right .contact-container {
-	@apply flex flex-row ml-auto gap-x-5 items-center;
+	@apply flex flex-row ml-auto gap-x-5 items-center opacity-0;
+}
+
+.contact-main-container .right .contact-container#contact-button {
+	transform: translateY(-60px);
+	animation: contactButtonAppearing 1s ease forwards 3s;
+}
+
+.contact-main-container .right .contact-container#furthermore-contact {
+	transform: translateY(60px);
+	animation: contactButtonAppearing 1s ease forwards 3s;
 }
 
 .contact-main-container .right .contact-container .contact-text {
@@ -27,7 +36,9 @@
 }
 
 .contact-main-container .right .contact-speech {
-	@apply flex flex-col gap-y-3;
+	animation: contactSpeechAppearing 1s ease forwards 2.5s;
+	transform: translateY(60px);
+	@apply flex flex-col gap-y-3 opacity-0;
 }
 
 .contact-main-container .right .contact-speech .contact-title {
@@ -47,4 +58,42 @@
 .contact-page-contact-button:hover {
 	transform: rotate(-10deg);
 	@apply bg-gray-200;
+}
+
+.profile-pic {
+	animation: profilePicAppearing 1.2s ease forwards 1.8s;
+	@apply h-full object-cover w-0;
+}
+
+@keyframes profilePicAppearing {
+	0% {
+		@apply w-0;
+	}
+
+	100% {
+		@apply w-full;
+	}
+}
+
+@keyframes contactSpeechAppearing {
+	0% {
+		transform: translateY(60px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes contactButtonAppearing {
+	0% {
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
 }

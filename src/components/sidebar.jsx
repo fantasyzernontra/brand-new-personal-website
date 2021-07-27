@@ -11,7 +11,10 @@ const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 				className='sidebar_container'
 				id={withOutAnimation ? 'without-animation' : ''}
 			>
-				<div className='sidebar_header_container'>
+				<div
+					className='sidebar_header_container'
+					onClick={() => history.push('/')}
+				>
 					<h1 className='sidebar_header'>NON</h1>
 					<h1 className='sidebar_header text-hard_pink'>.</h1>
 				</div>

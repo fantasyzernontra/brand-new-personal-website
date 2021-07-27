@@ -27,8 +27,18 @@
 	animation: closedFullCurtainAnimated 1.5s ease forwards;
 }
 
+.half-left-curtain {
+	animation: leftSideOpening 0.9s ease forwards;
+	@apply h-screen w-1/2  bg-white absolute duration-500 z-10;
+}
+
+.closed-half-left-curtain {
+	animation: leftSideClosing 0.9s ease forwards;
+	@apply h-screen w-0 bg-white absolute duration-500 z-10;
+}
+
 .sidebar_container {
-	animation: curtainAppear 0.8s ease forwards 1.5s;
+	animation: curtainAppear 0.8s ease forwards 1.6s;
 	width: 5vw;
 	@apply opacity-0 h-screen z-20 flex flex-col justify-between duration-500;
 }
@@ -174,5 +184,25 @@
 
 	100% {
 		@apply w-full;
+	}
+}
+
+@keyframes leftSideOpening {
+	0% {
+		@apply w-1/2;
+	}
+
+	100% {
+		@apply w-0;
+	}
+}
+
+@keyframes leftSideClosing {
+	0% {
+		@apply w-0;
+	}
+
+	100% {
+		@apply w-1/2;
 	}
 }
