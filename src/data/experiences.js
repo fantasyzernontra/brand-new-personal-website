@@ -3,6 +3,8 @@
 // 3: 'Business'
 // 4: 'Work as a Employee'
 
+import AlchemistLogo from '../assets/image/Alchemist-Logo.png'
+
 const experiences = [
 	{
 		exp_type: 1,
@@ -87,7 +89,7 @@ const experiences = [
 		exp_full_name: 'Co-Founder @ Alchemist',
 		exp_ref: 'https://alchemist-softwarehouse.co/',
 		exp_logo: {
-			url: 'https://raw.githubusercontent.com/AlchemistSoftwareHouse/landingpage/master/public/logo/Alchemist-Logo-512x512.png?token=ANDPMM6SMG3PLUQHTYCYLBTA73WYC',
+			url: AlchemistLogo,
 			alt: 'Alchemist Logo',
 			width: 400,
 			height: 350,

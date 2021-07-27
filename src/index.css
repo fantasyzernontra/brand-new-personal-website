@@ -3,6 +3,7 @@
 @import './styles/works.css';
 @import './styles/work-in-details.css';
 @import './styles/experience.css';
+@import './styles/contact.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,0 +1,50 @@
+.contact-main-container {
+	width: 95vw;
+	@apply bg-white h-screen flex flex-row;
+}
+
+.contact-main-container .left {
+	background-image: url('../assets/image/self3.jpg');
+	@apply w-1/2 h-screen
+		bg-cover  bg-bottom;
+}
+
+.contact-main-container .right {
+	@apply w-1/2 h-screen bg-white py-12 px-28 flex flex-col justify-between;
+}
+
+.contact-main-container .right .contact-container {
+	@apply flex flex-row ml-auto gap-x-5 items-center;
+}
+
+.contact-main-container .right .contact-container .contact-text {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-lg tracking-wide cursor-pointer duration-500;
+}
+
+.contact-text:hover {
+	@apply text-soft_pink;
+}
+
+.contact-main-container .right .contact-speech {
+	@apply flex flex-col gap-y-3;
+}
+
+.contact-main-container .right .contact-speech .contact-title {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-4xl capitalize tracking-wide;
+}
+
+.contact-main-container .right .contact-speech .contact-description {
+	font-family: 'SourceSansPro-ExtraLight';
+	@apply text-lg tracking-wide;
+}
+
+.contact-page-contact-button {
+	@apply duration-200 cursor-pointer  rounded-lg;
+}
+
+.contact-page-contact-button:hover {
+	transform: rotate(-10deg);
+	@apply bg-gray-200;
+}
