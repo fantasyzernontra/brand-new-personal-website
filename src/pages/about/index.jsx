@@ -14,8 +14,8 @@ const About = () => {
 
 	return (
 		<SideBar setIsOpenCurtain={setIsOpenCurtain}>
+			<HamBurgerMenu setIsOpenCurtain={setIsOpenCurtain} />
 			<FullCurtain isOpen={isOpenCurtain} />
-			<HamBurgerMenu />
 			<section className='about_container'>
 				<article className='about_header'>
 					<h2 className='text-lg md:text-2xl'>Non Nontra</h2>

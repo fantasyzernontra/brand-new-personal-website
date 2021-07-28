@@ -1,22 +1,22 @@
 /* Components */
 .curtain {
 	animation: curtainSliding 1.5s ease forwards;
-	@apply h-screen w-full bg-white absolute duration-500 z-10;
+	@apply h-screen w-full bg-white absolute duration-500 z-20 md:z-10;
 }
 
 .closed-curtain {
 	animation: curtainClosing 1.5s ease forwards;
-	@apply h-screen w-0  bg-white absolute duration-500 z-10;
+	@apply h-screen w-0  bg-white absolute duration-500 z-20 md:z-10;
 }
 
 .half-curtain {
 	animation: halfCurtainSliding 1.5s ease forwards;
-	@apply h-screen w-full bg-white absolute duration-500 z-10;
+	@apply h-screen w-full bg-white absolute duration-500 z-20 md:z-10;
 }
 
 .closed-half-curtain {
 	animation: halfCurtainClosing 1.5s ease forwards;
-	@apply h-screen w-1/2  bg-white absolute duration-500 z-10;
+	@apply h-screen w-1/2  bg-white absolute duration-500 z-20 md:z-10;
 }
 
 .closed-full-curtain {
@@ -29,12 +29,12 @@
 
 .half-left-curtain {
 	animation: leftSideOpening 0.9s ease forwards;
-	@apply h-screen w-1/2  bg-white absolute duration-500 z-10;
+	@apply h-screen w-1/2  bg-white absolute duration-500 z-20 md:z-10;
 }
 
 .closed-half-left-curtain {
 	animation: leftSideClosing 0.9s ease forwards;
-	@apply h-screen w-0 bg-white absolute duration-500 z-10;
+	@apply h-screen w-0 bg-white absolute duration-500 z-20 md:z-10;
 }
 
 .sidebar_container {
@@ -118,12 +118,31 @@
 	@apply absolute w-6 rotate-0 transition-all;
 }
 
+.open-hamburger-topbun,
+.open-hamburger-bottombun {
+	content: '';
+	height: 2px;
+	@apply absolute w-6 rotate-0 transition-all bg-hard_blue;
+}
+
+.open-hamburger-topbun {
+	transform: rotate(45deg) translateY(0px);
+}
+
+.open-hamburger-bottombun {
+	transform: rotate(-45deg) translateY(0px);
+}
+
 .hamburger-topbun {
 	transform: translateY(-5px);
+	transition: 1.3s;
+	@apply opacity-100;
 }
 
 .hamburger-bottombun {
 	transform: translateY(3px);
+	transition: 1.3s;
+	@apply opacity-100;
 }
 
 .open {
@@ -133,41 +152,60 @@
 
 .open .hamburger-topbun {
 	transform: rotate(45deg) translateY(0px);
+	@apply opacity-0;
 }
 
 .open .hamburger-bottombun {
 	transform: rotate(-45deg) translateY(0px);
+	@apply opacity-0;
 }
 
 .mobile-nav-menu {
-	@apply w-0 absolute h-screen overflow-hidden bg-white z-50 p-7 opacity-0 duration-1000 flex flex-col justify-between;
+	@apply w-0 absolute h-screen overflow-hidden bg-white z-20 duration-1000 flex flex-col justify-between;
+}
+
+.mobile-nav-menu.inactive {
+	animation: hamburgerDisappearing 1.2s ease forwards;
 }
 
 .mobile-nav-menu.active {
 	animation: hamburgerAppearing 1.2s ease forwards;
 }
 
+.mobile-nav-menu.active.animated
+	> .nav-menu-content
+	> .navLink
+	> .navlink-line {
+	animation: navLinkLineExpanding 1.2s ease forwards 0.8s;
+}
+
 .mobile-nav-menu .nav-menu-content {
-	@apply flex flex-col gap-y-4;
+	@apply flex flex-col gap-y-4 overflow-hidden;
+}
+
+.nav-menu-header {
+	@apply flex flex-row justify-between overflow-hidden;
 }
 
 .nav-menu-lang {
-	@apply flex flex-row gap-x-2 text-xl;
+	@apply flex flex-row gap-x-2 text-xl w-max overflow-hidden;
 }
 
 .navLink {
-	font-family: 'SourceSansPro-ExtraLight';
-	@apply text-hard_blue text-xl capitalize duration-300;
+	font-family: 'SourceSansPro-Regular';
+	@apply text-hard_blue text-xl capitalize duration-300 overflow-hidden;
 }
 
 .navlink-line {
-	animation: navLinkLineExpanding 1.2s ease forwards 1.2s;
-	@apply w-0;
+	@apply w-0 overflow-hidden;
 }
 
 .navLink.active > .navlink-line {
-	animation: navLinkLineExpanding 1.2s ease forwards 1.2s;
-	@apply border-hard_blue;
+	@apply border-hard_blue overflow-hidden;
+}
+
+.nav-menu-footer {
+	@apply flex flex-row justify-between items-center overflow-hidden;
 }
 
 @keyframes discoverLoop {
@@ -274,7 +312,7 @@
 
 @keyframes hamburgerAppearing {
 	0% {
-		@apply w-0;
+		@apply w-0 p-7;
 	}
 
 	1% {
@@ -282,7 +320,7 @@
 	}
 
 	100% {
-		@apply w-screen opacity-100;
+		@apply w-screen opacity-100 p-7;
 	}
 }
 
@@ -293,5 +331,19 @@
 
 	100% {
 		@apply w-full;
+	}
+}
+
+@keyframes hamburgerDisappearing {
+	0% {
+		@apply w-screen p-7;
+	}
+
+	99% {
+		@apply opacity-0 p-7;
+	}
+
+	100% {
+		@apply w-0 opacity-0 p-0;
 	}
 }

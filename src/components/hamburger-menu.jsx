@@ -1,10 +1,23 @@
-import { Link } from 'react-router-dom'
+import { Link, useHistory, useLocation } from 'react-router-dom'
 
 import DarkContactButton from '../components/contact/contact-button'
 
-import ContactButtonData from '../data/contact-button'
+import NavBarData from '../data/navbar'
+import ContactButtonData from '../data/dark-contact-button'
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ setIsOpenCurtain }) => {
+	const history = useHistory()
+	const location = useLocation()
+
+	function navToggle() {
+		const btn = document.getElementById('menuBtn')
+		const menu = document.getElementById('menu')
+		btn.classList.toggle('open')
+		menu.classList.remove('active')
+		menu.classList.add('inactive')
+		menu.classList.toggle('animated')
+	}
+
 	return (
 		<div id='menu' className='mobile-nav-menu'>
 			<div className='nav-menu-header'>
@@ -13,42 +26,65 @@ const HamburgerMenu = () => {
 					<span>/</span>
 					<span>TH</span>
 				</div>
+				<button
+					className='hamburger block lg:hidden focus:outline-none tracking-widest'
+					type='button'
+					onClick={navToggle}
+				>
+					<span className='open-hamburger-topbun'></span>
+					<span className='open-hamburger-bottombun'></span>
+				</button>
 			</div>
 			<div className='nav-menu-content'>
-				<div className='navLink active'>
-					<span>
-						<Link to='/'>about</Link>
-					</span>
-					<hr className='navlink-line' />
-				</div>
-				<div className='navLink'>
-					<span>
-						<Link to='/works'>works</Link>
-					</span>
-					<hr className='navlink-line' />
-				</div>
-				<div className='navLink'>
-					<span>
-						<Link to='/experiences'>experiences</Link>
-					</span>
-					<hr className='navlink-line' />
-				</div>
-				<div className='navLink'>
-					<span>
-						<Link to='/contact'>contact</Link>
-					</span>
-					<hr className='navlink-line' />
-				</div>
+				{NavBarData.map((text, index) => (
+					<div
+						key={index}
+						className={`navLink ${
+							location.pathname.replace('/', '').includes(text) ||
+							(location.pathname === '/' && text === 'about')
+								? 'active'
+								: 'inactive'
+						}`}
+					>
+						<span
+							onClick={() => {
+								if (
+									!location.pathname.replace('/', '').includes(text) &&
+									!(location.pathname === '/' && text === 'about')
+								) {
+									setIsOpenCurtain(false)
+									setTimeout(
+										() => history.push(text === 'about' ? '' : '/' + text),
+										1500
+									)
+								}
+							}}
+						>
+							{text}
+						</span>
+						<hr className='navlink-line' />
+					</div>
+				))}
 			</div>
 			<div className='nav-menu-footer'>
-				<DarkContactButton
-					img={ContactButtonData[1].img}
-					alt={ContactButtonData[1].alt}
-				/>
-				<DarkContactButton
-					img={ContactButtonData[2].img}
-					alt={ContactButtonData[2].alt}
-				/>
+				<span>
+					<Link
+						to={{ pathname: 'mailto:non_nontra@hotmail.com' }}
+						target='_blank'
+					>
+						non_nontra@hotmail.com
+					</Link>
+				</span>
+				<div className='flex flex-row gap-x-1'>
+					<DarkContactButton
+						img={ContactButtonData[1].img}
+						alt={ContactButtonData[1].alt}
+					/>
+					<DarkContactButton
+						img={ContactButtonData[2].img}
+						alt={ContactButtonData[2].alt}
+					/>
+				</div>
 			</div>
 		</div>
 	)

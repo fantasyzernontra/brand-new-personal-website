@@ -3,7 +3,11 @@ const HamBurger = () => {
 		const btn = document.getElementById('menuBtn')
 		const menu = document.getElementById('menu')
 		btn.classList.toggle('open')
-		menu.classList.toggle('active')
+		menu.classList.add('active')
+		menu.classList.remove('inactive')
+		setTimeout(() => {
+			menu.classList.toggle('animated')
+		}, 1200)
 	}
 
 	return (
