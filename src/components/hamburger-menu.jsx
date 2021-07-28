@@ -10,9 +10,12 @@ const HamburgerMenu = ({ setIsOpenCurtain }) => {
 	const location = useLocation()
 
 	function navToggle() {
-		const btn = document.getElementById('menuBtn')
+		const btnDark = document.getElementById('menuBtn-dark')
+		const btnLight = document.getElementById('menuBtn-light')
 		const menu = document.getElementById('menu')
-		btn.classList.toggle('open')
+		
+		if (btnDark) btnDark.classList.toggle('open')
+		if (btnLight) btnLight.classList.toggle('open')
 		menu.classList.remove('active')
 		menu.classList.add('inactive')
 		menu.classList.toggle('animated')
@@ -27,12 +30,13 @@ const HamburgerMenu = ({ setIsOpenCurtain }) => {
 					<span>TH</span>
 				</div>
 				<button
+					id='menuBtn-dark'
 					className='hamburger block lg:hidden focus:outline-none tracking-widest'
 					type='button'
 					onClick={navToggle}
 				>
-					<span className='open-hamburger-topbun'></span>
-					<span className='open-hamburger-bottombun'></span>
+					<span className='dark-hamburger-topbun'></span>
+					<span className='dark-hamburger-bottombun'></span>
 				</button>
 			</div>
 			<div className='nav-menu-content'>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import FullCurtain from '../../components/animation/full-curtain'
 import SideBar from '../../components/sidebar'
 import ContactButton from '../../components/about/contact-button'
-import HamBurgerButton from '../../components/hamburger-button'
+import LigthHamburgerButton from '../../components/light-hamburger-button'
 import HamBurgerMenu from '../../components/hamburger-menu'
 
 import ContactButtonData from '../../data/contact-button'
@@ -30,7 +30,7 @@ const About = () => {
 							/>
 						))}
 					</div>
-					<HamBurgerButton />
+					<LigthHamburgerButton />
 				</article>
 				<article className='about_content'>
 					<div className='welcome_container'>

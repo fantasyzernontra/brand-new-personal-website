@@ -1,3 +1,5 @@
+/* Desktop, Tablet Version */
+
 .works-container {
 	font-family: 'SourceSansPro-Regular';
 	@apply h-screen overflow-auto w-full bg-white flex flex-row;
@@ -115,4 +117,19 @@
 	100% {
 		@apply w-0;
 	}
+}
+
+/* Mobile Version */
+
+.works-container-mobile {
+	@apply flex flex-col p-7 bg-white h-screen overflow-auto w-screen;
+}
+
+.works-header-container-mobile {
+	@apply flex flex-row justify-between items-center;
+}
+
+.work-title-mobile {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-2xl text-hard_blue tracking-wider;
 }

@@ -5,8 +5,8 @@ import { useOrientation } from '../../utils/useOrientation'
 import SideBar from '../../components/sidebar'
 import FullCurtain from '../../components/animation/full-curtain'
 import HalfCurtain from '../../components/animation/half-curtain'
-import WorkName from '../../components/works/work-name'
-import HamBurger from '../../components/hamburger-button'
+import WorkName from '../../components/works/desktop/work-name'
+import DarkHamBurger from '../../components/dark-hamburger-button'
 import HamburgerMenu from '../../components/hamburger-menu'
 
 import WorkInfo from '../../data/works'
@@ -111,7 +111,14 @@ const Works = () => {
 			{/* Mobile Version */}
 			{isMobile && <FullCurtain isOpen={isOpenCurtain} />}
 			{isMobile && <HamburgerMenu setIsOpenCurtain={onOpenCurtain} />}
-			{isMobile && <section></section>}
+			{isMobile && (
+				<section className='works-container-mobile'>
+					<article className='works-header-container-mobile'>
+						<span className='work-title-mobile'>Works:</span>
+						<DarkHamBurger />
+					</article>
+				</section>
+			)}
 		</SideBar>
 	)
 }

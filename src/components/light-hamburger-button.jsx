@@ -1,8 +1,10 @@
 const HamBurger = () => {
 	function navToggle() {
-		const btn = document.getElementById('menuBtn')
+		const btnDark = document.getElementById('menuBtn-dark')
+		const btnLight = document.getElementById('menuBtn-light')
 		const menu = document.getElementById('menu')
-		btn.classList.toggle('open')
+		btnDark.classList.toggle('open')
+		btnLight.classList.toggle('open')
 		menu.classList.add('active')
 		menu.classList.remove('inactive')
 		setTimeout(() => {
@@ -13,7 +15,7 @@ const HamBurger = () => {
 	return (
 		<div>
 			<button
-				id='menuBtn'
+				id='menuBtn-light'
 				className='hamburger block lg:hidden focus:outline-none tracking-widest'
 				type='button'
 				onClick={navToggle}
