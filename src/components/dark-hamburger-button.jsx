@@ -16,7 +16,7 @@ const DarkHamBurger = () => {
 		<div>
 			<button
 				id='menuBtn-dark'
-				className='hamburger block lg:hidden focus:outline-none tracking-widest'
+				className='dark-hamburger block lg:hidden focus:outline-none tracking-widest'
 				type='button'
 				onClick={navToggle}
 			>

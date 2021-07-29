@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useObserverWithUnObserve } from '../../../utils/useObserverWithUnObserver'
+import { useOrientation } from '../../../utils/useOrientation'
 
 import ClosedCurtain from '../../../components/animation/closed-full-curtain'
 import SideBar from '../../../components/sidebar'
@@ -20,30 +21,38 @@ const WorkInDetails = ({ match }) => {
 	const workDescWrapper = useRef(null)
 	const painPointWrapper = useRef(null)
 	const partnetTestimonialWrapper = useRef(null)
+	const isMobile = useOrientation()
 
 	useEffect(() => {
-		observer(workDescWrapper.current, 'work-desc-appear')
-		if (work.painpoint_relieving)
-			observer(painPointWrapper.current, 'painpoint-appear')
-		if (work.partners_testimonial)
-			observer(partnetTestimonialWrapper.current, 'partner-testimonial-appear')
+		if (!isMobile) {
+			observer(workDescWrapper.current, 'work-desc-appear')
+			if (work.painpoint_relieving)
+				observer(painPointWrapper.current, 'painpoint-appear')
+			if (work.partners_testimonial)
+				observer(
+					partnetTestimonialWrapper.current,
+					'partner-testimonial-appear'
+				)
+		}
 	}, [observer, work.painpoint_relieving, work.partners_testimonial])
 
 	return (
 		<SideBar withOutAnimation={true} setIsOpenCurtain={onCloseCurtain}>
 			<ClosedCurtain isClosed={isCloseCurtain} />
-			<section className='work-details-container'>
-				<WorkBanner work={work} />
-				<WorkDescription work={work} ref={workDescWrapper} />
-				<WorkPictures url={work.pictures[0].url} alt={work.pictures[0].alt} />
-				{work.painpoint_relieving && (
-					<PainPointRelieving work={work} ref={painPointWrapper} />
-				)}
-				<WorkPictures url={work.pictures[1].url} alt={work.pictures[1].alt} />
-				{work.partners_testimonial && (
-					<PartnerTestimonial work={work} ref={partnetTestimonialWrapper} />
-				)}
-			</section>
+			{!isMobile && (
+				<section className='work-details-container'>
+					<WorkBanner work={work} />
+					<WorkDescription work={work} ref={workDescWrapper} />
+					<WorkPictures url={work.pictures[0].url} alt={work.pictures[0].alt} />
+					{work.painpoint_relieving && (
+						<PainPointRelieving work={work} ref={painPointWrapper} />
+					)}
+					<WorkPictures url={work.pictures[1].url} alt={work.pictures[1].alt} />
+					{work.partners_testimonial && (
+						<PartnerTestimonial work={work} ref={partnetTestimonialWrapper} />
+					)}
+				</section>
+			)}
 		</SideBar>
 	)
 }

@@ -110,6 +110,10 @@
 	@apply cursor-pointer w-12 h-12 transition-all;
 }
 
+.dark-hamburger {
+	@apply cursor-pointer w-12 h-12 transition-all;
+}
+
 .hamburger-topbun,
 .hamburger-bottombun {
 	content: '';

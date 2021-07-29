@@ -12,9 +12,11 @@ const works = [
 		label: 'wungsun-clinic.online',
 		path_name: 'wungsun-clinic',
 		work_type: [1, 2],
+		work_type_mobile: 'Development / Operation',
 		short_work_name: 'Wungsun Clinic',
 		work_name: 'Wungsun Clinic - OPD Online System',
 		short_desc: 'Dermatologist Online Treatment System',
+		hook_sentence: 'Medical Online System, Thailand',
 		url: 'https://wungsun-clinic.online',
 		description:
 			"Wungsun Clinic's OPD (Out Patient Department) Online System. This system has been based on web-application or generally, they're called 'Website'. This application is allowed any patients who are suffering in dermatology submitting their disease and get the treatment. Also, the doctor and clinic's worker would be able to performing the treatment through the application.",
@@ -51,6 +53,7 @@ const works = [
 		short_work_name: 'KiiD Event Attendance',
 		work_name: 'KiiD Event Attendance Web Application',
 		short_desc: 'Event Establishment Platform',
+		hook_sentence: 'Event Management Online System',
 		url: 'https://kiidincubeprogram.com',
 		description:
 			'KiiD Event Attendance is a web-application which is capable of establishing the event, attendee management, staff assigning and QR code checking in.',

@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, createRef, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useOrientation } from '../../utils/useOrientation'
+import { useObserverWithUnObserve } from '../../utils/useObserverWithUnObserver'
 
 import SideBar from '../../components/sidebar'
 import FullCurtain from '../../components/animation/full-curtain'
@@ -8,6 +9,7 @@ import HalfCurtain from '../../components/animation/half-curtain'
 import WorkName from '../../components/works/desktop/work-name'
 import DarkHamBurger from '../../components/dark-hamburger-button'
 import HamburgerMenu from '../../components/hamburger-menu'
+import WorkCard from '../../components/works/mobile/work-card'
 
 import WorkInfo from '../../data/works'
 
@@ -23,6 +25,10 @@ const Works = () => {
 	const [isViewInDetails, setIsViewInDetails] = useState(false)
 	const [isLoaded, setIsLoaded] = useState(false)
 	const isMobile = useOrientation()
+
+	// Observing Ref.
+	const [workRef, setWorkRef] = useState([])
+	const observer = useObserverWithUnObserve
 
 	function setHoverWork(workId) {
 		hoverWork.current = workId
@@ -46,9 +52,28 @@ const Works = () => {
 		setTimeout(() => history.push(`/works/${work.path_name}`), 2000)
 	}
 
+	function onLoadWorkRef() {
+		setWorkRef(
+			WorkInfo.map((item, index) => {
+				const ref = createRef()
+				return ref
+			})
+		)
+		if (isMobile)
+			workRef.map((item) => {
+				return observer(item.current, 'workRef-active')
+			})
+	}
+
 	useEffect(() => {
-		setTimeout(() => setIsLoaded(true), 2700)
-	}, [])
+		setTimeout(() => {
+			setIsLoaded(true)
+		}, 2700)
+	})
+
+	useEffect(() => {
+		onLoadWorkRef()
+	})
 
 	useEffect(() => {
 		if (isViewInDetails) onViewWorkDetails()
@@ -116,6 +141,23 @@ const Works = () => {
 					<article className='works-header-container-mobile'>
 						<span className='work-title-mobile'>Works:</span>
 						<DarkHamBurger />
+					</article>
+					<article className='works-list-container-mobile'>
+						{WorkInfo.map((item, index) => (
+							<WorkCard
+								key={index}
+								img={item.banner}
+								work_name={item.short_work_name}
+								work_desc={item.short_desc}
+								work_type_mobile={item.hook_sentence}
+								onClick={() => {
+									onOpenCurtain(false)
+									setHoverWork(item.id)
+									setIsViewInDetails(true)
+								}}
+								ref={workRef[index]}
+							/>
+						))}
 					</article>
 				</section>
 			)}

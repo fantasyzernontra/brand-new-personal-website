@@ -63,7 +63,7 @@
 }
 
 .about-header-contact-button-container {
-	@apply hidden md:flex flex-row gap-x-5 justify-center items-center;
+	@apply hidden md:flex flex-row gap-x-5 justify-end ml-auto items-center;
 }
 
 .contact-button {

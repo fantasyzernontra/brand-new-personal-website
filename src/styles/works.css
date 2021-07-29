@@ -130,6 +130,50 @@
 }
 
 .work-title-mobile {
-	font-family: 'SourceSansPro-SemiBold';
+	font-family: 'SourceSansPro-Regular';
 	@apply text-2xl text-hard_blue tracking-wider;
+}
+
+.work-card-container {
+	@apply my-8;
+}
+
+.work-card-banner-container {
+	@apply overflow-hidden;
+}
+
+.work-card-banner {
+	transform: scale(1.5);
+	@apply my-6 object-cover;
+}
+
+.work-card-container.workRef-active
+	> .work-card-banner-container
+	> .work-card-banner {
+	animation: workRefScaling 1.2s ease forwards;
+}
+
+.work-card-title {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-xl my-2;
+}
+
+.work-card-desc {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-base my-2;
+}
+
+.work-card-hook {
+	font-family: 'SourceSansPro-ExtraLight';
+	@apply text-gray-400 text-base my-2;
+}
+
+@keyframes workRefScaling {
+	0% {
+		transform: scale(1.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
