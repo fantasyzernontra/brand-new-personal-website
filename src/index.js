@@ -4,6 +4,8 @@ import './index.css'
 import App from './pages/index'
 import reportWebVitals from './reportWebVitals'
 
+import './i18n'
+
 import { BrowserRouter as Router } from 'react-router-dom'
 
 ReactDOM.render(
