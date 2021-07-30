@@ -13,7 +13,7 @@ const HamburgerMenu = ({ setIsOpenCurtain }) => {
 		const btnDark = document.getElementById('menuBtn-dark')
 		const btnLight = document.getElementById('menuBtn-light')
 		const menu = document.getElementById('menu')
-		
+
 		if (btnDark) btnDark.classList.toggle('open')
 		if (btnLight) btnLight.classList.toggle('open')
 		menu.classList.remove('active')
@@ -53,7 +53,7 @@ const HamburgerMenu = ({ setIsOpenCurtain }) => {
 						<span
 							onClick={() => {
 								if (
-									!location.pathname.replace('/', '').includes(text) &&
+									location.pathname.replace('/', '') !== text &&
 									!(location.pathname === '/' && text === 'about')
 								) {
 									setIsOpenCurtain(false)

@@ -1,4 +1,10 @@
-import React, { useState, useRef, createRef, useEffect } from 'react'
+import React, {
+	useState,
+	useRef,
+	createRef,
+	useEffect,
+	useCallback,
+} from 'react'
 import { useHistory } from 'react-router-dom'
 import { useOrientation } from '../../utils/useOrientation'
 import { useObserverWithUnObserve } from '../../utils/useObserverWithUnObserver'
@@ -52,18 +58,20 @@ const Works = () => {
 		setTimeout(() => history.push(`/works/${work.path_name}`), 2000)
 	}
 
-	function onLoadWorkRef() {
-		setWorkRef(
-			WorkInfo.map((item, index) => {
-				const ref = createRef()
-				return ref
-			})
-		)
+	const onLoadWorkRef = useCallback(() => {
+		const refArr = []
+		for (let i = 0; i < WorkInfo.length; i++) {
+			const ref = createRef()
+			refArr.push(ref)
+		}
+
+		setWorkRef(refArr)
 		if (isMobile)
 			workRef.map((item) => {
 				return observer(item.current, 'workRef-active')
 			})
-	}
+		// eslint-disable-next-line
+	}, [isMobile])
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -71,9 +79,7 @@ const Works = () => {
 		}, 2700)
 	})
 
-	useEffect(() => {
-		onLoadWorkRef()
-	})
+	useEffect(() => onLoadWorkRef(), [onLoadWorkRef, isLoaded])
 
 	useEffect(() => {
 		if (isViewInDetails) onViewWorkDetails()

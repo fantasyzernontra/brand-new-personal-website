@@ -30,7 +30,7 @@
 
 .visiting-label {
 	font-family: 'SourceSansPro-Regular';
-	@apply uppercase text-xl tracking-widest text-gray-300 duration-700;
+	@apply uppercase text-base  md:text-xl tracking-widest text-gray-300 duration-700;
 }
 
 .visiting-line {
@@ -227,6 +227,249 @@
 
 	100% {
 		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+/* Mobile */
+
+.work-details-banner-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply h-screen w-full bg-cover flex flex-col items-center justify-center text-center text-white_text gap-y-5 p-5;
+}
+
+.work-banner-title-mobile {
+	font-family: 'SourceSansPro-SemiBold';
+	transform: translateY(60px);
+	animation: workBannerAppearingMobile 0.8s ease forwards 1s;
+	@apply text-3xl opacity-0;
+}
+
+.work-banner-short-desc-mobile {
+	font-family: 'SourceSansPro-ExtraLight';
+	transform: translateY(60px);
+	animation: workBannerAppearingMobile 0.8s ease forwards 1.4s;
+	@apply text-xl opacity-0;
+}
+
+.work-explanation-mobile {
+	@apply p-10;
+}
+
+.visiting-container-mobile {
+	transform: translateY(60px);
+	animation: workBannerAppearingMobile 0.8s ease forwards 1.6s;
+	@apply flex flex-row gap-x-5 justify-center items-center opacity-0;
+}
+
+.visiting-label-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply tracking-wide uppercase;
+}
+
+.visiting-line-mobile {
+	@apply border border-gray-300 w-5 duration-700;
+}
+
+.introduction-details-sub-container-mobile {
+	transform: translateX(-50px);
+	@apply flex flex-col gap-y-1 my-5 opacity-0;
+}
+
+.introduction-details-header-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-gray-400 uppercase;
+}
+
+.introduction-details-content-mobile {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-lg text-hard_blue capitalize;
+}
+
+.introduction-details-production-mobile {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-lg text-hard_blue;
+}
+
+.work-picture-mobile {
+	@apply flex border-b border-gray-200;
+}
+
+.painpoint-relieving-container-mobile {
+	@apply flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
+}
+
+.painpoint-relieving-article-mobile {
+	@apply flex flex-col gap-y-3 items-center;
+}
+
+.painpoint-relieving-title-mobile {
+	font-family: 'SourceSansPro-SemiBold';
+	transform: translateY(60px);
+	@apply text-2xl capitalize text-left w-full opacity-0;
+}
+
+.painpoint-relieving-desc-mobile {
+	font-family: 'SourceSansPro-ExtraLight';
+	transform: translateX(-50px);
+	@apply text-lg tracking-wide opacity-0;
+}
+
+.partner-testimonial-container-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
+}
+
+.partner-testimonial-article-mobile {
+	@apply flex flex-col gap-y-5 items-start;
+}
+
+.partner-testimonial-title-mobile {
+	font-family: 'SourceSansPro-SemiBold';
+	transform: translateY(60px);
+	@apply text-xl capitalize text-hard_pink tracking-widest opacity-0;
+}
+
+.partner-testimonial-speech-mobile {
+	font-family: 'SourceSansPro-ExtraLight';
+	transform: translateY(60px);
+	@apply text-lg tracking-wide opacity-0;
+}
+
+.partner-name-mobile-container {
+	transform: translateX(-50px);
+	@apply flex flex-col justify-center items-start gap-x-1 w-full opacity-0;
+}
+
+.partner-testimonial-name-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-base tracking-normal text-gray-400;
+}
+
+.partner-testimonial-org-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-hard_blue text-base tracking-normal;
+}
+
+/* Work Description Animation Mobile */
+.work-details-introduction-mobile.work-desc-appear
+	> .work-explanation-mobile
+	> .introduction-details-sub-container-mobile:nth-child(1) {
+	animation: workExplanationMobileAppearing 0.8s ease forwards;
+}
+
+.work-details-introduction-mobile.work-desc-appear
+	> .work-explanation-mobile
+	> .introduction-details-sub-container-mobile:nth-child(2) {
+	animation: workExplanationMobileAppearing 0.8s ease forwards 0.2s;
+}
+
+.work-details-introduction-mobile.work-desc-appear
+	> .work-explanation-mobile
+	> .introduction-details-sub-container-mobile:nth-child(3) {
+	animation: workExplanationMobileAppearing 0.8s ease forwards 0.4s;
+}
+
+.work-details-introduction-mobile.work-desc-appear
+	> .work-explanation-mobile
+	> .introduction-details-sub-container-mobile:nth-child(4) {
+	animation: workExplanationMobileAppearing 0.8s ease forwards 0.6s;
+}
+
+.work-details-introduction-mobile.work-desc-appear
+	> .work-explanation-mobile
+	> .introduction-details-sub-container-mobile:nth-child(5) {
+	animation: workExplanationMobileAppearing 0.8s ease forwards 0.8s;
+}
+
+/* Pain Point Relieving Mobile Animation */
+.painpoint-relieving-container-mobile.painpoint-appear
+	> .painpoint-relieving-article-mobile
+	> .painpoint-relieving-title-mobile {
+	animation: painPointAppearMobile 0.8s ease forwards;
+}
+
+.painpoint-relieving-container-mobile.painpoint-appear
+	> .painpoint-relieving-article-mobile
+	> .painpoint-relieving-desc-mobile {
+	animation: painPointAppearMobile 0.8s ease forwards 0.5s;
+}
+
+/* Partner Testimonial Mobile Animation */
+.partner-testimonial-container-mobile.partner-testimonial-appear
+	> .partner-testimonial-article-mobile
+	> .partner-testimonial-title-mobile {
+	animation: partnerTestimonialMobileAppearing1 0.8s ease forwards;
+}
+
+.partner-testimonial-container-mobile.partner-testimonial-appear
+	> .partner-testimonial-article-mobile
+	> .partner-testimonial-speech-mobile {
+	animation: partnerTestimonialMobileAppearing1 0.8s ease forwards 0.4s;
+}
+
+.partner-testimonial-container-mobile.partner-testimonial-appear
+	> .partner-testimonial-article-mobile
+	> .partner-name-mobile-container {
+	animation: partnerTestimonialMobileAppearing2 0.8s ease forwards 0.6s;
+}
+
+@keyframes workBannerAppearingMobile {
+	0% {
+		transform: translateY(60px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes workExplanationMobileAppearing {
+	0% {
+		transform: translateX(-50px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateX(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes painPointAppearMobile {
+	0% {
+		transform: translateY(60px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes partnerTestimonialMobileAppearing1 {
+	0% {
+		transform: translateY(60px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes partnerTestimonialMobileAppearing2 {
+	0% {
+		transform: translateX(-50px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateX(0);
 		@apply opacity-100;
 	}
 }

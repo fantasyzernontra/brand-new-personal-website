@@ -1,0 +1,26 @@
+import { forwardRef } from 'react'
+
+const PartnerTestimonialMobile = forwardRef(({ work }, ref) => {
+	return (
+		<section className='partner-testimonial-container-mobile' ref={ref}>
+			<article className='partner-testimonial-article-mobile'>
+				<h2 className='partner-testimonial-title-mobile'>
+					partner's testimonial
+				</h2>
+				<p className='partner-testimonial-speech-mobile'>
+					{work.partners_testimonial}
+				</p>
+				<div className='partner-name-mobile-container'>
+					<span className='partner-testimonial-name-mobile'>
+						{work.partners_testimonial_name},{' '}
+					</span>
+					<span className='partner-testimonial-org-mobile'>
+						{work.partners_org}
+					</span>
+				</div>
+			</article>
+		</section>
+	)
+})
+
+export default PartnerTestimonialMobile

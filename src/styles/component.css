@@ -37,6 +37,16 @@
 	@apply h-screen w-0 bg-white absolute duration-500 z-20 md:z-10;
 }
 
+.bottom-to-top-curtain {
+	animation: bottomToTopCurtainOpening 1.5s ease forwards;
+	@apply h-screen w-screen bg-white absolute duration-500 z-20 md:z-10;
+}
+
+.closed-bottom-to-top-curtain {
+	animation: bottomToTopCurtainClosing 1.5s ease forwards;
+	@apply h-0 w-screen bg-white absolute duration-500 z-20 md:z-10;
+}
+
 .sidebar_container {
 	animation: curtainAppear 0.8s ease forwards 1.6s;
 	width: 5vw;
@@ -361,5 +371,25 @@
 
 	100% {
 		@apply w-0 opacity-0 p-0;
+	}
+}
+
+@keyframes bottomToTopCurtainOpening {
+	0% {
+		@apply h-screen;
+	}
+
+	100% {
+		@apply h-0;
+	}
+}
+
+@keyframes bottomToTopCurtainClosing {
+	0% {
+		@apply h-0;
+	}
+
+	100% {
+		@apply h-screen;
 	}
 }
