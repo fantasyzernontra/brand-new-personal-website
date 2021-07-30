@@ -1,6 +1,7 @@
 // 1: 'dev'
 // 2: 'management/operation'
 // 3: 'digital marketing'
+import KIID from '../assets/image/kiid.jpeg'
 
 const works = [
 	{
@@ -45,7 +46,7 @@ const works = [
 		id: 2,
 		work_type: [1],
 		banner: {
-			url: 'http://www.kiid.city/wp-content/uploads/2017/11/Artboard-1-copy.jpg',
+			url: KIID,
 			alt: 'Kluaynamthai Innovative Industries District',
 		},
 		label: false,
