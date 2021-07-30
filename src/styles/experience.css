@@ -1,13 +1,34 @@
+/* Desktop Version */
 .exp-main-container {
 	width: 95vw;
 	@apply h-screen bg-white overflow-auto;
 }
 
 .parallax-container {
-	background-attachment: fixed;
 	width: 95vw;
 	font-family: 'SourceSansPro-SemiBold';
-	@apply bg-center bg-no-repeat bg-cover h-full flex justify-center items-center text-white_text uppercase text-8xl tracking-widest;
+	@apply bg-center bg-no-repeat bg-cover bg-fixed h-full flex justify-center items-center text-white_text uppercase text-8xl tracking-widest;
+}
+
+.parallax-label {
+	transform: translateY(60px);
+	@apply opacity-0;
+}
+
+.parallax-container#education.label-appear > .parallax-label {
+	animation: parallaxAppearing 0.8s ease forwards 0.6s;
+}
+
+.parallax-container#internship.label-appear > .parallax-label {
+	animation: parallaxAppearing 0.8s ease forwards 0.6s;
+}
+
+.parallax-container#business.label-appear > .parallax-label {
+	animation: parallaxAppearing 0.8s ease forwards 0.6s;
+}
+
+.parallax-container#working.label-appear > .parallax-label {
+	animation: parallaxAppearing 0.8s ease forwards 0.6s;
 }
 
 /* Education Section */
@@ -49,25 +70,25 @@
 .exp-education-container.education-container-appear
 	> .education-container:nth-child(1)
 	.left {
-	animation: leftAppearing 1.5s ease forwards;
+	animation: leftAppearing 0.8s ease forwards;
 }
 
 .exp-education-container.education-container-appear
 	> .education-container:nth-child(2)
 	.left {
-	animation: leftAppearing 1.5s ease forwards 1s;
+	animation: leftAppearing 0.8s ease forwards 0.6s;
 }
 
 .exp-education-container.education-container-appear
 	> .education-container:nth-child(1)
 	.right {
-	animation: rightAppearing 1.5s ease forwards;
+	animation: rightAppearing 0.8s ease forwards;
 }
 
 .exp-education-container.education-container-appear
 	> .education-container:nth-child(2)
 	.right {
-	animation: rightAppearing 1.5s ease forwards 1s;
+	animation: rightAppearing 0.8s ease forwards 0.6s;
 }
 
 /* Internship */
@@ -169,25 +190,25 @@
 .exp-business-container.business-container-appear
 	> .business-container:nth-child(1)
 	.left {
-	animation: leftAppearing 1.5s ease forwards;
+	animation: leftAppearing 0.8s ease forwards;
 }
 
 .exp-business-container.business-container-appear
 	> .business-container:nth-child(2)
 	.left {
-	animation: leftAppearing 1.5s ease forwards 1s;
+	animation: leftAppearing 0.8s ease forwards 0.6s;
 }
 
 .exp-business-container.business-container-appear
 	> .business-container:nth-child(1)
 	.right {
-	animation: rightAppearing 1.5s ease forwards;
+	animation: rightAppearing 0.8s ease forwards;
 }
 
 .exp-business-container.business-container-appear
 	> .business-container:nth-child(2)
 	.right {
-	animation: rightAppearing 1.5s ease forwards 1s;
+	animation: rightAppearing 0.8s ease forwards 0.6s;
 }
 
 /* Working As An Employee */
@@ -229,25 +250,37 @@
 .exp-working-container.working-container-appear
 	> .working-container:nth-child(1)
 	.left {
-	animation: leftAppearing 1.5s ease forwards;
+	animation: leftAppearing 0.8s ease forwards;
 }
 
 .exp-working-container.working-container-appear
 	> .working-container:nth-child(2)
 	.left {
-	animation: leftAppearing 1.5s ease forwards 1s;
+	animation: leftAppearing 0.8s ease forwards 0.6s;
 }
 
 .exp-working-container.working-container-appear
 	> .working-container:nth-child(1)
 	.right {
-	animation: rightAppearing 1.5s ease forwards;
+	animation: rightAppearing 0.8s ease forwards;
 }
 
 .exp-working-container.working-container-appear
 	> .working-container:nth-child(2)
 	.right {
-	animation: rightAppearing 1.5s ease forwards 1s;
+	animation: rightAppearing 0.8s ease forwards 0.6s;
+}
+
+@keyframes parallaxAppearing {
+	0% {
+		transform: translateY(60px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
 }
 
 @keyframes leftAppearing {
@@ -270,6 +303,325 @@
 
 	100% {
 		transform: translateX(0);
+		@apply opacity-100;
+	}
+}
+
+/* Mobile Version */
+
+.exp-main-mobile-container {
+	@apply h-screen w-screen bg-white overflow-auto;
+}
+
+.parallax-mobile-container {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply bg-center bg-no-repeat bg-cover bg-fixed h-full flex justify-center items-center text-white_text uppercase text-4xl tracking-wider;
+}
+
+.parallax-mobile-container#education.label-appear > .parallax-label {
+	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.8s;
+}
+
+.parallax-mobile-container#internship.label-appear > .parallax-label {
+	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.8s;
+}
+
+.parallax-mobile-container#business.label-appear > .parallax-label {
+	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.8s;
+}
+
+.parallax-mobile-container#working.label-appear > .parallax-label {
+	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.8s;
+}
+
+@keyframes parallaxMobileLabelAppearing {
+	0% {
+		transform: translateY(60px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+/* Education Section Mobile */
+
+.exp-education-mobile-container {
+	@apply flex flex-col justify-around items-center;
+}
+
+.education-mobile-container {
+	@apply flex flex-col p-5  w-10/12  items-center justify-center;
+}
+
+.education-content-mobile-container {
+	@apply flex flex-col my-4;
+}
+
+.education-content-label-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-gray-400 uppercase;
+}
+
+.education-title-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-hard_blue text-lg;
+}
+
+.education-mobile-container > .education-logo {
+	transform: translateX(-50px);
+	@apply opacity-0 py-14;
+}
+
+.education-mobile-container > #content-mobile {
+	transform: translateY(60px);
+	@apply opacity-0;
+}
+
+.exp-education-mobile-container.education-container-appear
+	> .education-mobile-container
+	> .education-logo {
+	animation: educationLogoMobileAppear 0.8s ease forwards;
+}
+
+.exp-education-mobile-container.education-container-appear
+	> .education-mobile-container
+	> #content-mobile {
+	animation: educationContentMobileAppear 0.8s ease forwards 0.2s;
+}
+
+@keyframes educationLogoMobileAppear {
+	0% {
+		transform: translateX(-50px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateX(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes educationContentMobileAppear {
+	0% {
+		transform: translateY(60px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+/* Internship Section Mobile */
+
+.exp-internship-mobile-container {
+	@apply flex flex-col justify-around items-center;
+}
+
+.internship-mobile-container {
+	@apply flex flex-col p-5  w-10/12  items-center justify-center;
+}
+
+.internship-content-mobile-container {
+	@apply flex flex-col my-4;
+}
+
+.internship-content-label-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-gray-400 uppercase;
+}
+
+.internship-title-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-hard_blue text-lg;
+}
+
+.internship-mobile-container > .internship-logo {
+	transform: translateX(-50px);
+	@apply opacity-0 py-14;
+}
+
+.internship-mobile-container > #content-mobile {
+	transform: translateY(60px);
+	@apply opacity-0;
+}
+
+.exp-internship-mobile-container.internship-container-appear
+	> .internship-mobile-container
+	> .internship-logo {
+	animation: internshipLogoMobileAppear 0.8s ease forwards;
+}
+
+.exp-internship-mobile-container.internship-container-appear
+	> .internship-mobile-container
+	> #content-mobile {
+	animation: internshipContentMobileAppear 0.8s ease forwards 0.2s;
+}
+
+@keyframes internshipLogoMobileAppear {
+	0% {
+		transform: translateX(-50px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateX(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes internshipContentMobileAppear {
+	0% {
+		transform: translateY(60px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+/* Business Section Mobile */
+
+.exp-business-mobile-container {
+	@apply flex flex-col justify-around items-center;
+}
+
+.business-mobile-container {
+	@apply flex flex-col p-5  w-10/12  items-center justify-center;
+}
+
+.business-content-mobile-container {
+	@apply flex flex-col my-4;
+}
+
+.business-content-label-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-gray-400 uppercase;
+}
+
+.business-title-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-hard_blue text-lg;
+}
+
+.business-mobile-container > .business-logo {
+	transform: translateX(-50px);
+	@apply opacity-0 py-14;
+}
+
+.business-mobile-container > #content-mobile {
+	transform: translateY(60px);
+	@apply opacity-0;
+}
+
+.exp-business-mobile-container.business-container-appear
+	> .business-mobile-container
+	> .business-logo {
+	animation: businessLogoMobileAppear 0.8s ease forwards;
+}
+
+.exp-business-mobile-container.business-container-appear
+	> .business-mobile-container
+	> #content-mobile {
+	animation: businessContentMobileAppear 0.8s ease forwards 0.2s;
+}
+
+@keyframes businessLogoMobileAppear {
+	0% {
+		transform: translateX(-50px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateX(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes businessContentMobileAppear {
+	0% {
+		transform: translateY(60px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+/* Working Section Mobile */
+
+.exp-working-mobile-container {
+	@apply flex flex-col justify-around items-center;
+}
+
+.working-mobile-container {
+	@apply flex flex-col p-5  w-10/12  items-center justify-center;
+}
+
+.working-content-mobile-container {
+	@apply flex flex-col my-4;
+}
+
+.working-content-label-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-gray-400 uppercase;
+}
+
+.working-title-mobile {
+	font-family: 'SourceSansPro-Regular';
+	@apply text-hard_blue text-lg;
+}
+
+.working-mobile-container > .working-logo {
+	transform: translateX(-50px);
+	@apply opacity-0 py-14;
+}
+
+.working-mobile-container > #content-mobile {
+	transform: translateY(60px);
+	@apply opacity-0;
+}
+
+.exp-working-mobile-container.working-container-appear
+	> .working-mobile-container
+	> .working-logo {
+	animation: workingLogoMobileAppear 0.8s ease forwards;
+}
+
+.exp-working-mobile-container.working-container-appear
+	> .working-mobile-container
+	> #content-mobile {
+	animation: workingContentMobileAppear 0.8s ease forwards 0.2s;
+}
+
+@keyframes workingLogoMobileAppear {
+	0% {
+		transform: translateX(-50px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateX(0);
+		@apply opacity-100;
+	}
+}
+
+@keyframes workingContentMobileAppear {
+	0% {
+		transform: translateY(60px);
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
 		@apply opacity-100;
 	}
 }

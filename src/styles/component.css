@@ -6,7 +6,7 @@
 
 .closed-curtain {
 	animation: curtainClosing 1.5s ease forwards;
-	@apply h-screen w-0  bg-white absolute duration-500 z-20 md:z-10;
+	@apply h-screen w-0  bg-white absolute duration-500 z-30 md:z-10;
 }
 
 .half-curtain {

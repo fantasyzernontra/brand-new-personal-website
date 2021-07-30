@@ -1,4 +1,6 @@
-const ParallaxBox = ({ label, img }) => {
+import { forwardRef } from 'react'
+
+const ParallaxBox = forwardRef(({ label, img }, ref) => {
 	return (
 		<section
 			className='parallax-container'
@@ -9,10 +11,12 @@ const ParallaxBox = ({ label, img }) => {
         rgba(0, 0, 0, 0.75)
     ), url(${img})`,
 			}}
+			ref={ref}
+			id={label}
 		>
-			<h1>{label}</h1>
+			<h1 className='parallax-label'>{label}</h1>
 		</section>
 	)
-}
+})
 
 export default ParallaxBox

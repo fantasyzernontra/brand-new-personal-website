@@ -13,10 +13,18 @@ const experiences = [
 		exp_desc: 'GIFTED Thai Curriculum',
 		exp_ref: 'https://www.montfort.ac.th',
 		exp_logo: {
-			url: 'https://www.montfort.ac.th/wp-content/uploads/2020/10/LOGO-MC-5.png',
-			alt: 'Montfort College Logo',
-			width: 400,
-			height: 350,
+			desktop: {
+				url: 'https://www.montfort.ac.th/wp-content/uploads/2020/10/LOGO-MC-5.png',
+				alt: 'Montfort College Logo',
+				width: 400,
+				height: 350,
+			},
+			mobile: {
+				url: 'https://www.montfort.ac.th/wp-content/uploads/2020/10/LOGO-MC-5.png',
+				alt: 'Montfort College Logo',
+				width: 250,
+				height: 200,
+			},
 		},
 		exp_time_period: {
 			from: 2012,
@@ -30,10 +38,18 @@ const experiences = [
 		exp_full_name: "King Mongkut's University of Technology Thonburi",
 		exp_ref: 'https://www.kmutt.ac.th',
 		exp_logo: {
-			url: 'https://www.jgsee.kmutt.ac.th/v3/wp-content/uploads/2019/10/logo1.png',
-			alt: "King Monkut's University of Technology Thonburi",
-			width: 300,
-			height: 300,
+			desktop: {
+				url: 'https://www.jgsee.kmutt.ac.th/v3/wp-content/uploads/2019/10/logo1.png',
+				alt: "King Monkut's University of Technology Thonburi",
+				width: 300,
+				height: 300,
+			},
+			mobile: {
+				url: 'https://www.jgsee.kmutt.ac.th/v3/wp-content/uploads/2019/10/logo1.png',
+				alt: "King Monkut's University of Technology Thonburi",
+				width: 150,
+				height: 150,
+			},
 		},
 		exp_desc:
 			'Computer Science (English Program), School of Information Technology (SIT)',
@@ -49,10 +65,18 @@ const experiences = [
 		exp_full_name: 'Back-end Developer @ Artisan Digital Asia',
 		exp_ref: 'https://artisan.co.th/',
 		exp_logo: {
-			url: 'https://artisan.co.th/wp-content/uploads/2020/02/cover-fb-02.png',
-			alt: 'Artisan Digital Asia Logo',
-			width: 400,
-			height: 350,
+			desktop: {
+				url: 'https://artisan.co.th/wp-content/uploads/2020/02/cover-fb-02.png',
+				alt: 'Artisan Digital Asia Logo',
+				width: 400,
+				height: 350,
+			},
+			mobile: {
+				url: 'https://artisan.co.th/wp-content/uploads/2020/02/cover-fb-02.png',
+				alt: 'Artisan Digital Asia Logo',
+				width: 300,
+				height: 250,
+			},
 		},
 		exp_desc:
 			'Underwent with Business Analysis, Stakeholders Discussion, ER Diagram, Project Structure, Project Management and Development',
@@ -69,10 +93,18 @@ const experiences = [
 		exp_full_name: 'Full-Stack Developer @ SCG Chemicals Co.Ltd',
 		exp_ref: 'https://www.scgchemicals.com/en',
 		exp_logo: {
-			url: 'https://www.watsadupedia.com/images/thumb/2/2c/Scg.png/320px-Scg.png',
-			alt: 'SCG Logo',
-			width: 400,
-			height: 350,
+			desktop: {
+				url: 'https://www.watsadupedia.com/images/thumb/2/2c/Scg.png/320px-Scg.png',
+				alt: 'SCG Logo',
+				width: 400,
+				height: 350,
+			},
+			mobile: {
+				url: 'https://www.watsadupedia.com/images/thumb/2/2c/Scg.png/320px-Scg.png',
+				alt: 'SCG Logo',
+				width: 300,
+				height: 250,
+			},
 		},
 		exp_desc:
 			'Underwent with Business Analysis, Stakeholders Discussion, ER Diagram, Project Structure, Project Management and Development',
@@ -89,10 +121,18 @@ const experiences = [
 		exp_full_name: 'Co-Founder @ Alchemist',
 		exp_ref: 'https://alchemist-softwarehouse.co/',
 		exp_logo: {
-			url: AlchemistLogo,
-			alt: 'Alchemist Logo',
-			width: 400,
-			height: 350,
+			desktop: {
+				url: AlchemistLogo,
+				alt: 'Alchemist Logo',
+				width: 400,
+				height: 350,
+			},
+			mobile: {
+				url: AlchemistLogo,
+				alt: 'Alchemist Logo',
+				width: 300,
+				height: 250,
+			},
 		},
 		exp_desc:
 			'Business IT Solution Based Advisor. We intends to leading Thailand SME at the proper way in order to prepare for Digital Transformation.',

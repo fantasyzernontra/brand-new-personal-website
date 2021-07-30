@@ -8,10 +8,10 @@ const Working = forwardRef(({ work_as_an_employee }, ref) => {
 				<div key={index} className='working-container'>
 					<section className='left'>
 						<img
-							src={item.exp_logo.url}
-							alt={item.exp_logo.alt}
-							width={item.exp_logo.width}
-							height={item.exp_logo.height}
+							src={item.exp_logo.desktop.url}
+							alt={item.exp_logo.desktop.alt}
+							width={item.exp_logo.desktop.width}
+							height={item.exp_logo.desktop.height}
 						/>
 					</section>
 					<section className='right'>
