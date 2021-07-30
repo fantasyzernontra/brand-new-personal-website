@@ -1,6 +1,7 @@
+/* Desktop Version */
 .contact-main-container {
 	width: 95vw;
-	@apply bg-white h-screen flex flex-row;
+	@apply bg-white h-screen flex md:flex-row;
 }
 
 .contact-main-container .left {
@@ -89,6 +90,52 @@
 
 @keyframes contactButtonAppearing {
 	0% {
+		@apply opacity-0;
+	}
+
+	100% {
+		transform: translateY(0);
+		@apply opacity-100;
+	}
+}
+
+/* Mobile Version */
+
+.contact-main-mobile-container {
+	font-family: 'SourceSansPro-Regular';
+	@apply flex flex-col h-screen w-screen;
+}
+
+.profile-pic-mobile-container {
+	@apply h-4/5 w-screen flex;
+}
+
+.profile-pic-mobile {
+	@apply h-full object-cover w-screen;
+}
+
+.contact-content-mobile-container {
+	transform: translateY(100px);
+	animation: contactMeMobileAppearing 0.8s ease forwards 1.5s;
+	@apply flex flex-col items-center p-5 opacity-0;
+}
+
+.contact-title-mobile {
+	font-family: 'SourceSansPro-SemiBold';
+	@apply text-2xl capitalize;
+}
+
+.contact-email-mobile {
+	@apply text-lg;
+}
+
+.contact-button-mobile-container {
+	@apply flex flex-row justify-evenly my-3;
+}
+
+@keyframes contactMeMobileAppearing {
+	0% {
+		transform: translateY(100px);
 		@apply opacity-0;
 	}
 
