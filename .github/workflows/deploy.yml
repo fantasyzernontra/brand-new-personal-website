@@ -1,4 +1,4 @@
-name: Non Nontra's Personal Website Deployment 🚀🌈🚀
+name: Non Nontra's Personal Website Deployment 🚀🌈🚀🌈
 
 on: 
   push:
@@ -11,7 +11,7 @@ env:
 
 jobs:
   Build-And-Deploy:
-    name: Non Nontra's Personal Website Deployment 🚀🌈🚀
+    name: Non Nontra's Personal Website Deployment 🚀🌈🚀🌈
     runs-on: ubuntu-latest
 
     steps:
