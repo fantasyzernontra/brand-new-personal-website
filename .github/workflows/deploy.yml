@@ -20,7 +20,7 @@ jobs:
 
       - name: Build Docker Image
         run: 
-          docker build -f  -t asia.gcr.io/${{ env.PROJECT_ID }}/${{ env.APP_NAME }} .
+          docker build -t asia.gcr.io/${{ env.PROJECT_ID }}/${{ env.APP_NAME }} .
 
       - name: Authenticate into Google Cloud Platform
         uses: google-github-actions/setup-gcloud@master
