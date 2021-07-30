@@ -8,7 +8,7 @@ on:
 env: 
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
   APP_NAME: non-nontra-personal-website
-
+  
 jobs:
   Build-And-Deploy:
     name: Non Nontra's Personal Website Deployment 🚀🌈🚀🌈
