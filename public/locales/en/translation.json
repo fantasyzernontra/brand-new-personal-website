@@ -1,5 +1,14 @@
 {
+	"sidebar": ["contact", "experiences", "works", "about"],
 	"about": {
-        
-    }
+		"welcome": "Hi! I'm Non",
+		"desc1": "Currently, I'm a junior computer science student.",
+		"desc2": "Also, I'm a full stack developer who is familiar",
+		"desc3": "in Full Stack Web Development and Mobile Development.",
+		"desc4": "And I'm a working with myself consistently as a Weight Lifter.",
+		"contact": {
+			"email_label": "E-mail",
+			"phone_label": "Phone"
+		}
+	}
 }

@@ -1,27 +1,17 @@
 import i18n from 'i18next'
-import XHR from 'i18next-xhr-backend'
 import { initReactI18next } from 'react-i18next'
-
-// import translationEN from './public/locales/en/translation.json'
-// import translationTH from './public/locales/th/translation.json'
-
-// const resources = {
-// 	en: {
-// 		translation: translationEN,
-// 	},
-// 	th: {
-// 		translation: translationTH,
-// 	},
-// }
+import Backend from 'i18next-http-backend'
 
 i18n
-	.use(XHR)
+	.use(Backend)
 	.use(initReactI18next)
 	.init({
-		// resources,
 		lng: 'en',
+		fallbackLng: 'en',
+		preload: ['en', 'th'],
 		react: {
 			wait: true,
+			useSuspense: false,
 		},
 	})
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 import FullCurtain from '../../components/animation/full-curtain'
 import SideBar from '../../components/sidebar'
@@ -11,6 +12,8 @@ import ContactButtonData from '../../data/contact-button'
 
 const About = () => {
 	const [isOpenCurtain, setIsOpenCurtain] = useState(true)
+	const [t, i18n] = useTranslation()
+	const currentLanguage = i18n.language
 
 	return (
 		<SideBar setIsOpenCurtain={setIsOpenCurtain}>
@@ -18,7 +21,13 @@ const About = () => {
 			<FullCurtain isOpen={isOpenCurtain} />
 			<section className='about_container'>
 				<article className='about_header'>
-					<h2 className='text-lg md:text-2xl en-regular'>Non Nontra</h2>
+					<h2
+						className={`text-lg md:text-2xl ${
+							currentLanguage === 'en' ? 'en-regular' : 'th-regular'
+						}`}
+					>
+						Non Nontra
+					</h2>
 					<div className='about-header-contact-button-container'>
 						<hr className='w-10 border-hard_pink' />
 						{ContactButtonData.map((item, index) => (
@@ -34,31 +43,40 @@ const About = () => {
 				</article>
 				<article className='about_content'>
 					<div className='welcome_container'>
-						<h1 className='welcome en-semibold'>Hi! I'm Non</h1>
+						<h1
+							className={`welcome ${
+								currentLanguage === 'en' ? 'en-semibold' : 'th-semibold'
+							}`}
+						>
+							{t('about.welcome')}
+						</h1>
 						<hr className='welcome-line' />
-						<div className='about_description en-extralight'>
-							<p className='about-desc-element'>
-								Currently, I'm a junior computer science student.
-							</p>
-							<p className='about-desc-element'>
-								{' '}
-								Also, I'm a full stack developer who is familiar
-							</p>
-							<p className='about-desc-element'>
-								{' '}
-								in Full Stack Web Development and Mobile Development.
-							</p>
-							<p className='about-desc-element'>
-								{' '}
-								And I'm a working with myself consistently as a Weight Lifter.
-							</p>
+						<div
+							className={`about_description ${
+								currentLanguage === 'en' ? 'en-extralight' : 'th-extralight'
+							}`}
+						>
+							<p className='about-desc-element'>{t('about.desc1')}</p>
+							<p className='about-desc-element'> {t('about.desc2')}</p>
+							<p className='about-desc-element'> {t('about.desc3')}</p>
+							<p className='about-desc-element'> {t('about.desc4')}</p>
 						</div>
 					</div>
 				</article>
 				<article className='about_footer'>
 					<div className='about_contact_element'>
-						<span className='about_contact_header en-semibold'>E-mail:</span>
-						<span className='about_contact_sub_header en-regular'>
+						<span
+							className={`about_contact_header ${
+								currentLanguage === 'en' ? 'en-semibold' : 'th-semibold'
+							}`}
+						>
+							{t('about.contact.email_label')}:
+						</span>
+						<span
+							className={`about_contact_sub_header ${
+								currentLanguage === 'en' ? 'en-regular' : 'th-regular'
+							}`}
+						>
 							<Link
 								to={{ pathname: 'mailto:non_nontra@hotmail.com' }}
 								target='_parent'
@@ -68,9 +86,19 @@ const About = () => {
 						</span>
 					</div>
 					{/* Desktop, Tablet Version */}
-					<div className='about_contact_element hidden md:block'>
-						<span className='about_contact_header en-semibold'>Phone:</span>
-						<span className='about_contact_sub_header en-regular'>
+					<div className='about_contact_element'>
+						<span
+							className={`about_contact_header ${
+								currentLanguage === 'en' ? 'en-semibold' : 'th-semibold'
+							}`}
+						>
+							{t('about.contact.phone_label')}:
+						</span>
+						<span
+							className={`about_contact_sub_header ${
+								currentLanguage === 'en' ? 'en-regular' : 'th-regular'
+							}`}
+						>
 							<Link to={{ pathname: 'tel:+66946211452' }} target='_parent'>
 								(+66)94-621-1452
 							</Link>

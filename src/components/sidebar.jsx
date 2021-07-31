@@ -1,11 +1,13 @@
 import { useLocation, useHistory } from 'react-router-dom'
 import { useOrientation } from '../utils/useOrientation'
-import SideBarText from '../data/sidebar'
+import { useTranslation } from 'react-i18next'
 
 const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 	const location = useLocation()
 	const history = useHistory()
 	const isMobile = useOrientation()
+	const [t, i18n] = useTranslation()
+	const currentLanguage = i18n.language
 
 	return (
 		<div className='flex flex-row'>
@@ -18,18 +20,28 @@ const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 						className='sidebar_header_container'
 						onClick={() => history.push('/')}
 					>
-						<h1 className='sidebar_header en-semibold'>NON</h1>
-						<h1 className='sidebar_header text-hard_pink'>.</h1>
+						<h1
+							className={`sidebar_header ${
+								currentLanguage === 'en' ? 'en-semibold' : 'th-semibold'
+							}`}
+						>
+							NON
+						</h1>
+						<h1 className='sidebar_header text-hard_pink en-semibold'>.</h1>
 					</div>
 					<div className='sidebar_text_container'>
-						{SideBarText.map((text, index) => (
+						{[...t('sidebar', { returnObjects: true })].map((text, index) => (
 							<span
 								key={index}
 								className={
 									location.pathname.replace('/', '').includes(text) ||
 									(location.pathname === '/' && text === 'about')
-										? 'active_sidebar_text en-semibold'
-										: 'inactive_sidebar_text en-regular'
+										? `active_sidebar_text ${
+												currentLanguage === 'en' ? 'en-semibold' : 'th-semibold'
+										  }`
+										: `inactive_sidebar_text ${
+												currentLanguage === 'en' ? 'en-regular' : 'th-regular'
+										  }`
 								}
 								onClick={() => {
 									if (
@@ -49,9 +61,41 @@ const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 						))}
 					</div>
 					<div className='sidebar_lang_container'>
-						<span className='active_sidebar_lang_text en-semibold'>EN</span>
+						<span
+							className={
+								currentLanguage === 'en'
+									? 'active_sidebar_lang_text en-semibold'
+									: 'inactive_sidebar_lang_text en-regular'
+							}
+							onClick={() => {
+								setIsOpenCurtain(false)
+								setTimeout(() => {
+									i18n.changeLanguage('en')
+									localStorage.setItem('lang', 'en')
+									history.go(0)
+								}, 1500)
+							}}
+						>
+							EN
+						</span>
 						<hr className='h-1 bg-primary_pink w-full' />
-						<span className='inactive_sidebar_lang_text en-regular'>TH</span>
+						<span
+							className={
+								currentLanguage === 'th'
+									? 'active_sidebar_lang_text en-semibold'
+									: 'inactive_sidebar_lang_text en-regular'
+							}
+							onClick={() => {
+								setIsOpenCurtain(false)
+								setTimeout(() => {
+									i18n.changeLanguage('th')
+									localStorage.setItem('lang', 'th')
+									history.go(0)
+								}, 1500)
+							}}
+						>
+							TH
+						</span>
 					</div>
 				</nav>
 			)}

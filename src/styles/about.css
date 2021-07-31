@@ -20,7 +20,7 @@
 
 .welcome {
 	animation: welcomeFadingIn 0.8s ease forwards 2s;
-	@apply text-5xl lg:text-9xl overflow-hidden  text-white_text tracking-wider duration-300 opacity-0;
+	@apply text-4xl lg:text-9xl overflow-hidden  text-white_text tracking-wider duration-300 opacity-0;
 }
 
 .welcome-line {

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { withTranslation, useTranslation } from 'react-i18next'
 import { Route, Switch, withRouter } from 'react-router-dom'
 
 import About from './about/index'
@@ -9,6 +10,14 @@ import Contact from './contact/index'
 import NotFound from './404/index'
 
 const Main = () => {
+	const { i18n } = useTranslation()
+
+	useEffect(() => {
+		if (!localStorage.getItem('lang')) localStorage.setItem('lang', 'en')
+		else i18n.changeLanguage(localStorage.getItem('lang'))
+		// eslint-disable-next-line
+	}, [])
+
 	return (
 		<Switch>
 			<Route exact path='/' component={About} />
@@ -21,4 +30,4 @@ const Main = () => {
 	)
 }
 
-export default withRouter(Main)
+export default withRouter(withTranslation()(Main))
