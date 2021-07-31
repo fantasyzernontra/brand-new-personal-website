@@ -1,6 +1,5 @@
 /* About Page */
 .about_container {
-	font-family: 'SourceSansPro-Regular';
 	@apply w-full h-screen text-white_text bg-hard_blue flex flex-col justify-between p-5 md:p-12;
 }
 
@@ -20,7 +19,6 @@
 }
 
 .welcome {
-	font-family: 'SourceSansPro-Semibold';
 	animation: welcomeFadingIn 0.8s ease forwards 2s;
 	@apply text-5xl lg:text-9xl overflow-hidden  text-white_text tracking-wider duration-300 opacity-0;
 }
@@ -32,7 +30,6 @@
 }
 
 .about_description {
-	font-family: 'SourceSansPro-ExtraLight';
 	animation: aboutDescriptionFadingIn 0.8s ease forwards 3.1s;
 	transform: translateY(45px);
 	@apply opacity-0 tracking-wider;
@@ -49,12 +46,10 @@
 }
 
 .about_contact_header {
-	font-family: 'SourceSansPro-Semibold';
 	@apply tracking-wider;
 }
 
 .about_contact_sub_header {
-	font-family: 'SourceSansPro-Regular';
 	@apply tracking-wider cursor-pointer text-gray-400 duration-200;
 }
 

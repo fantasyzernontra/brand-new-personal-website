@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 
-const Working = forwardRef(({ work_as_an_employee }, ref) => {
+const Working = forwardRef(({ work_as_an_employee, lang }, ref) => {
 	return (
 		<section className='exp-working-container' ref={ref}>
 			{work_as_an_employee.map((item, index) => (
@@ -15,21 +15,21 @@ const Working = forwardRef(({ work_as_an_employee }, ref) => {
 						/>
 					</section>
 					<section className='right'>
-						<div className='working-content-container'>
+						<div className='working-content-container en-regular'>
 							<span className='working-content-label'>job title</span>
 							<h2 className='working-title'>{item.exp_full_name}</h2>
 						</div>
-						<div className='working-content-container'>
+						<div className='working-content-container en-regular'>
 							<span className='working-content-label'>job description</span>
 							<h2 className='working-title'>{item.exp_desc}</h2>
 						</div>
-						<div className='working-content-container'>
+						<div className='working-content-container en-regular'>
 							<span className='working-content-label'>incharged year</span>
 							<h2 className='working-title'>
 								{item.exp_time_period.from} - {item.exp_time_period.to}
 							</h2>
 						</div>
-						<div className='working-content-container'>
+						<div className='working-content-container en-regular'>
 							<span className='working-content-label'>work place website</span>
 							<h2 className='working-title duration-500 hover:text-soft_pink'>
 								<Link to={{ pathname: item.exp_ref }} target='_blank'>
@@ -37,7 +37,7 @@ const Working = forwardRef(({ work_as_an_employee }, ref) => {
 								</Link>
 							</h2>
 						</div>
-						<div className='working-content-container'>
+						<div className='working-content-container en-regular'>
 							<span className='working-content-label'>jobs</span>
 							{item.exp_tools.map((item, index) => (
 								<h2 key={index} className='working-title'>

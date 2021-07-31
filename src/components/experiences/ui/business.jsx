@@ -15,7 +15,7 @@ const Business = forwardRef(({ business }, ref) => {
 						/>
 					</section>
 					<section className='right'>
-						<div className='business-content-container'>
+						<div className='business-content-container en-regular'>
 							<span className='business-content-label'>business name</span>
 							<h2 className='business-title'>{item.exp_full_name}</h2>
 						</div>
@@ -25,13 +25,13 @@ const Business = forwardRef(({ business }, ref) => {
 							</span>
 							<h2 className='business-title'>{item.exp_desc}</h2>
 						</div>
-						<div className='business-content-container'>
+						<div className='business-content-container en-regular'>
 							<span className='business-content-label'>establishment year</span>
 							<h2 className='business-title'>
 								{item.exp_time_period.from} - {item.exp_time_period.to}
 							</h2>
 						</div>
-						<div className='business-content-container'>
+						<div className='business-content-container en-regular'>
 							<span className='business-content-label'>business website</span>
 							<h2 className='business-title duration-500 hover:text-soft_pink'>
 								<Link to={{ pathname: item.exp_ref }} target='_blank'>
@@ -39,7 +39,7 @@ const Business = forwardRef(({ business }, ref) => {
 								</Link>
 							</h2>
 						</div>
-						<div className='business-content-container'>
+						<div className='business-content-container en-regular'>
 							<span className='business-content-label'>services</span>
 							{item.exp_tools.map((item, index) => (
 								<h2 key={index} className='business-title'>

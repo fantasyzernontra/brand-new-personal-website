@@ -10,6 +10,10 @@ module.exports = {
 				soft_pink: '#FF9BAA',
 				white_text: '#E3ECFF',
 			},
+			fontFamily: {
+				en: ['Source Sans Pro', 'sans-serif'],
+				th: ['Kanit', 'sans-serif'],
+			},
 		},
 	},
 	variants: {

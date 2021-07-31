@@ -1,10 +1,10 @@
 import { forwardRef } from 'react'
 import LightHamburgerMenu from '../light-hamburger-button'
 
-const ParallaxMobile = forwardRef(({ label, img }, ref) => {
+const ParallaxMobile = forwardRef(({ label, img, lang }, ref) => {
 	return (
 		<section
-			className='parallax-mobile-container'
+			className='parallax-mobile-container en-semibold'
 			style={{
 				backgroundImage: `linear-gradient(
         to bottom,

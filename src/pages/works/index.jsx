@@ -132,7 +132,7 @@ const Works = () => {
 						>
 							<div className='hover-banner'>
 								<div className='hover-border'>
-									<div className='hover-banner-button'>View In Details</div>
+									<div className='hover-banner-button en-semibold'>View In Details</div>
 								</div>
 							</div>
 						</article>
@@ -145,7 +145,7 @@ const Works = () => {
 			{isMobile && (
 				<section className='works-container-mobile'>
 					<article className='works-header-container-mobile'>
-						<span className='work-title-mobile'>Works:</span>
+						<span className='work-title-mobile en-regular'>Works:</span>
 						<DarkHamBurger />
 					</article>
 					<article className='works-list-container-mobile'>

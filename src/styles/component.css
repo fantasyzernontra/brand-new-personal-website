@@ -67,19 +67,16 @@
 }
 
 .sidebar_header {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-center uppercase  text-2xl cursor-pointer;
 }
 
 .inactive_sidebar_text {
 	transform: rotate(-90deg);
-	font-family: 'SourceSansPro-Regular';
 	@apply uppercase text-gray-400 cursor-pointer duration-300 tracking-wider;
 }
 
 .active_sidebar_text {
 	transform: rotate(-90deg);
-	font-family: 'SourceSansPro-Semibold';
 	@apply uppercase text-hard_blue cursor-pointer duration-300 tracking-wider;
 }
 
@@ -96,12 +93,10 @@
 }
 
 .active_sidebar_lang_text {
-	font-family: 'SourceSansPro-Semibold';
 	@apply text-hard_blue cursor-pointer;
 }
 
 .inactive_sidebar_lang_text {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-gray-400 cursor-pointer duration-300;
 }
 
@@ -218,7 +213,6 @@
 }
 
 .navLink {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-hard_blue text-xl capitalize duration-300 overflow-hidden;
 }
 

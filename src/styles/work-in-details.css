@@ -3,20 +3,17 @@
 }
 
 .work-details-banner {
-	font-family: 'SourceSansPro-Regular';
 	width: 95vw;
 	@apply h-screen bg-cover flex flex-col items-center justify-center text-white_text gap-y-16;
 }
 
 .work-detail-title {
-	font-family: 'SourceSansPro-SemiBold';
 	animation: bannerAppearing 1.2s ease forwards;
 	transform: translateY(70px);
 	@apply text-6xl opacity-0 duration-1000;
 }
 
 .work-detail-short-desc {
-	font-family: 'SourceSansPro-ExtraLight';
 	animation: bannerAppearing 1.2s ease forwards 0.7s;
 	transform: translateY(70px);
 	@apply text-2xl opacity-0 duration-1000;
@@ -29,7 +26,6 @@
 }
 
 .visiting-label {
-	font-family: 'SourceSansPro-Regular';
 	@apply uppercase text-base  md:text-xl tracking-widest text-gray-300 duration-700;
 }
 
@@ -51,22 +47,18 @@
 }
 
 .introduction-title {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-4xl tracking-wider;
 }
 
 .introduction-desc {
-	font-family: 'SourceSansPro-ExtraLight';
 	@apply text-xl tracking-wide leading-10;
 }
 
 .introduction-details-header {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-gray-400 text-base uppercase;
 }
 
 .introduction-details-content {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-xl text-hard_blue capitalize;
 }
 
@@ -75,7 +67,6 @@
 }
 
 .introduction-details-production {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-xl text-hard_blue cursor-pointer duration-500;
 }
 
@@ -91,17 +82,14 @@
 .painpoint-relieving-container {
 	width: 95vw;
 	height: 60vh;
-	font-family: 'SourceSansPro-Regular';
 	@apply flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
 }
 
 .painpoint-relieving-title {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-3xl capitalize;
 }
 
 .painpoint-relieving-desc {
-	font-family: 'SourceSansPro-ExtraLight';
 	@apply text-2xl leading-10 tracking-wide;
 }
 
@@ -113,7 +101,6 @@
 .partner-testimonial-container {
 	width: 95vw;
 	height: 60vh;
-	font-family: 'SourceSansPro-Regular';
 	@apply flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
 }
 
@@ -123,22 +110,18 @@
 }
 
 .partner-testimonial-title {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-xl capitalize text-hard_pink tracking-widest;
 }
 
 .partner-testimonial-speech {
-	font-family: 'SourceSansPro-ExtraLight';
 	@apply text-2xl leading-10 tracking-wider;
 }
 
 .partner-testimonial-name {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-2xl tracking-wide text-gray-400;
 }
 
 .partner-testimonial-org {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-hard_blue text-2xl tracking-wide;
 }
 
@@ -234,19 +217,16 @@
 /* Mobile */
 
 .work-details-banner-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply h-screen w-full bg-cover flex flex-col items-center justify-center text-center text-white_text gap-y-5 p-5;
 }
 
 .work-banner-title-mobile {
-	font-family: 'SourceSansPro-SemiBold';
 	transform: translateY(60px);
 	animation: workBannerAppearingMobile 0.8s ease forwards 1s;
 	@apply text-3xl opacity-0;
 }
 
 .work-banner-short-desc-mobile {
-	font-family: 'SourceSansPro-ExtraLight';
 	transform: translateY(60px);
 	animation: workBannerAppearingMobile 0.8s ease forwards 1.4s;
 	@apply text-xl opacity-0;
@@ -263,7 +243,6 @@
 }
 
 .visiting-label-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply tracking-wide uppercase;
 }
 
@@ -277,17 +256,14 @@
 }
 
 .introduction-details-header-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-gray-400 uppercase;
 }
 
 .introduction-details-content-mobile {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-lg text-hard_blue capitalize;
 }
 
 .introduction-details-production-mobile {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-lg text-hard_blue;
 }
 
@@ -304,19 +280,16 @@
 }
 
 .painpoint-relieving-title-mobile {
-	font-family: 'SourceSansPro-SemiBold';
 	transform: translateY(60px);
 	@apply text-2xl capitalize text-left w-full opacity-0;
 }
 
 .painpoint-relieving-desc-mobile {
-	font-family: 'SourceSansPro-ExtraLight';
 	transform: translateX(-50px);
 	@apply text-lg tracking-wide opacity-0;
 }
 
 .partner-testimonial-container-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
 }
 
@@ -325,13 +298,11 @@
 }
 
 .partner-testimonial-title-mobile {
-	font-family: 'SourceSansPro-SemiBold';
 	transform: translateY(60px);
 	@apply text-xl capitalize text-hard_pink tracking-widest opacity-0;
 }
 
 .partner-testimonial-speech-mobile {
-	font-family: 'SourceSansPro-ExtraLight';
 	transform: translateY(60px);
 	@apply text-lg tracking-wide opacity-0;
 }
@@ -342,12 +313,10 @@
 }
 
 .partner-testimonial-name-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-base tracking-normal text-gray-400;
 }
 
 .partner-testimonial-org-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-hard_blue text-base tracking-normal;
 }
 

@@ -41,14 +41,14 @@ const Contact = () => {
 							))}
 						</div>
 						<div className='contact-speech'>
-							<span className='contact-title'>contact me</span>
-							<p className='contact-description'>
+							<span className='contact-title en-semibold'>contact me</span>
+							<p className='contact-description en-extralight'>
 								If you want to contact me about software development or finding
 								a business partner, then e-mail me at non_nontra@hotmail.com
 							</p>
 						</div>
 						<div className='contact-container' id='furthermore-contact'>
-							<span className='contact-text'>
+							<span className='contact-text en-regular'>
 								<Link
 									to={{ pathname: 'mailto:non_nontra@hotmail.com' }}
 									target='_parent'
@@ -56,7 +56,7 @@ const Contact = () => {
 									non_nontra@hotmail.com
 								</Link>
 							</span>
-							<span className='contact-text'>
+							<span className='contact-text en-regular'>
 								<Link to={{ pathname: 'tel:+66946211452' }} target='_parent'>
 									(+66)94-621-1452
 								</Link>
@@ -66,7 +66,7 @@ const Contact = () => {
 				</section>
 			)}
 			{isMobile && (
-				<section className='contact-main-mobile-container'>
+				<section className='contact-main-mobile-container en-regular'>
 					<div className='profile-pic-mobile-container'>
 						<div className='absolute top-7 left-7'>
 							<span className='text-white text-lg'>Non Nontra</span>
@@ -81,7 +81,7 @@ const Contact = () => {
 						/>
 					</div>
 					<div className='contact-content-mobile-container'>
-						<span className='contact-title-mobile'>contact me</span>
+						<span className='contact-title-mobile en-semibold'>contact me</span>
 						<span className='contact-email-mobile'>non_nontra@hotmail.com</span>
 						<div className='contact-button-mobile-container'>
 							{DarkContactButtonData.map((item, index) => (

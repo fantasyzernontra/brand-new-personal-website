@@ -6,7 +6,6 @@
 
 .parallax-container {
 	width: 95vw;
-	font-family: 'SourceSansPro-SemiBold';
 	@apply bg-center bg-no-repeat bg-cover bg-fixed h-full flex justify-center items-center text-white_text uppercase text-8xl tracking-widest;
 }
 
@@ -58,12 +57,10 @@
 }
 
 .education-content-label {
-	font-family: 'SourceSansPro-Regular';
 	@apply uppercase text-gray-400 text-lg;
 }
 
 .education-title {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-xl text-hard_blue;
 }
 
@@ -118,12 +115,10 @@
 }
 
 .internship-content-label {
-	font-family: 'SourceSansPro-Regular';
 	@apply uppercase text-gray-400 text-lg;
 }
 
 .internship-title {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-xl text-hard_blue;
 }
 
@@ -178,12 +173,10 @@
 }
 
 .business-content-label {
-	font-family: 'SourceSansPro-Regular';
 	@apply uppercase text-gray-400 text-lg;
 }
 
 .business-title {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-xl text-hard_blue;
 }
 
@@ -238,12 +231,10 @@
 }
 
 .working-content-label {
-	font-family: 'SourceSansPro-Regular';
 	@apply uppercase text-gray-400 text-lg;
 }
 
 .working-title {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-xl text-hard_blue;
 }
 
@@ -314,7 +305,6 @@
 }
 
 .parallax-mobile-container {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply bg-center bg-no-repeat bg-cover bg-fixed h-full flex justify-center items-center text-white_text uppercase text-4xl tracking-wider;
 }
 
@@ -361,12 +351,10 @@
 }
 
 .education-content-label-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-gray-400 uppercase;
 }
 
 .education-title-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-hard_blue text-lg;
 }
 
@@ -431,12 +419,10 @@
 }
 
 .internship-content-label-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-gray-400 uppercase;
 }
 
 .internship-title-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-hard_blue text-lg;
 }
 
@@ -501,12 +487,10 @@
 }
 
 .business-content-label-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-gray-400 uppercase;
 }
 
 .business-title-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-hard_blue text-lg;
 }
 
@@ -571,12 +555,10 @@
 }
 
 .working-content-label-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-gray-400 uppercase;
 }
 
 .working-title-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-hard_blue text-lg;
 }
 

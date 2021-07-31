@@ -1,0 +1,27 @@
+/* English */
+
+.en-extralight {
+	@apply font-en font-extralight;
+}
+
+.en-regular {
+	@apply font-en font-normal;
+}
+
+.en-semibold {
+	@apply font-en font-semibold;
+}
+
+/* Thai */
+
+.th-extralight {
+	@apply font-th font-extralight;
+}
+
+.th-regular {
+	@apply font-th font-normal;
+}
+
+.th-semibold {
+	@apply font-th font-semibold;
+}

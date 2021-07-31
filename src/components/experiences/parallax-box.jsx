@@ -1,9 +1,9 @@
 import { forwardRef } from 'react'
 
-const ParallaxBox = forwardRef(({ label, img }, ref) => {
+const ParallaxBox = forwardRef(({ label, img, lang }, ref) => {
 	return (
 		<section
-			className='parallax-container'
+			className='parallax-container en-semibold'
 			style={{
 				backgroundImage: `linear-gradient(
         to bottom,

@@ -18,7 +18,7 @@ const About = () => {
 			<FullCurtain isOpen={isOpenCurtain} />
 			<section className='about_container'>
 				<article className='about_header'>
-					<h2 className='text-lg md:text-2xl'>Non Nontra</h2>
+					<h2 className='text-lg md:text-2xl en-regular'>Non Nontra</h2>
 					<div className='about-header-contact-button-container'>
 						<hr className='w-10 border-hard_pink' />
 						{ContactButtonData.map((item, index) => (
@@ -34,9 +34,9 @@ const About = () => {
 				</article>
 				<article className='about_content'>
 					<div className='welcome_container'>
-						<h1 className='welcome'>Hi! I'm Non</h1>
+						<h1 className='welcome en-semibold'>Hi! I'm Non</h1>
 						<hr className='welcome-line' />
-						<div className='about_description'>
+						<div className='about_description en-extralight'>
 							<p className='about-desc-element'>
 								Currently, I'm a junior computer science student.
 							</p>
@@ -57,8 +57,8 @@ const About = () => {
 				</article>
 				<article className='about_footer'>
 					<div className='about_contact_element'>
-						<span className='about_contact_header'>E-mail:</span>
-						<span className='about_contact_sub_header'>
+						<span className='about_contact_header en-semibold'>E-mail:</span>
+						<span className='about_contact_sub_header en-regular'>
 							<Link
 								to={{ pathname: 'mailto:non_nontra@hotmail.com' }}
 								target='_parent'
@@ -69,8 +69,8 @@ const About = () => {
 					</div>
 					{/* Desktop, Tablet Version */}
 					<div className='about_contact_element hidden md:block'>
-						<span className='about_contact_header'>Phone:</span>
-						<span className='about_contact_sub_header'>
+						<span className='about_contact_header en-semibold'>Phone:</span>
+						<span className='about_contact_sub_header en-regular'>
 							<Link to={{ pathname: 'tel:+66946211452' }} target='_parent'>
 								(+66)94-621-1452
 							</Link>

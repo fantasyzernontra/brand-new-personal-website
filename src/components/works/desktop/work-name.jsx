@@ -3,6 +3,7 @@ const WorkName = ({
 	short_desc,
 	isHover,
 	setHoverWork,
+	lang,
 }) => {
 	return (
 		<div
@@ -11,8 +12,8 @@ const WorkName = ({
 			id={isHover ? 'hovered' : ''}
 		>
 			<hr className='work-line' id={isHover ? 'expanding' : ''} />
-			<span className='work-name'>{short_work_name}</span>
-			<span className='work-short-desc'>{short_desc}</span>
+			<span className='work-name en-regular'>{short_work_name}</span>
+			<span className='work-short-desc en-extralight'>{short_desc}</span>
 		</div>
 	)
 }

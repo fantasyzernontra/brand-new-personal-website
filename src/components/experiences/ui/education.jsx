@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 
-const Education = forwardRef(({ educations }, ref) => {
+const Education = forwardRef(({ educations, lang }, ref) => {
 	return (
 		<section className='exp-education-container' ref={ref}>
 			{educations.map((item, index) => (
@@ -16,22 +16,30 @@ const Education = forwardRef(({ educations }, ref) => {
 					</section>
 					<section className='right'>
 						<div className='education-content-container'>
-							<span className='education-content-label'>school name</span>
-							<h2 className='education-title'>{item.exp_full_name}</h2>
+							<span className='education-content-label en-regular'>
+								school name
+							</span>
+							<h2 className='education-title en-regular'>
+								{item.exp_full_name}
+							</h2>
 						</div>
 						<div className='education-content-container'>
-							<span className='education-content-label'>department</span>
-							<h2 className='education-title'>{item.exp_desc}</h2>
+							<span className='education-content-label en-regular'>
+								department
+							</span>
+							<h2 className='education-title en-regular'>{item.exp_desc}</h2>
 						</div>
 						<div className='education-content-container'>
-							<span className='education-content-label'>year in academic</span>
-							<h2 className='education-title'>
+							<span className='education-content-label en-regular'>
+								year in academic
+							</span>
+							<h2 className='education-title en-regular'>
 								{item.exp_time_period.from} - {item.exp_time_period.to}
 							</h2>
 						</div>
 						<div className='education-content-container'>
-							<span className='education-content-label'>academic website</span>
-							<h2 className='education-title duration-500 hover:text-soft_pink'>
+							<span className='education-content-label en-regular'>academic website</span>
+							<h2 className='education-title duration-500 hover:text-soft_pink en-regular'>
 								<Link to={{ pathname: item.exp_ref }} target='_blank'>
 									{item.exp_ref}
 								</Link>

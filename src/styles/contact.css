@@ -28,7 +28,6 @@
 }
 
 .contact-main-container .right .contact-container .contact-text {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-lg tracking-wide cursor-pointer duration-500;
 }
 
@@ -43,12 +42,10 @@
 }
 
 .contact-main-container .right .contact-speech .contact-title {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-4xl capitalize tracking-wide;
 }
 
 .contact-main-container .right .contact-speech .contact-description {
-	font-family: 'SourceSansPro-ExtraLight';
 	@apply text-lg tracking-wide;
 }
 
@@ -102,7 +99,6 @@
 /* Mobile Version */
 
 .contact-main-mobile-container {
-	font-family: 'SourceSansPro-Regular';
 	@apply flex flex-col h-screen w-screen;
 }
 
@@ -121,7 +117,6 @@
 }
 
 .contact-title-mobile {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-2xl capitalize;
 }
 

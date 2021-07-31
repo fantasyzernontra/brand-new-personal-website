@@ -1,7 +1,6 @@
 /* Desktop, Tablet Version */
 
 .works-container {
-	font-family: 'SourceSansPro-Regular';
 	@apply h-screen overflow-auto w-full bg-white flex flex-row;
 }
 
@@ -35,12 +34,10 @@
 }
 
 .work-name {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-xl cursor-pointer text-gray-600 duration-1000;
 }
 
 .work-short-desc {
-	font-family: 'SourceSansPro-ExtraLight';
 	@apply text-gray-400 cursor-pointer tracking-wide duration-1000;
 }
 
@@ -130,7 +127,6 @@
 }
 
 .work-title-mobile {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-2xl text-hard_blue tracking-wider;
 }
 
@@ -154,17 +150,14 @@
 }
 
 .work-card-title {
-	font-family: 'SourceSansPro-SemiBold';
 	@apply text-xl my-2;
 }
 
 .work-card-desc {
-	font-family: 'SourceSansPro-Regular';
 	@apply text-base my-2;
 }
 
 .work-card-hook {
-	font-family: 'SourceSansPro-ExtraLight';
 	@apply text-gray-400 text-base my-2;
 }
 

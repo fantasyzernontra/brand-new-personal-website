@@ -24,7 +24,7 @@ const HamburgerMenu = ({ setIsOpenCurtain }) => {
 	return (
 		<div id='menu' className='mobile-nav-menu'>
 			<div className='nav-menu-header'>
-				<div className='nav-menu-lang'>
+				<div className='nav-menu-lang en-regular'>
 					<span>EN</span>
 					<span>/</span>
 					<span>TH</span>
@@ -43,7 +43,7 @@ const HamburgerMenu = ({ setIsOpenCurtain }) => {
 				{NavBarData.map((text, index) => (
 					<div
 						key={index}
-						className={`navLink ${
+						className={`navLink en-regular ${
 							location.pathname.replace('/', '').includes(text) ||
 							(location.pathname === '/' && text === 'about')
 								? 'active'
@@ -70,7 +70,7 @@ const HamburgerMenu = ({ setIsOpenCurtain }) => {
 					</div>
 				))}
 			</div>
-			<div className='nav-menu-footer'>
+			<div className='nav-menu-footer en-regular'>
 				<span>
 					<Link
 						to={{ pathname: 'mailto:non_nontra@hotmail.com' }}

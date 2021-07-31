@@ -18,7 +18,7 @@ const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 						className='sidebar_header_container'
 						onClick={() => history.push('/')}
 					>
-						<h1 className='sidebar_header'>NON</h1>
+						<h1 className='sidebar_header en-semibold'>NON</h1>
 						<h1 className='sidebar_header text-hard_pink'>.</h1>
 					</div>
 					<div className='sidebar_text_container'>
@@ -28,8 +28,8 @@ const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 								className={
 									location.pathname.replace('/', '').includes(text) ||
 									(location.pathname === '/' && text === 'about')
-										? 'active_sidebar_text'
-										: 'inactive_sidebar_text'
+										? 'active_sidebar_text en-semibold'
+										: 'inactive_sidebar_text en-regular'
 								}
 								onClick={() => {
 									if (
@@ -49,9 +49,9 @@ const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 						))}
 					</div>
 					<div className='sidebar_lang_container'>
-						<span className='active_sidebar_lang_text'>EN</span>
+						<span className='active_sidebar_lang_text en-semibold'>EN</span>
 						<hr className='h-1 bg-primary_pink w-full' />
-						<span className='inactive_sidebar_lang_text'>TH</span>
+						<span className='inactive_sidebar_lang_text en-regular'>TH</span>
 					</div>
 				</nav>
 			)}

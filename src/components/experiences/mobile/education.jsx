@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 
-const EducationMobile = forwardRef(({ educations }, ref) => {
+const EducationMobile = forwardRef(({ educations, lang }, ref) => {
 	return (
 		<section className='exp-education-mobile-container' ref={ref}>
 			{educations.map((item, index) => (
@@ -16,28 +16,34 @@ const EducationMobile = forwardRef(({ educations }, ref) => {
 					</section>
 					<section id='content-mobile'>
 						<div className='education-content-mobile-container'>
-							<span className='education-content-label-mobile'>
+							<span className='education-content-label-mobile en-regular'>
 								school name
 							</span>
-							<h2 className='education-title-mobile'>{item.exp_full_name}</h2>
+							<h2 className='education-title-mobile en-regular'>
+								{item.exp_full_name}
+							</h2>
 						</div>
 						<div className='education-content-mobile-container'>
-							<span className='education-content-label-mobile'>department</span>
-							<h2 className='education-title-mobile'>{item.exp_desc}</h2>
+							<span className='education-content-label-mobile en-regular'>
+								department
+							</span>
+							<h2 className='education-title-mobile en-regular'>
+								{item.exp_desc}
+							</h2>
 						</div>
 						<div className='education-content-mobile-container'>
-							<span className='education-content-label-mobile'>
+							<span className='education-content-label-mobile en-regular'>
 								year in academic
 							</span>
-							<h2 className='education-title-mobile'>
+							<h2 className='education-title-mobile en-regular'>
 								{item.exp_time_period.from} - {item.exp_time_period.to}
 							</h2>
 						</div>
 						<div className='education-content-mobile-container'>
-							<span className='education-content-label-mobile'>
+							<span className='education-content-label-mobile en-regular'>
 								academic website
 							</span>
-							<h2 className='education-title-mobile duration-500 hover:text-soft_pink'>
+							<h2 className='education-title-mobile duration-500 hover:text-soft_pink en-regular'>
 								<Link to={{ pathname: item.exp_ref }} target='_blank'>
 									{item.exp_ref}
 								</Link>

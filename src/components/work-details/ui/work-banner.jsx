@@ -4,7 +4,7 @@ import ScrollToDiscover from '../../scroll-to-discover'
 const WorkBanner = ({ work }) => {
 	return (
 		<section
-			className='work-details-banner'
+			className='work-details-banner en-regular'
 			id='banner'
 			style={{
 				backgroundImage: `linear-gradient(
@@ -14,8 +14,8 @@ const WorkBanner = ({ work }) => {
         ), url(${work.banner.url})`,
 			}}
 		>
-			<h1 className='work-detail-title'>{work.work_name}</h1>
-			<p className='work-detail-short-desc'>{work.short_desc}</p>
+			<h1 className='work-detail-title en-semibold'>{work.work_name}</h1>
+			<p className='work-detail-short-desc en-extralight'>{work.short_desc}</p>
 			{work.label && <VisitingLabel label={work.label} url={work.url} />}
 			<ScrollToDiscover />
 		</section>
