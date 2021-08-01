@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useOrientation } from '../../utils/useOrientation'
+import { useTranslation } from 'react-i18next'
 
 import FullCurtain from '../../components/animation/full-curtain'
 import HalfLeftCurtain from '../../components/animation/half-left-curtain'
@@ -16,6 +17,8 @@ import SelfPhoto from '../../assets/image/self3.jpg'
 const Contact = () => {
 	const [isOpenCurtain, setIsOpenCurtain] = useState(true)
 	const isMobile = useOrientation()
+	const { t, i18n } = useTranslation()
+	const currentLanguage = i18n.language
 
 	return (
 		<SideBar setIsOpenCurtain={setIsOpenCurtain}>
@@ -41,14 +44,27 @@ const Contact = () => {
 							))}
 						</div>
 						<div className='contact-speech'>
-							<span className='contact-title en-semibold'>contact me</span>
-							<p className='contact-description en-extralight'>
-								If you want to contact me about software development or finding
-								a business partner, then e-mail me at non_nontra@hotmail.com
+							<span
+								className={`contact-title ${
+									currentLanguage === 'en' ? 'en-semibold' : 'th-semibold'
+								}`}
+							>
+								{t('contact.desktop.title')}
+							</span>
+							<p
+								className={`contact-description  ${
+									currentLanguage === 'en' ? 'en-extralight' : 'th-extralight'
+								}`}
+							>
+								{t('contact.desktop.desc')}
 							</p>
 						</div>
 						<div className='contact-container' id='furthermore-contact'>
-							<span className='contact-text en-regular'>
+							<span
+								className={`contact-text ${
+									currentLanguage === 'en' ? 'en-regular' : 'th-regular'
+								}`}
+							>
 								<Link
 									to={{ pathname: 'mailto:non_nontra@hotmail.com' }}
 									target='_parent'
@@ -56,7 +72,11 @@ const Contact = () => {
 									non_nontra@hotmail.com
 								</Link>
 							</span>
-							<span className='contact-text en-regular'>
+							<span
+								className={`contact-text ${
+									currentLanguage === 'en' ? 'en-regular' : 'th-regular'
+								}`}
+							>
 								<Link to={{ pathname: 'tel:+66946211452' }} target='_parent'>
 									(+66)94-621-1452
 								</Link>
@@ -66,7 +86,11 @@ const Contact = () => {
 				</section>
 			)}
 			{isMobile && (
-				<section className='contact-main-mobile-container en-regular'>
+				<section
+					className={`contact-main-mobile-container ${
+						currentLanguage === 'en' ? 'en-regular' : 'th-regular'
+					}`}
+				>
 					<div className='profile-pic-mobile-container'>
 						<div className='absolute top-7 left-7'>
 							<span className='text-white text-lg'>Non Nontra</span>
@@ -81,8 +105,20 @@ const Contact = () => {
 						/>
 					</div>
 					<div className='contact-content-mobile-container'>
-						<span className='contact-title-mobile en-semibold'>contact me</span>
-						<span className='contact-email-mobile'>non_nontra@hotmail.com</span>
+						<span
+							className={`contact-title-mobile ${
+								currentLanguage === 'en' ? 'en-semibold' : 'th-semibold'
+							}`}
+						>
+							{t('contact.mobile.title')}
+						</span>
+						<span
+							className={`contact-email-mobile ${
+								currentLanguage === 'en' ? 'en-regular' : 'th-regular'
+							}`}
+						>
+							non_nontra@hotmail.com
+						</span>
 						<div className='contact-button-mobile-container'>
 							{DarkContactButtonData.map((item, index) => (
 								<ContactButton

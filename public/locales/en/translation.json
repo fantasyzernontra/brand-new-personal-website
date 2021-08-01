@@ -15,5 +15,14 @@
 	"work": {
 		"header": "works",
 		"view_in_details": "View In Details"
+	},
+	"contact": {
+		"desktop": {
+			"title": "contact me",
+			"desc": "If you want to contact me about software development or finding a business partner, then e-mail me at non_nontra@hotmail.com"
+		},
+		"mobile": {
+			"title": "contact me"
+		}
 	}
 }
