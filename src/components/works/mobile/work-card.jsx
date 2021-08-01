@@ -7,9 +7,27 @@ const WorkCard = forwardRef(
 				<div className='work-card-banner-container'>
 					<img src={img.url} alt={img.alt} className='work-card-banner' />
 				</div>
-				<h2 className='work-card-title en-semibold'>{work_name}</h2>
-				<p className='work-card-desc en-regular'>{work_desc}</p>
-				<span className='work-card-hook en-extralight'>{work_type_mobile}</span>
+				<h2
+					className={`work-card-title ${
+						lang === 'en' ? 'en-semibold' : 'th-semibold'
+					}`}
+				>
+					{work_name}
+				</h2>
+				<p
+					className={`work-card-desc ${
+						lang === 'en' ? 'en-regular' : 'th-regular'
+					}`}
+				>
+					{work_desc}
+				</p>
+				<span
+					className={`work-card-hook ${
+						lang === 'en' ? 'en-extralight' : 'th-extralight'
+					}`}
+				>
+					{work_type_mobile}
+				</span>
 			</section>
 		)
 	}

@@ -5,7 +5,13 @@ const VisitingLabel = ({ label, url, lang }) => {
 		<Link to={{ pathname: url }} target='_blank'>
 			<div className='visiting-container'>
 				<hr className='visiting-line' />
-				<span className='visiting-label en-regular'>VISIT {label}</span>
+				<span
+					className={`visiting-label ${
+						lang === 'en' ? 'en-regular' : 'th-regular'
+					}`}
+				>
+					VISIT {label}
+				</span>
 				<hr className='visiting-line' />
 			</div>
 		</Link>

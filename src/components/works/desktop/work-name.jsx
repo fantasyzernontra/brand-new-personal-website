@@ -12,8 +12,18 @@ const WorkName = ({
 			id={isHover ? 'hovered' : ''}
 		>
 			<hr className='work-line' id={isHover ? 'expanding' : ''} />
-			<span className='work-name en-regular'>{short_work_name}</span>
-			<span className='work-short-desc en-extralight'>{short_desc}</span>
+			<span
+				className={`work-name ${lang === 'en' ? 'en-regular' : 'th-regular'}`}
+			>
+				{short_work_name}
+			</span>
+			<span
+				className={`work-short-desc ${
+					lang === 'en' ? 'en-extralight' : 'th-extralight'
+				}`}
+			>
+				{short_desc}
+			</span>
 		</div>
 	)
 }

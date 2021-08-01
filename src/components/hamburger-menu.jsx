@@ -1,13 +1,18 @@
 import { Link, useHistory, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useActiveHamburgerMenu } from '../utils/useActiveHamburgerMenu'
+import { useNavigate } from '../utils/useNavigate'
 
 import DarkContactButton from '../components/contact/contact-button'
 
-import NavBarData from '../data/navbar'
 import ContactButtonData from '../data/dark-contact-button'
 
 const HamburgerMenu = ({ setIsOpenCurtain }) => {
 	const history = useHistory()
 	const location = useLocation()
+	const { t, i18n } = useTranslation()
+	const currentLanguage = i18n.language
+	const onActiveLink = useActiveHamburgerMenu
 
 	function navToggle() {
 		const btnDark = document.getElementById('menuBtn-dark')
@@ -21,13 +26,62 @@ const HamburgerMenu = ({ setIsOpenCurtain }) => {
 		menu.classList.toggle('animated')
 	}
 
+	const onRouteChange = (text) => {
+		const navigate = useNavigate
+		const route = navigate(text, location.pathname, currentLanguage)
+		if (route) {
+			setIsOpenCurtain(false)
+			setTimeout(() => history.push(route), 1500)
+		}
+	}
+
 	return (
 		<div id='menu' className='mobile-nav-menu'>
 			<div className='nav-menu-header'>
-				<div className='nav-menu-lang en-regular'>
-					<span>EN</span>
-					<span>/</span>
-					<span>TH</span>
+				<div className='nav-menu-lang'>
+					<span
+						className={
+							currentLanguage === 'en'
+								? 'text-hard_blue en-semibold'
+								: 'text-gray-400 th-regular'
+						}
+						onClick={() => {
+							setIsOpenCurtain(false)
+							setTimeout(() => {
+								i18n.changeLanguage('en')
+								localStorage.setItem('lang', 'en')
+								history.go(0)
+							}, 1500)
+						}}
+					>
+						EN
+					</span>
+					<span
+						className={
+							currentLanguage === 'en'
+								? 'text-hard_blue en-regular'
+								: 'text-hard_blue th-regular'
+						}
+					>
+						/
+					</span>
+					<span
+						className={
+							currentLanguage === 'th'
+								? 'text-hard_blue th-semibold'
+								: 'text-gray-400 en-regular'
+						}
+						onClick={() => {
+							setIsOpenCurtain(false)
+							setTimeout(() => {
+								i18n.changeLanguage('th')
+								localStorage.setItem('lang', 'th')
+								history.go(0)
+							}, 1500)
+						}}
+					>
+						TH
+					</span>
 				</div>
 				<button
 					id='menuBtn-dark'
@@ -40,35 +94,29 @@ const HamburgerMenu = ({ setIsOpenCurtain }) => {
 				</button>
 			</div>
 			<div className='nav-menu-content'>
-				{NavBarData.map((text, index) => (
-					<div
-						key={index}
-						className={`navLink en-regular ${
-							location.pathname.replace('/', '').includes(text) ||
-							(location.pathname === '/' && text === 'about')
-								? 'active'
-								: 'inactive'
-						}`}
-					>
-						<span
-							onClick={() => {
-								if (
-									location.pathname.replace('/', '') !== text &&
-									!(location.pathname === '/' && text === 'about')
-								) {
-									setIsOpenCurtain(false)
-									setTimeout(
-										() => history.push(text === 'about' ? '' : '/' + text),
-										1500
-									)
-								}
-							}}
+				{[...t('hamburger_menu', { returnObjects: true })].map(
+					(text, index) => (
+						<div
+							key={index}
+							className={`navLink ${
+								currentLanguage === 'en' ? 'en-regular' : 'th-regular'
+							} ${
+								onActiveLink(text, location.pathname, currentLanguage)
+									? 'active'
+									: 'false'
+							}`}
 						>
-							{text}
-						</span>
-						<hr className='navlink-line' />
-					</div>
-				))}
+							<span
+								onClick={() => {
+									onRouteChange(text)
+								}}
+							>
+								{text}
+							</span>
+							<hr className='navlink-line' />
+						</div>
+					)
+				)}
 			</div>
 			<div className='nav-menu-footer en-regular'>
 				<span>

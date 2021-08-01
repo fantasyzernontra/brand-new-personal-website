@@ -11,53 +11,113 @@ const WorkDescription = forwardRef(({ work, lang }, ref) => {
 		>
 			<article className='work-introduction-container'>
 				<div className='flex flex-row'>
-					<h2 className='introduction-title en-semibold'>Introduction</h2>
-					<span className='text-hard_pink text-4xl en-semibold'>.</span>
+					<h2
+						className={`introduction-title ${
+							lang === 'en' ? 'en-semibold' : 'th-semibold'
+						}`}
+					>
+						Introduction
+					</h2>
+					<span
+						className={`text-hard_pink text-4xl ${
+							lang === 'en' ? 'en-semibold' : 'th-semibold'
+						}`}
+					>
+						.
+					</span>
 				</div>
-				<p className='introduction-desc en-extralight'>{work.description}</p>
+				<p
+					className={`introduction-desc ${
+						lang === 'en' ? 'en-extralight' : 'th-extralight'
+					}`}
+				>
+					{work.description}
+				</p>
 			</article>
 			<article className='work-explanation'>
 				<section className='introduction-details-sub-container'>
-					<h3 className='introduction-details-header en-regular'>
+					<h3
+						className={`introduction-details-header ${
+							lang === 'en' ? 'en-regular' : 'th-regular'
+						}`}
+					>
 						work description
 					</h3>
 					{work.work_type.map((item, index) => (
 						<h2
 							key={index}
-							className='introduction-details-content en-semibold'
+							className={`introduction-details-content ${
+								lang === 'en' ? 'en-semibold' : 'th-semibold'
+							}`}
 						>
 							{WorkType[item]}
 						</h2>
 					))}
 				</section>
 				<section className='introduction-details-sub-container'>
-					<h3 className='introduction-details-header en-regular'>partners</h3>
-					<h2 className='introduction-details-content en-semibold'>
+					<h3
+						className={`introduction-details-header ${
+							lang === 'en' ? 'en-regular' : 'th-regular'
+						}`}
+					>
+						partners
+					</h3>
+					<h2
+						className={`introduction-details-content ${
+							lang === 'en' ? 'en-semibold' : 'th-semibold'
+						}`}
+					>
 						{work.partners}
 					</h2>
 				</section>
 				<section className='introduction-details-sub-container w-7/12'>
-					<h3 className='introduction-details-header en-regular'>
+					<h3
+						className={`introduction-details-header ${
+							lang === 'en' ? 'en-regular' : 'th-regular'
+						}`}
+					>
 						responsible
 					</h3>
-					<h2 className='introduction-details-content en-semibold'>{work.responsible}</h2>
+					<h2
+						className={`introduction-details-content ${
+							lang === 'en' ? 'en-semibold' : 'th-semibold'
+						}`}
+					>
+						{work.responsible}
+					</h2>
 				</section>
 				<section className='introduction-details-sub-container'>
-					<h3 className='introduction-details-header en-regular'>
+					<h3
+						className={`introduction-details-header ${
+							lang === 'en' ? 'en-regular' : 'th-regular'
+						}`}
+					>
 						technology stack
 					</h3>
 					{work.tech_stack.map((item, index) => (
 						<h2
 							key={index}
-							className='introduction-details-content en-semibold'
+							className={`introduction-details-content ${
+								lang === 'en' ? 'en-semibold' : 'th-semibold'
+							}`}
 						>
 							{item}
 						</h2>
 					))}
 				</section>
 				<section className='introduction-details-sub-container'>
-					<h3 className='introduction-details-header en-regular'>production</h3>
-					<h2 className='introduction-details-production en-semibold'>
+					<h3
+						className={`introduction-details-header ${
+							lang === 'en' ? 'en-regular' : 'th-regular'
+						}`}
+					>
+						production
+					</h3>
+					<h2
+						className={`introduction-details-production ${
+							lang === 'en' ? 'en-semibold' : 'th-semibold'
+						}`}
+					>
 						<Link to={{ pathname: work.url }} target='_blank'>
 							{work.url}
 						</Link>

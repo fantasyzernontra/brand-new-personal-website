@@ -213,7 +213,7 @@
 }
 
 .navLink {
-	@apply text-hard_blue text-xl capitalize duration-300 overflow-hidden;
+	@apply text-hard_blue text-xl capitalize duration-300 overflow-hidden whitespace-nowrap;
 }
 
 .navlink-line {

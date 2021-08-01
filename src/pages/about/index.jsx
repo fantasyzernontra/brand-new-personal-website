@@ -86,7 +86,7 @@ const About = () => {
 						</span>
 					</div>
 					{/* Desktop, Tablet Version */}
-					<div className='about_contact_element'>
+					<div className='about_contact_element hidden md:flex'>
 						<span
 							className={`about_contact_header ${
 								currentLanguage === 'en' ? 'en-semibold' : 'th-semibold'

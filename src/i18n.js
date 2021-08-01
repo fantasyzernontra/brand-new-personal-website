@@ -10,7 +10,6 @@ i18n
 		fallbackLng: 'en',
 		preload: ['en', 'th'],
 		react: {
-			wait: true,
 			useSuspense: false,
 		},
 	})

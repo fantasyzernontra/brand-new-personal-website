@@ -1,5 +1,6 @@
 {
 	"sidebar": ["contact", "experiences", "works", "about"],
+	"hamburger_menu": ["about", "works", "experiences", "contact"],
 	"about": {
 		"welcome": "Hi! I'm Non",
 		"desc1": "Currently, I'm a junior computer science student.",
@@ -10,5 +11,9 @@
 			"email_label": "E-mail",
 			"phone_label": "Phone"
 		}
+	},
+	"work": {
+		"header": "works",
+		"view_in_details": "View In Details"
 	}
 }
