@@ -1,9 +1,11 @@
 import { forwardRef } from 'react'
 
-const ParallaxBox = forwardRef(({ label, img, lang }, ref) => {
+const ParallaxBox = forwardRef(({ label, id, img, lang }, ref) => {
 	return (
 		<section
-			className='parallax-container en-semibold'
+			className={`parallax-container ${
+				lang === 'en' ? 'en-semibold' : 'th-semibold'
+			}`}
 			style={{
 				backgroundImage: `linear-gradient(
         to bottom,
@@ -12,7 +14,7 @@ const ParallaxBox = forwardRef(({ label, img, lang }, ref) => {
     ), url(${img})`,
 			}}
 			ref={ref}
-			id={label}
+			id={id}
 		>
 			<h1 className='parallax-label'>{label}</h1>
 		</section>
