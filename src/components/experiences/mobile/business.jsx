@@ -1,7 +1,10 @@
 import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const BusinessMobile = forwardRef(({ business, lang }, ref) => {
+	const { t } = useTranslation()
+
 	return (
 		<section className='exp-business-mobile-container' ref={ref}>
 			{business.map((item, index) => {
@@ -23,7 +26,7 @@ const BusinessMobile = forwardRef(({ business, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									business name
+									{t('experiences.business.label1')}
 								</span>
 								<h2
 									className={`business-title-mobile ${
@@ -39,7 +42,7 @@ const BusinessMobile = forwardRef(({ business, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									business description
+									{t('experiences.business.label2')}
 								</span>
 								<h2
 									className={`business-title-mobile ${
@@ -55,7 +58,7 @@ const BusinessMobile = forwardRef(({ business, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									establishment year
+									{t('experiences.business.label3')}
 								</span>
 								<h2
 									className={`business-title-mobile ${
@@ -72,7 +75,7 @@ const BusinessMobile = forwardRef(({ business, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									business website
+									{t('experiences.business.label4')}
 								</span>
 								<h2
 									className={`business-title-mobile duration-500 hover:text-soft_pink text-base ${
@@ -83,6 +86,25 @@ const BusinessMobile = forwardRef(({ business, lang }, ref) => {
 										{business.exp_ref}
 									</Link>
 								</h2>
+							</div>
+							<div className='business-content-mobile-container'>
+								<span
+									className={`business-content-label-mobile ${
+										lang === 'en' ? 'en-regular' : 'th-regular'
+									}`}
+								>
+									{t('experiences.business.label5')}
+								</span>
+								{business.exp_tools.map((item, index) => (
+									<h2
+										className={`business-title-mobile ${
+											lang === 'en' ? 'en-regular' : 'th-regular'
+										}`}
+										key={index}
+									>
+										{item}
+									</h2>
+								))}
 							</div>
 						</section>
 					</div>

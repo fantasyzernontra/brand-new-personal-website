@@ -16,6 +16,35 @@
 		"header": "works",
 		"view_in_details": "View In Details"
 	},
+	"experiences": {
+		"education": {
+			"label1": "acedemy name",
+			"label2": "department",
+			"label3": "year in academy",
+			"label4": "academy's website"
+		},
+		"internship": {
+			"label1": "company name",
+			"label2": "job description",
+			"label3": "incharged year",
+			"label4": "company's website",
+			"label5": "tools"
+		},
+		"business": {
+			"label1": "business name",
+			"label2": "business description",
+			"label3": "establishment year",
+			"label4": "business's website",
+			"label5": "services"
+		},
+		"working": {
+			"label1": "job title",
+			"label2": "job description",
+			"label3": "incharged year",
+			"label4": "work place's website",
+			"label5": "jobs"
+		}
+	},
 	"contact": {
 		"desktop": {
 			"title": "contact me",

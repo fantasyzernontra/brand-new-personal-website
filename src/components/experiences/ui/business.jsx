@@ -1,7 +1,10 @@
 import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Business = forwardRef(({ business, lang }, ref) => {
+	const { t } = useTranslation()
+
 	return (
 		<section className='exp-business-container' ref={ref}>
 			{business.map((item, index) => {
@@ -22,7 +25,9 @@ const Business = forwardRef(({ business, lang }, ref) => {
 									lang === 'en' ? 'en-regular' : 'th-regular'
 								}`}
 							>
-								<span className='business-content-label'>business name</span>
+								<span className='business-content-label'>
+									{t('experiences.business.label1')}
+								</span>
 								<h2 className='business-title'>{business.exp_full_name}</h2>
 							</div>
 							<div
@@ -31,7 +36,7 @@ const Business = forwardRef(({ business, lang }, ref) => {
 								}`}
 							>
 								<span className='business-content-label'>
-									business description
+									{t('experiences.business.label2')}
 								</span>
 								<h2 className='business-title'>{business.exp_desc}</h2>
 							</div>
@@ -41,7 +46,7 @@ const Business = forwardRef(({ business, lang }, ref) => {
 								}`}
 							>
 								<span className='business-content-label'>
-									establishment year
+									{t('experiences.business.label3')}
 								</span>
 								<h2 className='business-title'>
 									{business.exp_time_period.from} -{' '}
@@ -53,7 +58,9 @@ const Business = forwardRef(({ business, lang }, ref) => {
 									lang === 'en' ? 'en-regular' : 'th-regular'
 								}`}
 							>
-								<span className='business-content-label'>business website</span>
+								<span className='business-content-label'>
+									{t('experiences.business.label4')}
+								</span>
 								<h2 className='business-title duration-500 hover:text-soft_pink'>
 									<Link to={{ pathname: business.exp_ref }} target='_blank'>
 										{business.exp_ref}
@@ -65,7 +72,9 @@ const Business = forwardRef(({ business, lang }, ref) => {
 									lang === 'en' ? 'en-regular' : 'th-regular'
 								}`}
 							>
-								<span className='business-content-label'>services</span>
+								<span className='business-content-label'>
+									{t('experiences.business.label5')}
+								</span>
 								{business.exp_tools.map((item, index) => (
 									<h2 key={index} className='business-title'>
 										{item}

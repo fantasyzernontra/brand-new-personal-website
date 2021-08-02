@@ -13,7 +13,7 @@ export const useActiveHamburgerMenu = (
 
 	// About Case
 	if (
-		replacedCurrentLocation === '/' &&
+		replacedCurrentLocation === '' &&
 		(text === 'about' || text === 'ผมเป็นใคร')
 	) {
 		return true

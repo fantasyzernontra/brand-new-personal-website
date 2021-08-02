@@ -9,7 +9,10 @@ export const useActiveSidebar = (text, currentLocation, currentLanguage) => {
 	]
 
 	// About Case
-	if (currentLocation === '/' && (text === 'about' || text === 'ผมเป็นใคร')) {
+	if (
+		replacedCurrentLocation === '' &&
+		(text === 'about' || text === 'ผมเป็นใคร')
+	) {
 		classResult =
 			currentLanguage === 'en'
 				? 'active_sidebar_text en-semibold'

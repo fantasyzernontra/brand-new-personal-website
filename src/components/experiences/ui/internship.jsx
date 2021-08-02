@@ -1,7 +1,10 @@
 import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Internship = forwardRef(({ internships, lang }, ref) => {
+	const { t } = useTranslation()
+
 	return (
 		<section className='exp-internship-container' ref={ref}>
 			{internships.map((item, index) => {
@@ -24,7 +27,7 @@ const Internship = forwardRef(({ internships, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									company name
+									{t('experiences.internship.label1')}
 								</span>
 								<h2
 									className={`internship-title ${
@@ -40,7 +43,7 @@ const Internship = forwardRef(({ internships, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									job description
+									{t('experiences.internship.label2')}
 								</span>
 								<h2
 									className={`internship-title ${
@@ -56,7 +59,7 @@ const Internship = forwardRef(({ internships, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									incharged year
+									{t('experiences.internship.label3')}
 								</span>
 								<h2
 									className={`internship-title ${
@@ -72,9 +75,13 @@ const Internship = forwardRef(({ internships, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									company website
+									{t('experiences.internship.label4')}
 								</span>
-								<h2 className='internship-title duration-500 hover:text-soft_pink en-regular'>
+								<h2
+									className={`internship-title duration-500 hover:text-soft_pink ${
+										lang === 'en' ? 'en-regular' : 'th-regular'
+									}`}
+								>
 									<Link to={{ pathname: internship.exp_ref }} target='_blank'>
 										{internship.exp_ref}
 									</Link>
@@ -86,7 +93,7 @@ const Internship = forwardRef(({ internships, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									tools
+									{t('experiences.internship.label5')}
 								</span>
 								{internship.exp_tools.map((item, index) => (
 									<h2

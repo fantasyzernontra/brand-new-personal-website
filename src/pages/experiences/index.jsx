@@ -151,7 +151,11 @@ const Experiences = () => {
 							ref={businessParallaxWrapper}
 							lang={currentLanguage}
 						/>
-						<Business business={business} ref={businessContainerWrapper} />
+						<Business
+							business={business}
+							ref={businessContainerWrapper}
+							lang={currentLanguage}
+						/>
 						{workAsAnEmployee.length !== 0 && (
 							<ParallaxBox
 								label={currentLanguage === 'en' ? 'work' : 'การทำงาน'}

@@ -1,7 +1,10 @@
 import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Education = forwardRef(({ educations, lang }, ref) => {
+	const { t } = useTranslation()
+
 	return (
 		<section className='exp-education-container' ref={ref}>
 			{educations.map((item, index) => {
@@ -24,7 +27,7 @@ const Education = forwardRef(({ educations, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									school name
+									{t('experiences.education.label1')}
 								</span>
 								<h2
 									className={`education-title ${
@@ -40,7 +43,7 @@ const Education = forwardRef(({ educations, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									department
+									{t('experiences.education.label2')}
 								</span>
 								<h2
 									className={`education-title ${
@@ -56,7 +59,7 @@ const Education = forwardRef(({ educations, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									year in academic
+									{t('experiences.education.label3')}
 								</span>
 								<h2
 									className={`education-title ${
@@ -73,7 +76,7 @@ const Education = forwardRef(({ educations, lang }, ref) => {
 										lang === 'en' ? 'en-regular' : 'th-regular'
 									}`}
 								>
-									academic website
+									{t('experiences.education.label4')}
 								</span>
 								<h2
 									className={`education-title duration-500 hover:text-soft_pink ${

@@ -1,7 +1,10 @@
 import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Working = forwardRef(({ work_as_an_employee, lang }, ref) => {
+	const { t } = useTranslation()
+
 	return (
 		<section className='exp-working-container' ref={ref}>
 			{work_as_an_employee.map((item, index) => {
@@ -22,7 +25,9 @@ const Working = forwardRef(({ work_as_an_employee, lang }, ref) => {
 									lang === 'en' ? 'en-regular' : 'th-regular'
 								}`}
 							>
-								<span className='working-content-label'>job title</span>
+								<span className='working-content-label'>
+									{t('experiences.working.label1')}
+								</span>
 								<h2 className='working-title'>{work.exp_full_name}</h2>
 							</div>
 							<div
@@ -30,7 +35,9 @@ const Working = forwardRef(({ work_as_an_employee, lang }, ref) => {
 									lang === 'en' ? 'en-regular' : 'th-regular'
 								}`}
 							>
-								<span className='working-content-label'>job description</span>
+								<span className='working-content-label'>
+									{t('experiences.working.label2')}
+								</span>
 								<h2 className='working-title'>{work.exp_desc}</h2>
 							</div>
 							<div
@@ -38,7 +45,9 @@ const Working = forwardRef(({ work_as_an_employee, lang }, ref) => {
 									lang === 'en' ? 'en-regular' : 'th-regular'
 								}`}
 							>
-								<span className='working-content-label'>incharged year</span>
+								<span className='working-content-label'>
+									{t('experiences.working.label3')}
+								</span>
 								<h2 className='working-title'>
 									{work.exp_time_period.from} - {work.exp_time_period.to}
 								</h2>
@@ -49,7 +58,7 @@ const Working = forwardRef(({ work_as_an_employee, lang }, ref) => {
 								}`}
 							>
 								<span className='working-content-label'>
-									work place website
+									{t('experiences.working.label4')}
 								</span>
 								<h2 className='working-title duration-500 hover:text-soft_pink'>
 									<Link to={{ pathname: work.exp_ref }} target='_blank'>
@@ -62,7 +71,9 @@ const Working = forwardRef(({ work_as_an_employee, lang }, ref) => {
 									lang === 'en' ? 'en-regular' : 'th-regular'
 								}`}
 							>
-								<span className='working-content-label'>jobs</span>
+								<span className='working-content-label'>
+									{t('experiences.working.label5')}
+								</span>
 								{work.exp_tools.map((item, index) => (
 									<h2 key={index} className='working-title'>
 										{item}

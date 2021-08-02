@@ -15,19 +15,19 @@
 }
 
 .parallax-container#education.label-appear > .parallax-label {
-	animation: parallaxAppearing 0.8s ease forwards 0.6s;
+	animation: parallaxAppearing 0.8s ease forwards 0.3s;
 }
 
 .parallax-container#internship.label-appear > .parallax-label {
-	animation: parallaxAppearing 0.8s ease forwards 0.6s;
+	animation: parallaxAppearing 0.8s ease forwards 0.3s;
 }
 
 .parallax-container#business.label-appear > .parallax-label {
-	animation: parallaxAppearing 0.8s ease forwards 0.6s;
+	animation: parallaxAppearing 0.8s ease forwards 0.3s;
 }
 
 .parallax-container#working.label-appear > .parallax-label {
-	animation: parallaxAppearing 0.8s ease forwards 0.6s;
+	animation: parallaxAppearing 0.8s ease forwards 0.3s;
 }
 
 /* Education Section */
@@ -309,19 +309,19 @@
 }
 
 .parallax-mobile-container#education.label-appear > .parallax-label {
-	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.8s;
+	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.3s;
 }
 
 .parallax-mobile-container#internship.label-appear > .parallax-label {
-	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.8s;
+	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.3s;
 }
 
 .parallax-mobile-container#business.label-appear > .parallax-label {
-	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.8s;
+	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.3s;
 }
 
 .parallax-mobile-container#working.label-appear > .parallax-label {
-	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.8s;
+	animation: parallaxMobileLabelAppearing 0.8s ease forwards 0.3s;
 }
 
 @keyframes parallaxMobileLabelAppearing {
