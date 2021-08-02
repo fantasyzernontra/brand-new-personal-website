@@ -30,7 +30,12 @@ const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 				>
 					<div
 						className='sidebar_header_container'
-						onClick={() => history.push('/')}
+						onClick={() => {
+							if (location.pathname !== '/') {
+								setIsOpenCurtain(false)
+								setTimeout(() => history.push('/'), 1500)
+							}
+						}}
 					>
 						<h1
 							className={`sidebar_header ${
