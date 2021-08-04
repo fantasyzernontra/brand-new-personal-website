@@ -9,7 +9,7 @@ const PainPointRelievingMobile = forwardRef(({ t, work, lang }, ref) => {
 						lang === 'en' ? 'en-semibold' : 'th-semibold'
 					}`}
 				>
-					{t('work_details.painpoint.title')}
+					{t('work-details.painpoint.title')}
 				</h2>
 				<p
 					className={`painpoint-relieving-desc-mobile ${

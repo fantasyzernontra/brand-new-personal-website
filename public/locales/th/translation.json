@@ -17,8 +17,8 @@
 		"works": [],
 		"view_in_details": "ดูเพิ่มเติม"
 	},
-	"work_details": {
-		"work_desc": {
+	"work-details": {
+		"work-desc": {
 			"title": "รู้จักกับงานของผม",
 			"label1": "ลักษณะงาน",
 			"label2": "พาร์ทเนอร์ / ลูกค้า",
@@ -29,7 +29,7 @@
 		"painpoint": {
 			"title":  "ปัญหาที่แก้ไข"
 		},
-		"partner_testimonial": {
+		"partner-testimonial": {
 			"title": "ความคิดเห็นหลังใช้งานของพาร์ทเนอร์"
 		}
 	},

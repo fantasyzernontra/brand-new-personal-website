@@ -14,7 +14,7 @@ const PartnerTestimonial = forwardRef(({ t, work, lang }, ref) => {
 						lang === 'en' ? 'en-semibold' : 'th-semibold'
 					}`}
 				>
-					{t('work_details.partner_testimonial.title')}
+					{t('work-details.partner-testimonial.title')}
 				</h2>
 				<p
 					className={`partner-testimonial-speech ${

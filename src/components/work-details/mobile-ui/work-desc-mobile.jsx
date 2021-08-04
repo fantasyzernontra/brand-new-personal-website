@@ -12,7 +12,7 @@ const WorkDescriptionMobile = forwardRef(({ t, work, lang }, ref) => {
 							lang === 'en' ? 'en-regular' : 'th-regular'
 						}`}
 					>
-						{t('work_details.work_desc.label1')}
+						{t('work-details.work-desc.label1')}
 					</h3>
 					{work.work_type.map((item, index) => (
 						<h2
@@ -31,7 +31,7 @@ const WorkDescriptionMobile = forwardRef(({ t, work, lang }, ref) => {
 							lang === 'en' ? 'en-regular' : 'th-regular'
 						}`}
 					>
-						{t('work_details.work_desc.label2')}
+						{t('work-details.work-desc.label2')}
 					</h3>
 					<h2
 						className={`introduction-details-content-mobile  ${
@@ -47,7 +47,7 @@ const WorkDescriptionMobile = forwardRef(({ t, work, lang }, ref) => {
 							lang === 'en' ? 'en-regular' : 'th-regular'
 						}`}
 					>
-						{t('work_details.work_desc.label3')}
+						{t('work-details.work-desc.label3')}
 					</h3>
 					<h2
 						className={`introduction-details-content-mobile  ${
@@ -63,7 +63,7 @@ const WorkDescriptionMobile = forwardRef(({ t, work, lang }, ref) => {
 							lang === 'en' ? 'en-regular' : 'th-regular'
 						}`}
 					>
-						{t('work_details.work_desc.label4')}
+						{t('work-details.work-desc.label4')}
 					</h3>
 					{work.tech_stack.map((item, index) => (
 						<h2
@@ -82,7 +82,7 @@ const WorkDescriptionMobile = forwardRef(({ t, work, lang }, ref) => {
 							lang === 'en' ? 'en-regular' : 'th-regular'
 						}`}
 					>
-						{t('work_details.work_desc.label5')}
+						{t('work-details.work-desc.label5')}
 					</h3>
 					<h2
 						className={`introduction-details-production-mobile ${

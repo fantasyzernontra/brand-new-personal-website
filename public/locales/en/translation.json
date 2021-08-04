@@ -16,8 +16,8 @@
 		"header": "works",
 		"view_in_details": "View In Details"
 	},
-	"work_details": {
-		"work_desc": {
+	"work-details": {
+		"work-desc": {
 			"title": "Introduction",
 			"label1": "work description",
 			"label2": "partners",
@@ -28,7 +28,7 @@
 		"painpoint": {
 			"title":  "pain point relieving"
 		},
-		"partner_testimonial": {
+		"partner-testimonial": {
 			"title": "partner's testimonial"
 		}
 	},
