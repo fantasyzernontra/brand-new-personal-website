@@ -34,7 +34,7 @@ const WorkInDetails = ({ match }) => {
 	const partnetTestimonialWrapper = useRef(null)
 	const isMobile = useOrientation()
 	const [isLoaded, setIsLoaded] = useState(false)
-	const { i18n } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const currentLanguage = i18n.language
 
 	useEffect(() => {
@@ -85,6 +85,7 @@ const WorkInDetails = ({ match }) => {
 							work={work}
 							ref={workDescWrapper}
 							lang={currentLanguage}
+							t={t}
 						/>
 						<WorkPictures
 							url={work.pictures[0].url}
@@ -95,6 +96,7 @@ const WorkInDetails = ({ match }) => {
 								work={work}
 								ref={painPointWrapper}
 								lang={currentLanguage}
+								t={t}
 							/>
 						)}
 						<WorkPictures
@@ -106,6 +108,7 @@ const WorkInDetails = ({ match }) => {
 								work={work}
 								ref={partnetTestimonialWrapper}
 								lang={currentLanguage}
+								t={t}
 							/>
 						)}
 					</section>
@@ -117,6 +120,7 @@ const WorkInDetails = ({ match }) => {
 							work={work}
 							ref={workDescWrapper}
 							lang={currentLanguage}
+							t={t}
 						/>
 						<WorkPictureMobile
 							url={work.pictures[0].url}
@@ -127,6 +131,7 @@ const WorkInDetails = ({ match }) => {
 								work={work}
 								ref={painPointWrapper}
 								lang={currentLanguage}
+								t={t}
 							/>
 						)}
 						<WorkPictureMobile
@@ -138,6 +143,7 @@ const WorkInDetails = ({ match }) => {
 								work={work}
 								ref={partnetTestimonialWrapper}
 								lang={currentLanguage}
+								t={t}
 							/>
 						)}
 					</section>

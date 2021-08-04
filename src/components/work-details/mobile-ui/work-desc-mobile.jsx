@@ -1,11 +1,8 @@
 import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 import WorkType from '../../../data/work-type'
-import { useTranslation } from 'react-i18next'
 
-const WorkDescriptionMobile = forwardRef(({ work, lang }, ref) => {
-	const { t } = useTranslation()
-
+const WorkDescriptionMobile = forwardRef(({ t, work, lang }, ref) => {
 	return (
 		<section className='work-details-introduction-mobile' ref={ref}>
 			<article className='work-explanation-mobile'>

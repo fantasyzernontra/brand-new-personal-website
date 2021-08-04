@@ -1,9 +1,6 @@
 import { forwardRef } from 'react'
-import { useTranslation } from 'react-i18next'
 
-const PainPointRelieving = forwardRef(({ work, lang }, ref) => {
-	const { t } = useTranslation()
-
+const PainPointRelieving = forwardRef(({ t, work, lang }, ref) => {
 	return (
 		<section
 			className={`painpoint-relieving-container ${

@@ -1,9 +1,6 @@
 import { forwardRef } from 'react'
-import { useTranslation } from 'react-i18next'
 
-const PartnerTestimonialMobile = forwardRef(({ work, lang }, ref) => {
-	const { t } = useTranslation()
-
+const PartnerTestimonialMobile = forwardRef(({ t, work, lang }, ref) => {
 	return (
 		<section
 			className={`partner-testimonial-container-mobile ${
