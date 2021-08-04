@@ -1,6 +1,9 @@
 import { forwardRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const PainPointRelieving = forwardRef(({ work, lang }, ref) => {
+	const { t } = useTranslation()
+
 	return (
 		<section
 			className={`painpoint-relieving-container ${
@@ -14,7 +17,7 @@ const PainPointRelieving = forwardRef(({ work, lang }, ref) => {
 						lang === 'en' ? 'en-semibold' : 'th-semibold'
 					}`}
 				>
-					pain point Relieving
+					{t('work_details.painpoint.title')}
 				</h2>
 				<p
 					className={`painpoint-relieving-desc ${

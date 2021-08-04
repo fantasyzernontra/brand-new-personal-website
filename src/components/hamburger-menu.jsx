@@ -118,7 +118,11 @@ const HamburgerMenu = ({ setIsOpenCurtain }) => {
 					)
 				)}
 			</div>
-			<div className='nav-menu-footer en-regular'>
+			<div
+				className={`nav-menu-footer ${
+					currentLanguage === 'en' ? 'en-regular' : 'th-regular'
+				}`}
+			>
 				<span>
 					<Link
 						to={{ pathname: 'mailto:non_nontra@hotmail.com' }}

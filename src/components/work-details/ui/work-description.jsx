@@ -2,7 +2,11 @@ import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 import WorkType from '../../../data/work-type'
 
+import { useTranslation } from 'react-i18next'
+
 const WorkDescription = forwardRef(({ work, lang }, ref) => {
+	const { t } = useTranslation()
+
 	return (
 		<section
 			className='work-details-introduction'
@@ -16,7 +20,7 @@ const WorkDescription = forwardRef(({ work, lang }, ref) => {
 							lang === 'en' ? 'en-semibold' : 'th-semibold'
 						}`}
 					>
-						Introduction
+						{t('work_details.work_desc.title')}
 					</h2>
 					<span
 						className={`text-hard_pink text-4xl ${
@@ -41,7 +45,7 @@ const WorkDescription = forwardRef(({ work, lang }, ref) => {
 							lang === 'en' ? 'en-regular' : 'th-regular'
 						}`}
 					>
-						work description
+						{t('work_details.work_desc.label1')}
 					</h3>
 					{work.work_type.map((item, index) => (
 						<h2
@@ -60,7 +64,7 @@ const WorkDescription = forwardRef(({ work, lang }, ref) => {
 							lang === 'en' ? 'en-regular' : 'th-regular'
 						}`}
 					>
-						partners
+						{t('work_details.work_desc.label2')}
 					</h3>
 					<h2
 						className={`introduction-details-content ${
@@ -76,7 +80,7 @@ const WorkDescription = forwardRef(({ work, lang }, ref) => {
 							lang === 'en' ? 'en-regular' : 'th-regular'
 						}`}
 					>
-						responsible
+						{t('work_details.work_desc.label3')}
 					</h3>
 					<h2
 						className={`introduction-details-content ${
@@ -92,7 +96,7 @@ const WorkDescription = forwardRef(({ work, lang }, ref) => {
 							lang === 'en' ? 'en-regular' : 'th-regular'
 						}`}
 					>
-						technology stack
+						{t('work_details.work_desc.label4')}
 					</h3>
 					{work.tech_stack.map((item, index) => (
 						<h2
@@ -111,7 +115,7 @@ const WorkDescription = forwardRef(({ work, lang }, ref) => {
 							lang === 'en' ? 'en-regular' : 'th-regular'
 						}`}
 					>
-						production
+						{t('work_details.work_desc.label5')}
 					</h3>
 					<h2
 						className={`introduction-details-production ${

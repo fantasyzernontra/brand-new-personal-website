@@ -16,6 +16,22 @@
 		"header": "works",
 		"view_in_details": "View In Details"
 	},
+	"work_details": {
+		"work_desc": {
+			"title": "Introduction",
+			"label1": "work description",
+			"label2": "partners",
+			"label3": "responsible",
+			"label4": "technology stack",
+			"label5": "production"
+		},
+		"painpoint": {
+			"title":  "pain point relieving"
+		},
+		"partner_testimonial": {
+			"title": "partner's testimonial"
+		}
+	},
 	"experiences": {
 		"education": {
 			"label1": "acedemy name",

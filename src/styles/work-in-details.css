@@ -3,14 +3,13 @@
 }
 
 .work-details-banner {
-	width: 95vw;
-	@apply h-screen bg-cover flex flex-col items-center justify-center text-white_text gap-y-16;
+	@apply w-content_pc h-screen bg-cover flex flex-col items-center justify-center text-white_text gap-y-16;
 }
 
 .work-detail-title {
 	animation: bannerAppearing 1.2s ease forwards;
 	transform: translateY(70px);
-	@apply text-6xl opacity-0 duration-1000;
+	@apply text-3xl 2xl:text-6xl opacity-0 duration-1000;
 }
 
 .work-detail-short-desc {
@@ -42,16 +41,15 @@
 }
 
 .work-details-introduction {
-	width: 95vw;
-	@apply h-screen bg-white flex flex-row justify-evenly items-center p-10 text-hard_blue;
+	@apply w-content_pc  bg-white flex flex-row justify-evenly items-center p-10 text-hard_blue;
 }
 
 .introduction-title {
-	@apply text-4xl tracking-wider;
+	@apply text-xl 2xl:text-4xl tracking-wider;
 }
 
 .introduction-desc {
-	@apply text-xl tracking-wide leading-10;
+	@apply 2xl:text-xl tracking-wide leading-10;
 }
 
 .introduction-details-header {
@@ -59,7 +57,7 @@
 }
 
 .introduction-details-content {
-	@apply text-xl text-hard_blue capitalize;
+	@apply text-base 2xl:text-xl text-hard_blue capitalize;
 }
 
 .introduction-details-sub-container {
@@ -75,22 +73,19 @@
 }
 
 .work-picture {
-	width: 95vw;
-	@apply h-screen flex border-b border-gray-200 my-28;
+	@apply w-content_pc h-screen flex border-b border-gray-200 my-28 bg-cover object-cover;
 }
 
 .painpoint-relieving-container {
-	width: 95vw;
-	height: 60vh;
-	@apply flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
+	@apply w-content_pc flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
 }
 
 .painpoint-relieving-title {
-	@apply text-3xl capitalize;
+	@apply text-xl 2xl:text-3xl capitalize;
 }
 
 .painpoint-relieving-desc {
-	@apply text-2xl leading-10 tracking-wide;
+	@apply text-lg 2xl:text-2xl leading-10 tracking-wide;
 }
 
 .painpoint-relieving-article {
@@ -99,9 +94,7 @@
 }
 
 .partner-testimonial-container {
-	width: 95vw;
-	height: 60vh;
-	@apply flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
+	@apply w-content_pc flex flex-col items-center justify-center bg-white p-10 text-hard_blue;
 }
 
 .partner-testimonial-article {
@@ -110,19 +103,19 @@
 }
 
 .partner-testimonial-title {
-	@apply text-xl capitalize text-hard_pink tracking-widest;
+	@apply text-base 2xl:text-xl capitalize text-hard_pink tracking-widest;
 }
 
 .partner-testimonial-speech {
-	@apply text-2xl leading-10 tracking-wider;
+	@apply text-lg 2xl:text-2xl leading-10 tracking-wider;
 }
 
 .partner-testimonial-name {
-	@apply text-2xl tracking-wide text-gray-400;
+	@apply text-lg 2xl:text-2xl tracking-wide text-gray-400;
 }
 
 .partner-testimonial-org {
-	@apply text-hard_blue text-2xl tracking-wide;
+	@apply text-hard_blue text-lg 2xl:text-2xl tracking-wide;
 }
 
 .work-introduction-container {

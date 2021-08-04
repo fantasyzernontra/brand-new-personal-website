@@ -17,11 +17,23 @@ const WorkBannerMobile = ({ work, lang }) => {
 			<div className='absolute top-5 right-10'>
 				<LightHamburgerButton />
 			</div>
-			<h1 className='work-banner-title-mobile en-semibold'>{work.work_name}</h1>
-			<p className='work-banner-short-desc-mobile en-extralight'>
+			<h1
+				className={`work-banner-title-mobile ${
+					lang === 'en' ? 'en-semibold' : 'th-semibold'
+				}`}
+			>
+				{work.work_name}
+			</h1>
+			<p
+				className={`work-banner-short-desc-mobile ${
+					lang === 'en' ? 'en-extralight' : 'th-extralight'
+				}`}
+			>
 				{work.short_desc}
 			</p>
-			{work.label && <VisitingLabelMobile url={work.url} label={work.label} />}
+			{work.label && (
+				<VisitingLabelMobile url={work.url} label={work.label} lang={lang} />
+			)}
 		</section>
 	)
 }

@@ -1,6 +1,9 @@
 import { forwardRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const PartnerTestimonial = forwardRef(({ work, lang }, ref) => {
+	const { t } = useTranslation()
+
 	return (
 		<section
 			className={`partner-testimonial-container ${
@@ -14,7 +17,7 @@ const PartnerTestimonial = forwardRef(({ work, lang }, ref) => {
 						lang === 'en' ? 'en-semibold' : 'th-semibold'
 					}`}
 				>
-					partner's testimonial
+					{t('work_details.partner_testimonial.title')}
 				</h2>
 				<p
 					className={`partner-testimonial-speech ${

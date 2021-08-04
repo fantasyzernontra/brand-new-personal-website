@@ -20,7 +20,7 @@
 
 .welcome {
 	animation: welcomeFadingIn 0.8s ease forwards 2s;
-	@apply text-4xl lg:text-9xl overflow-hidden  text-white_text tracking-wider duration-300 opacity-0;
+	@apply text-4xl xl:text-6xl 2xl:text-9xl overflow-hidden  text-white_text tracking-wider duration-300 opacity-0;
 }
 
 .welcome-line {
@@ -71,7 +71,7 @@
 }
 
 .about-desc-element {
-	@apply ml-0 md:ml-48 text-base md:text-2xl inline md:block;
+	@apply ml-0 md:ml-48 text-lg xl:text-2xl inline md:block;
 }
 
 @keyframes animatedToOriginal {

@@ -14,7 +14,7 @@ export const useOrientation = () => {
 		}
 	}, [])
 
-	let isMobile = width <= 768
+	let isMobile = width < 1024
 
 	return isMobile
 }

@@ -14,6 +14,12 @@ module.exports = {
 				en: ['Source Sans Pro', 'sans-serif'],
 				th: ['Kanit', 'sans-serif'],
 			},
+			width: {
+				sidebar_pc: '5vw',
+				sidebar_tablet: '10vw',
+				content_pc: '95vw',
+				content_tablet: '90vw',
+			},
 		},
 	},
 	variants: {

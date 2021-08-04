@@ -17,6 +17,22 @@
 		"works": [],
 		"view_in_details": "ดูเพิ่มเติม"
 	},
+	"work_details": {
+		"work_desc": {
+			"main_label": "รู้จักกับงานของผม",
+			"label1": "ลักษณะงาน",
+			"label2": "พาร์ทเนอร์ / ลูกค้า",
+			"label3": "งานที่รับผิดชอบ",
+			"label4": "เทคโนโลยีที่ใช้",
+			"label5": "ผลิตภัณฑ์"
+		},
+		"painpoint": {
+			"title":  "ปัญหาที่แก้ไข"
+		},
+		"partner_testimonial": {
+			"title": "ความคิดเห็นหลังใช้งานของพาร์ทเนอร์"
+		}
+	},
 	"experiences": {
 		"education": {
 			"label1": "ชื่อสถานศึกษา",

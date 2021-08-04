@@ -10,7 +10,7 @@ const VisitingLabel = ({ label, url, lang }) => {
 						lang === 'en' ? 'en-regular' : 'th-regular'
 					}`}
 				>
-					VISIT {label}
+					{lang === 'en' ? 'VISIT' : 'เยี่ยมชม'} {label}
 				</span>
 				<hr className='visiting-line' />
 			</div>

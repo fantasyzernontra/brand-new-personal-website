@@ -49,13 +49,11 @@
 
 .sidebar_container {
 	animation: curtainAppear 0.8s ease forwards 1.6s;
-	width: 5vw;
-	@apply opacity-0 h-screen z-20 flex flex-col justify-between duration-500;
+	@apply md:w-sidebar_tablet 2xl:w-sidebar_pc opacity-0 h-screen z-20 flex flex-col justify-between duration-500;
 }
 
 .sidebar_container#without-animation {
-	width: 5vw;
-	@apply opacity-100 h-screen z-20 flex flex-col justify-between duration-500;
+	@apply md:w-sidebar_tablet 2xl:w-sidebar_pc opacity-100 h-screen z-20 flex flex-col justify-between duration-500;
 }
 
 .sidebar_text_container {
@@ -67,7 +65,7 @@
 }
 
 .sidebar_header {
-	@apply text-center uppercase  text-2xl cursor-pointer;
+	@apply text-center uppercase  text-xl cursor-pointer;
 }
 
 .inactive_sidebar_text {
@@ -77,7 +75,7 @@
 
 .active_sidebar_text {
 	transform: rotate(-90deg);
-	@apply uppercase text-hard_blue cursor-pointer duration-300 tracking-wider;
+	@apply uppercase text-hard_blue cursor-pointer duration-300 tracking-wider w-full;
 }
 
 .inactive_sidebar_text:hover {
