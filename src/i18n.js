@@ -9,7 +9,7 @@ i18n
 		lng: 'en',
 		fallbackLng: 'en',
 		preload: ['en', 'th'],
-		keySeparator: false,
+		returnObjects: true,
 		react: {
 			useSuspense: false,
 		},
