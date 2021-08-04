@@ -11,7 +11,7 @@ i18n
 		preload: ['en', 'th'],
 		returnObjects: true,
 		react: {
-			useSuspense: false,
+			useSuspense: true,
 		},
 	})
 
