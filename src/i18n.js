@@ -9,6 +9,7 @@ i18n
 		lng: 'en',
 		fallbackLng: 'en',
 		preload: ['en', 'th'],
+		keySeparator: false,
 		react: {
 			useSuspense: false,
 		},
