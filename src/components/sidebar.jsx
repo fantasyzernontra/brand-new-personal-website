@@ -68,7 +68,7 @@ const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 							className={
 								currentLanguage === 'en'
 									? 'active_sidebar_lang_text en-semibold'
-									: 'inactive_sidebar_lang_text en-regular'
+									: 'inactive_sidebar_lang_text th-regular'
 							}
 							onClick={() => {
 								setIsOpenCurtain(false)
@@ -86,7 +86,7 @@ const SideBar = ({ children, setIsOpenCurtain, withOutAnimation }) => {
 							className={
 								currentLanguage === 'th'
 									? 'active_sidebar_lang_text th-semibold'
-									: 'inactive_sidebar_lang_text th-regular'
+									: 'inactive_sidebar_lang_text en-regular'
 							}
 							onClick={() => {
 								setIsOpenCurtain(false)
