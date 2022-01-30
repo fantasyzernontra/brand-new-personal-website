@@ -3,10 +3,10 @@
 	"hamburger_menu": ["about", "works", "experiences", "contact"],
 	"about": {
 		"welcome": "Hi! I'm Non",
-		"desc1": "Currently, I'm a junior computer science student.",
-		"desc2": "Also, I'm a full stack developer who is familiar",
-		"desc3": "in Full Stack Web Development and Mobile Development.",
-		"desc4": "And I'm a working with myself consistently as a Weight Lifter.",
+		"desc1": "I'm a full-stack developer",
+		"desc2": "who familiar with Web development and Mobile development.",
+		"desc3": "Currently, I'm interesting in Blockchain, Defi., Innovation and Investing",
+		"desc4": "Also, I'm an entreprenuer who owns several businesses.",
 		"contact": {
 			"email_label": "E-mail",
 			"phone_label": "Phone"
