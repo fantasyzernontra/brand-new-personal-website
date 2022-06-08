@@ -1,73 +1,73 @@
 {
-	"sidebar": ["contact", "experiences", "works", "about"],
-	"hamburger_menu": ["about", "works", "experiences", "contact"],
-	"about": {
-		"welcome": "Hi! I'm Non",
-		"desc1": "I'm a full-stack developer",
-		"desc2": "who familiar with Web development and Mobile development.",
-		"desc3": "Currently, I'm interesting in Blockchain, Defi., Innovation and Investing",
-		"desc4": "Also, I'm an entreprenuer who owns several businesses.",
-		"contact": {
-			"email_label": "E-mail",
-			"phone_label": "Phone"
-		}
-	},
-	"work": {
-		"header": "works",
-		"view_in_details": "View In Details"
-	},
-	"work-details": {
-		"work-desc": {
-			"title": "Introduction",
-			"label1": "work description",
-			"label2": "partners",
-			"label3": "responsible",
-			"label4": "technology stack",
-			"label5": "production"
-		},
-		"painpoint": {
-			"title":  "pain point relieving"
-		},
-		"partner-testimonial": {
-			"title": "partner's testimonial"
-		}
-	},
-	"experiences": {
-		"education": {
-			"label1": "acedemy name",
-			"label2": "department",
-			"label3": "year in academy",
-			"label4": "academy's website"
-		},
-		"internship": {
-			"label1": "company name",
-			"label2": "job description",
-			"label3": "incharged year",
-			"label4": "company's website",
-			"label5": "tools"
-		},
-		"business": {
-			"label1": "business name",
-			"label2": "business description",
-			"label3": "establishment year",
-			"label4": "business's website",
-			"label5": "services"
-		},
-		"working": {
-			"label1": "job title",
-			"label2": "job description",
-			"label3": "incharged year",
-			"label4": "work place's website",
-			"label5": "jobs"
-		}
-	},
-	"contact": {
-		"desktop": {
-			"title": "contact me",
-			"desc": "If you want to contact me about software development or finding a business partner, then e-mail me at non_nontra@hotmail.com"
-		},
-		"mobile": {
-			"title": "contact me"
-		}
-	}
+  "sidebar": ["contact", "experiences", "works", "about"],
+  "hamburger_menu": ["about", "works", "experiences", "contact"],
+  "about": {
+    "welcome": "Hi! I'm Non",
+    "desc1": "Software",
+    "desc2": "Innovation",
+    "desc3": "Business",
+    "desc4": "",
+    "contact": {
+      "email_label": "E-mail",
+      "phone_label": "Phone"
+    }
+  },
+  "work": {
+    "header": "works",
+    "view_in_details": "View In Details"
+  },
+  "work-details": {
+    "work-desc": {
+      "title": "Introduction",
+      "label1": "work description",
+      "label2": "partners",
+      "label3": "responsible",
+      "label4": "technology stack",
+      "label5": "production"
+    },
+    "painpoint": {
+      "title": "pain point relieving"
+    },
+    "partner-testimonial": {
+      "title": "partner's testimonial"
+    }
+  },
+  "experiences": {
+    "education": {
+      "label1": "acedemy name",
+      "label2": "department",
+      "label3": "year in academy",
+      "label4": "academy's website"
+    },
+    "internship": {
+      "label1": "company name",
+      "label2": "job description",
+      "label3": "incharged year",
+      "label4": "company's website",
+      "label5": "tools"
+    },
+    "business": {
+      "label1": "business name",
+      "label2": "business description",
+      "label3": "establishment year",
+      "label4": "business's website",
+      "label5": "services"
+    },
+    "working": {
+      "label1": "job title",
+      "label2": "job description",
+      "label3": "incharged year",
+      "label4": "work place's website",
+      "label5": "jobs"
+    }
+  },
+  "contact": {
+    "desktop": {
+      "title": "contact me",
+      "desc": "Would like to get in touch with me?, e-mail me at non_nontra@hotmail.com"
+    },
+    "mobile": {
+      "title": "contact me"
+    }
+  }
 }
