@@ -23,10 +23,10 @@ jobs:
           docker build -t asia.gcr.io/${{ env.PROJECT_ID }}/${{ env.APP_NAME }} .
 
       - name: Authenticate into Google Cloud Platform
-        uses: google-github-actions/setup-gcloud@master
+        uses: "google-github-actions/auth@v0"
         with:
-          service_account_email: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
-          service_account_key: ${{ secrets.GCLOUD_AUTH }}
+          service_account: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
+          credentials_json: ${{ secrets.GCLOUD_AUTH }}
 
       - name: Configure Docker to use Google Cloud Platform
         run: "gcloud auth configure-docker --quiet"
